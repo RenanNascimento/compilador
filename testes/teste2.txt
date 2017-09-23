@@ -14,5 +14,5 @@ program
 	print c;
 	a = b + c + d)/2;
 	e = val + c + a;
-	print ("E: "");
+	print ("E: ");
 	print (e);

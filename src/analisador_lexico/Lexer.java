@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Hashtable;
+import java.util.Map;
 
 public class Lexer {
 
@@ -12,33 +13,34 @@ public class Lexer {
 	private FileReader file;
 	private Hashtable<String, Word> words = new Hashtable<String, Word>();
 
+
 	/** Método para inserir palavras reservadas na HashTable */
-	private void reserve(Word w){
+	private void reserve(Word w) {
 		words.put(w.getLexeme(), w); // lexema é a chave para entrada na
 	}
 
 
 	/** Método construtor */
 	public Lexer(String fileName) throws FileNotFoundException {
-		try{
-			file = new FileReader (fileName);
+		try {
+			file = new FileReader(fileName);
 		} catch(FileNotFoundException e){
 			System.out.println("Arquivo não encontrado");
 			throw e;
 		}
 
 		// Insere palavras reservadas na HashTable
-		reserve(new Word ("program", Tag.PRG));
-		reserve(new Word ("end", Tag.END));
-		reserve(new Word ("int", Tag.INT));
-		reserve(new Word ("string", Tag.STR));
-		reserve(new Word ("if", Tag.IF));
-		reserve(new Word ("then", Tag.THEN));
-		reserve(new Word ("else", Tag.ELSE));
-		reserve(new Word ("do", Tag.DO));
-		reserve(new Word ("while", Tag.WHILE));
-		reserve(new Word ("scan", Tag.SCAN));
-		reserve(new Word ("print", Tag.PRINT));
+		reserve(new Word("program", Tag.PRG));
+		reserve(new Word("end", Tag.END));
+		reserve(new Word("int", Tag.INT));
+		reserve(new Word("string", Tag.STR));
+		reserve(new Word("if", Tag.IF));
+		reserve(new Word("then", Tag.THEN));
+		reserve(new Word("else", Tag.ELSE));
+		reserve(new Word("do", Tag.DO));
+		reserve(new Word("while", Tag.WHILE));
+		reserve(new Word("scan", Tag.SCAN));
+		reserve(new Word("print", Tag.PRINT));
 	}
 
 
@@ -46,6 +48,7 @@ public class Lexer {
 	private void readch() throws IOException {
 		ch = (char) file.read();
 	}
+
 
 	/* Lê o próximo caractere do arquivo e verifica se é igual a c*/
 	private boolean readch(char c) throws IOException{
@@ -55,8 +58,8 @@ public class Lexer {
 		return true;
 	}
 
-	public Token scan() throws IOException{
 
+	public Token scan() throws IOException{
 		//Desconsidera delimitadores na entrada
 		for (;; readch()) {
 			if (ch == ' ' || ch == '\t' || ch == '\r' || ch == '\b')
@@ -115,5 +118,13 @@ public class Lexer {
 		Token t = new Token(ch);
 		ch = ' ';
 		return t;
+	}
+
+	/* Imprime todas as entradas da tabela de símbolos */
+	public void imprimirTabela() {
+		System.out.println("\n\n\n**** Tabela de símbolos ****");
+		for (Map.Entry<String, Word> entrada: words.entrySet()) {
+			System.out.println(entrada.getKey() + ":\t\t" + entrada.getValue());
+		}
 	}
 }
