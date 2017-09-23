@@ -1,6 +1,7 @@
 package analisador_lexico;
 
 public class Tag {
+
 	public final static int
 		//Palavras reservadas
 		PRG   = 256,
