@@ -1,7 +1,6 @@
 package analisador_lexico;
 
 import java.io.*;
-import java.util.*;
 
 public class Lexer {
 	
