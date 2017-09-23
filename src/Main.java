@@ -1,6 +1,4 @@
-package analisador_lexico;
-
-import analisador_lexico.Lexer;
+import analisador_lexico.*;
 
 public class Main {
 
