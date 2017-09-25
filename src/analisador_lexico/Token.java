@@ -15,7 +15,7 @@ public class Token {
 	}
 
 
-	public void imprimeToken() {
+	public void imprimeToken(Token T) {
 		String valor;
 		switch (tag) {
 			case Tag.PRG:
@@ -75,12 +75,16 @@ public class Token {
 			case Tag.ID:
 				valor = "id";
 				break;
-			case Tag.CARAC:
-				valor = "carac";
+			case Tag.LIT:
+				valor = "literal";
 				break;
 			default:
 				valor = "" + (char)tag;
 		}
-		System.out.println(tag + ":\t\t" + valor);
+		if(tag == Tag.LIT || tag == Tag.ID || tag == Tag.NUM){
+			System.out.println("< " + valor + ", " + T + " >");
+		}else {
+			System.out.println("< " + valor + " >");
+		}
 	}
 }

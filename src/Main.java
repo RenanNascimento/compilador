@@ -4,12 +4,15 @@ palavras reservadas) instalados na Tabela de Símbolos. Nas etapas seguintes, is
  */
 
 import analisador_lexico.Lexer;
+import analisador_lexico.Tag;
 import analisador_lexico.Token;
+import exception.InvalidTokenException;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Main {
+
 	private static String[] testes = {
 			"testes/teste1.txt",
 			"testes/teste2.txt",
@@ -26,13 +29,15 @@ public class Main {
 			System.out.println("**** Tokens lidos ****");
 			Token T = L.scan();
 			while (T.tag != 65535) { // acho q 65535 é fim de arquivo, olhar se acha uma condição de termino melhor
-				T.imprimeToken();
+				T.imprimeToken(T);
 				T = L.scan();
 			}
 			L.imprimirTabela();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (InvalidTokenException e) {
 			e.printStackTrace();
 		}
 	}

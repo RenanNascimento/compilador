@@ -1,5 +1,9 @@
 package analisador_lexico;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Tag {
 
 	public final static int
@@ -27,5 +31,8 @@ public class Tag {
 		//Outros tokens
 		NUM   = 300,
 		ID    = 301,
-		CARAC = 302;
+		LIT = 302;
+
+	public final static Set<Character> validASCIITokens = new HashSet<>(Arrays.asList(';', ',', '=', '(', ')', '-', '+', '*', '/'));
+
 }

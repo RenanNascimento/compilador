@@ -5,13 +5,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Map;
+import exception.InvalidTokenException;
 
 public class Lexer {
 
 	public static int line = 1; 	//contador de linhas
 	private char ch = ' '; 			//caractere lido do arquivo
 	private FileReader file;
-	private Hashtable<String, Word> words = new Hashtable<String, Word>();
+	private Hashtable<String, Word> words = new Hashtable<>();
 
 
 	/** Método para inserir palavras reservadas na HashTable */
@@ -59,7 +60,7 @@ public class Lexer {
 	}
 
 
-	public Token scan() throws IOException{
+	public Token scan() throws IOException, InvalidTokenException{
 		//Desconsidera delimitadores na entrada
 		for (;; readch()) {
 			if (ch == ' ' || ch == '\t' || ch == '\r' || ch == '\b')
@@ -69,6 +70,33 @@ public class Lexer {
 			else break;
 		}
 
+		/*
+		//Ignora comentario
+		if(ch == '/'){
+			boolean leuComentario = false;
+			readch();
+			if(ch == '/'){
+				while(ch != '\n' && file.read() != -1){ readch(); }
+			}else{
+				if(ch == '*'){
+					while(file.read() != -1){
+						if(ch == '*' && readch('/')) {
+							leuComentario = true;
+							break;
+						}
+						if(ch == '\n') line++;
+					}
+					System.out.println(leuComentario);
+					if(leuComentario){
+						readch();
+					}else{
+						throw new InvalidTokenException("Error("+line+"): Comentario nao finalizado");
+					}
+				}
+			}
+		}
+		*/
+		
 		switch(ch){
 			//Operadores
 			case '&':
@@ -86,6 +114,8 @@ public class Lexer {
 			case '>':
 				if (readch('=')) return Word.ge;
 				else return new Token('>');
+			case '!':
+				if (readch('=')) return Word.ne;
 		}
 
 		//	Números
@@ -96,6 +126,23 @@ public class Lexer {
 				readch();
 			}while(Character.isDigit(ch));
 			return new Num(value);
+		}
+
+		// Literais
+		if(ch == '\"'){
+			StringBuffer sb = new StringBuffer();
+			do{
+				sb.append(ch);
+				readch();
+				if(ch == '\n'){
+					throw new InvalidTokenException("Error("+ line +"): Token '" + sb.toString() + "' invalido");
+				}
+			}while(ch != '\"');
+			sb.append('\"');
+			readch();
+			String s = sb.toString();
+			Word w = new Word(s, Tag.LIT);
+			return w;
 		}
 
 		// Identificadores
@@ -114,10 +161,16 @@ public class Lexer {
 			return w;
 		}
 
-		// Caracteres não especificados
-		Token t = new Token(ch);
-		ch = ' ';
-		return t;
+		// Caracteres ASCII validos
+		if(Tag.validASCIITokens.contains(ch) || file.read() == -1){
+			Token t = new Token(ch);
+			ch = ' ';
+			return t;
+		}else{
+			throw new InvalidTokenException("Error("+ line +"): Caracter '" + ch + "' invalido");
+		}
+
+
 	}
 
 	/* Imprime todas as entradas da tabela de símbolos */
@@ -127,4 +180,5 @@ public class Lexer {
 			System.out.println(entrada.getKey() + ":\t\t" + entrada.getValue());
 		}
 	}
+
 }
