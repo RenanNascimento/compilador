@@ -16,6 +16,8 @@ public class Token {
 
 
 	public void imprimeToken(Token T) {
+
+		IMPRIMIR O NOME DO TOKEN AO INVES DO TOKEN. EXEMPLO: < OR > AO INVES DE < || >
 		String valor;
 		switch (tag) {
 			case Tag.PRG:

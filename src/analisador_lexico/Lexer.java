@@ -14,7 +14,6 @@ public class Lexer {
 	private FileReader file;
 	private Hashtable<String, Word> words = new Hashtable<>();
 
-
 	/** Método para inserir palavras reservadas na HashTable */
 	private void reserve(Word w) {
 		words.put(w.getLexeme(), w); // lexema é a chave para entrada na
@@ -61,42 +60,36 @@ public class Lexer {
 
 
 	public Token scan() throws IOException, InvalidTokenException{
+		boolean is_comentario_linha = false;
+		boolean is_comentario_bloco = false;
 		//Desconsidera delimitadores na entrada
 		for (;; readch()) {
-			if (ch == ' ' || ch == '\t' || ch == '\r' || ch == '\b')
-				continue;
-			else if (ch == '\n')
+			if (ch == (char)Tag.EOF) {
+				if (is_comentario_bloco)
+					throw new InvalidTokenException("Erro comentário não fechado");
+				break;
+			}
+			if(ch == '/'){
+				readch();
+				if(ch == '/' && !is_comentario_linha) {
+					is_comentario_linha = true;
+				} else if (ch == '*'){
+					is_comentario_bloco = true;
+				}
+			} else if (ch == '\n') {
+				is_comentario_linha = false;
 				line++; //conta linhas
+			} else if (ch == '*') {
+				readch();
+				if(ch == '/') {
+					is_comentario_bloco = false;
+				}
+			} else if (ch == ' ' || ch == '\t' || ch == '\r' || ch == '\b' || is_comentario_linha || is_comentario_bloco)
+				continue;
 			else break;
 		}
 
-		/*
-		//Ignora comentario
-		if(ch == '/'){
-			boolean leuComentario = false;
-			readch();
-			if(ch == '/'){
-				while(ch != '\n' && file.read() != -1){ readch(); }
-			}else{
-				if(ch == '*'){
-					while(file.read() != -1){
-						if(ch == '*' && readch('/')) {
-							leuComentario = true;
-							break;
-						}
-						if(ch == '\n') line++;
-					}
-					System.out.println(leuComentario);
-					if(leuComentario){
-						readch();
-					}else{
-						throw new InvalidTokenException("Error("+line+"): Comentario nao finalizado");
-					}
-				}
-			}
-		}
-		*/
-		
+
 		switch(ch){
 			//Operadores
 			case '&':
@@ -116,6 +109,7 @@ public class Lexer {
 				else return new Token('>');
 			case '!':
 				if (readch('=')) return Word.ne;
+				else return new Token('!');
 		}
 
 		//	Números
@@ -162,15 +156,13 @@ public class Lexer {
 		}
 
 		// Caracteres ASCII validos
-		if(Tag.validASCIITokens.contains(ch) || file.read() == -1){
+		if(Tag.validASCIITokens.contains(ch) || ch == (char)Tag.EOF){
 			Token t = new Token(ch);
 			ch = ' ';
 			return t;
 		}else{
 			throw new InvalidTokenException("Error("+ line +"): Caracter '" + ch + "' invalido");
 		}
-
-
 	}
 
 	/* Imprime todas as entradas da tabela de símbolos */

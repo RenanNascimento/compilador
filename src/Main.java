@@ -28,17 +28,14 @@ public class Main {
 			Lexer L = new Lexer(testes[5]);
 			System.out.println("**** Tokens lidos ****");
 			Token T = L.scan();
-			while (T.tag != 65535) { // acho q 65535 é fim de arquivo, olhar se acha uma condição de termino melhor
+			while (T.tag != Tag.EOF) { // acho q 65535 é fim de arquivo, olhar se acha uma condição de termino melhor
 				T.imprimeToken(T);
 				T = L.scan();
 			}
 			L.imprimirTabela();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (InvalidTokenException e) {
-			e.printStackTrace();
+		} catch (InvalidTokenException | IOException e) {
+			System.out.println(e.getMessage());
+			//e.printStackTrace();
 		}
 	}
 

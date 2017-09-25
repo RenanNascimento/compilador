@@ -21,6 +21,19 @@ public class Tag {
 		PRINT = 266,
 
 		//Operadores e pontuação
+		PV 	= (int)';',
+		VRG = (int)'+',
+		SUM = (int)'+',
+		ASS = (int)'=',
+		AP 	= (int) '(',
+		FP	= (int)')',
+		MIN = (int)'-',
+		MUL	= (int)'*',
+		DIV = (int)'/',
+		GT	= (int)'>',
+		LT	= (int)'<',
+		NOT	= (int)'!',
+
 		EQ  = 288, // ==
 		GE  = 289, // >=
 		LE  = 290, // <=
@@ -31,7 +44,11 @@ public class Tag {
 		//Outros tokens
 		NUM   = 300,
 		ID    = 301,
-		LIT = 302;
+		LIT = 302,
+		EOF = 65535;
+
+
+
 
 	public final static Set<Character> validASCIITokens = new HashSet<>(Arrays.asList(';', ',', '=', '(', ')', '-', '+', '*', '/'));
 
