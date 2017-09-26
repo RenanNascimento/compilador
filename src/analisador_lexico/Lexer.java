@@ -45,7 +45,7 @@ public class Lexer {
 
 
 	/*Lê o próximo caractere do arquivo*/
-	private void readch() throws IOException {
+	public void readch() throws IOException {
 		ch = (char) file.read();
 	}
 
@@ -66,7 +66,7 @@ public class Lexer {
 		for (;; readch()) {
 			if (ch == (char)Tag.EOF) {
 				if (is_comentario_bloco)
-					throw new InvalidTokenException("Error: comentário não fechado");
+					throw new InvalidTokenException("Error(" + line + "): comentário não fechado");
 				break;
 			}
 			if(ch == '/'){
@@ -75,6 +75,9 @@ public class Lexer {
 					is_comentario_linha = true;
 				} else if (ch == '*'){
 					is_comentario_bloco = true;
+				} else {
+					// operador de divisao
+					return new Token(Tag.DIV);
 				}
 			} else if (ch == '\n') {
 				is_comentario_linha = false;
@@ -93,23 +96,37 @@ public class Lexer {
 		switch(ch){
 			//Operadores
 			case '&':
-				if (readch('&')) return Word.and;
-				else return new Token('&');
+				if (readch('&'))
+					return Word.and;
+				else
+					throw new InvalidTokenException(line, ch);
 			case '|':
-				if (readch('|')) return Word.or;
-				else return new Token('|');
+				if (readch('|'))
+					return Word.or;
+				else
+					throw new InvalidTokenException(line, ch);
 			case '=':
-				if (readch('=')) return Word.eq;
-				else return new Token('=');
+				if (readch('='))
+					return Word.eq;
+				else
+					return new Token('=');
 			case '<':
-				if (readch('=')) return Word.le;
-				else return new Token('<');
+				if (readch('='))
+					return Word.le;
+				else
+					return new Token('<');
 			case '>':
-				if (readch('=')) return Word.ge;
-				else return new Token('>');
+				if (readch('='))
+					return Word.ge;
+				else
+					return new Token('>');
 			case '!':
-				if (readch('=')) return Word.ne;
-				else return new Token('!');
+				if (readch('='))
+					return Word.ne;
+				else
+					return new Token('!');
+			case '*':
+				return new Token('*');
 		}
 
 		//	Números
@@ -140,12 +157,12 @@ public class Lexer {
 		}
 
 		// Identificadores
-		if (Character.isLetter(ch)){
+		if (Token.isLetter(ch)){
 			StringBuffer sb = new StringBuffer();
 			do {
 				sb.append(ch);
 				readch();
-			} while(Character.isLetterOrDigit(ch));
+			} while(Token.isLetterOrDigit(ch));
 			String s = sb.toString();
 			Word w = words.get(s);
 			if (w != null)
@@ -167,9 +184,9 @@ public class Lexer {
 
 	/* Imprime todas as entradas da tabela de símbolos */
 	public void imprimirTabela() {
-		System.out.println("\n\n\n**** Tabela de símbolos ****");
+		System.out.println("\n\n\n**** Tabela de símbolos ****\nEntrada\t\t|\t\tMais info");
 		for (Map.Entry<String, Word> entrada: words.entrySet()) {
-			System.out.println(entrada.getKey() + ":\t\t" + entrada.getValue());
+			System.out.println(entrada.getKey());
 		}
 	}
 

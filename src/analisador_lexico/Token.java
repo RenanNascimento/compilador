@@ -123,4 +123,27 @@ public class Token {
 			System.out.println("< " + valor + " >");
 		}
 	}
+
+
+	public static boolean isLetter(char ch) {
+		int A = (int)'A';
+		int Z = (int)'Z';
+		int a = (int)'a';
+		int z = (int)'z';
+
+		if (((int)ch >= A && (int)ch <= Z) || ((int)ch >= a && (int)ch <= z)) {
+			return true;
+		}
+		return false;
+	}
+
+
+	public static boolean isLetterOrDigit(char ch) {
+		int zero = (int) '0';
+		int nove = (int) '9';
+		if (isLetter(ch) || ((int) ch >= zero && (int) ch <= nove)) {
+			return true;
+		}
+		return false;
+	}
 }

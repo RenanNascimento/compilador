@@ -24,17 +24,30 @@ public class Main {
 
 
 	public static void main(String[] args) {
+		Lexer L = null;
 		try {
-			Lexer L = new Lexer(testes[5]);
+			L = new Lexer(testes[5]);
 			System.out.println("**** Tokens lidos ****");
-			Token T = L.scan();
-			while (T.tag != Tag.EOF) { // acho q 65535 é fim de arquivo, olhar se acha uma condição de termino melhor
-				T.imprimeToken(T);
-				T = L.scan();
+			// Apenas para entrar no laço
+			Token T = new Token(0);
+			while (T.tag != Tag.EOF) {
+				try {
+					T = L.scan();
+					if(T.tag == Tag.EOF)
+						break;
+					T.imprimeToken(T);
+				} catch (InvalidTokenException | IOException e) {
+					System.out.println(e.getMessage());
+					try {
+						L.readch();
+					} catch (IOException e1) {
+						e1.printStackTrace();
+					}
+				}
 			}
 			L.imprimirTabela();
-		} catch (InvalidTokenException | IOException e) {
-			System.out.println(e.getMessage());
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		}
 	}
 }
