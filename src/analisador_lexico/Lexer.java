@@ -66,7 +66,7 @@ public class Lexer {
 		for (;; readch()) {
 			if (ch == (char)Tag.EOF) {
 				if (is_comentario_bloco)
-					throw new InvalidTokenException("Erro comentário não fechado");
+					throw new InvalidTokenException("Error: comentário não fechado");
 				break;
 			}
 			if(ch == '/'){
@@ -128,8 +128,8 @@ public class Lexer {
 			do{
 				sb.append(ch);
 				readch();
-				if(ch == '\n'){
-					throw new InvalidTokenException("Error("+ line +"): Token '" + sb.toString() + "' invalido");
+				if(ch == '\n' || ch == (char)Tag.EOF){
+					throw new InvalidTokenException(line, '\"');
 				}
 			}while(ch != '\"');
 			sb.append('\"');
@@ -161,7 +161,7 @@ public class Lexer {
 			ch = ' ';
 			return t;
 		}else{
-			throw new InvalidTokenException("Error("+ line +"): Caracter '" + ch + "' invalido");
+			throw new InvalidTokenException(line, ch);
 		}
 	}
 

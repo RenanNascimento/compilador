@@ -35,8 +35,6 @@ public class Main {
 			L.imprimirTabela();
 		} catch (InvalidTokenException | IOException e) {
 			System.out.println(e.getMessage());
-			//e.printStackTrace();
 		}
 	}
-
 }

@@ -16,8 +16,6 @@ public class Token {
 
 
 	public void imprimeToken(Token T) {
-
-		IMPRIMIR O NOME DO TOKEN AO INVES DO TOKEN. EXEMPLO: < OR > AO INVES DE < || >
 		String valor;
 		switch (tag) {
 			case Tag.PRG:
@@ -53,39 +51,75 @@ public class Token {
 			case Tag.PRINT:
 				valor = "print";
 				break;
+			case Tag.PV:
+				valor = "PV";
+				break;
+			case Tag.VRG:
+				valor = "VRG";
+				break;
+			case Tag.SUM:
+				valor = "SUM";
+				break;
+			case Tag.ASS:
+				valor = "ASS";
+				break;
+			case Tag.AP:
+				valor = "AP";
+				break;
+			case Tag.FP:
+				valor = "FP";
+				break;
+			case Tag.MIN:
+				valor = "MIN";
+				break;
+			case Tag.MUL:
+				valor = "MUL";
+				break;
+			case Tag.DIV:
+				valor = "DIV";
+				break;
+			case Tag.GT:
+				valor = "GT";
+				break;
+			case Tag.LT:
+				valor = "LT";
+				break;
+			case Tag.NOT:
+				valor = "NOT";
+				break;
 			case Tag.EQ:
-				valor = "==";
+				valor = "EQ";
 				break;
 			case Tag.GE:
-				valor = ">=";
+				valor = "GE";
 				break;
 			case Tag.LE:
-				valor = "<=";
+				valor = "LE";
 				break;
 			case Tag.NE:
-				valor = "!=";
+				valor = "NE";
 				break;
 			case Tag.AND:
-				valor = "&&";
+				valor = "AND";
 				break;
 			case Tag.OR:
-				valor = "||";
+				valor = "OR";
 				break;
 			case Tag.NUM:
-				valor = "num";
+				valor = "NUM";
 				break;
 			case Tag.ID:
-				valor = "id";
+				valor = "ID";
 				break;
 			case Tag.LIT:
-				valor = "literal";
+				valor = "LITERAL";
 				break;
 			default:
 				valor = "" + (char)tag;
 		}
-		if(tag == Tag.LIT || tag == Tag.ID || tag == Tag.NUM){
+		if (tag == Tag.LIT || tag == Tag.ID || tag == Tag.NUM){
 			System.out.println("< " + valor + ", " + T + " >");
-		}else {
+		} else {
 			System.out.println("< " + valor + " >");
 		}
 	}

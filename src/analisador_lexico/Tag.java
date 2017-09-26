@@ -22,7 +22,7 @@ public class Tag {
 
 		//Operadores e pontuação
 		PV 	= (int)';',
-		VRG = (int)'+',
+		VRG = (int)',',
 		SUM = (int)'+',
 		ASS = (int)'=',
 		AP 	= (int) '(',
