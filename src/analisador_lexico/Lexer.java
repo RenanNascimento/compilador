@@ -86,6 +86,9 @@ public class Lexer {
 				readch();
 				if(ch == '/') {
 					is_comentario_bloco = false;
+				} else {
+					// operador de multiplicacao
+					return new Token(Tag.MUL);
 				}
 			} else if (ch == ' ' || ch == '\t' || ch == '\r' || ch == '\b' || is_comentario_linha || is_comentario_bloco)
 				continue;

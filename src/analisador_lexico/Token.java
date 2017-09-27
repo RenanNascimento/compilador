@@ -52,67 +52,67 @@ public class Token {
 				valor = "print";
 				break;
 			case Tag.PV:
-				valor = "PV";
+				valor = "ponto_virgula";
 				break;
 			case Tag.VRG:
-				valor = "VRG";
+				valor = "virgula";
 				break;
 			case Tag.SUM:
-				valor = "SUM";
+				valor = "soma";
 				break;
 			case Tag.ASS:
-				valor = "ASS";
+				valor = "assign";
 				break;
 			case Tag.AP:
-				valor = "AP";
+				valor = "abre_parent";
 				break;
 			case Tag.FP:
-				valor = "FP";
+				valor = "fecha_parent";
 				break;
 			case Tag.MIN:
-				valor = "MIN";
+				valor = "menos";
 				break;
 			case Tag.MUL:
-				valor = "MUL";
+				valor = "mult";
 				break;
 			case Tag.DIV:
-				valor = "DIV";
+				valor = "div";
 				break;
 			case Tag.GT:
-				valor = "GT";
+				valor = "greater_than";
 				break;
 			case Tag.LT:
-				valor = "LT";
+				valor = "less_than";
 				break;
 			case Tag.NOT:
-				valor = "NOT";
+				valor = "not";
 				break;
 			case Tag.EQ:
-				valor = "EQ";
+				valor = "equals";
 				break;
 			case Tag.GE:
-				valor = "GE";
+				valor = "greater_equals";
 				break;
 			case Tag.LE:
-				valor = "LE";
+				valor = "less_equals";
 				break;
 			case Tag.NE:
-				valor = "NE";
+				valor = "not_equals";
 				break;
 			case Tag.AND:
-				valor = "AND";
+				valor = "and";
 				break;
 			case Tag.OR:
-				valor = "OR";
+				valor = "or";
 				break;
 			case Tag.NUM:
-				valor = "NUM";
+				valor = "num";
 				break;
 			case Tag.ID:
-				valor = "ID";
+				valor = "id";
 				break;
 			case Tag.LIT:
-				valor = "LITERAL";
+				valor = "literal";
 				break;
 			default:
 				valor = "" + (char)tag;

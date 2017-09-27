@@ -1,3 +1,21 @@
-4/4
-asç
-sfg
+program
+
+        Teste6
+    */
+
+    // comentario
+    //
+    int a, b, c, d;
+
+    if ((c==a) | (c==b)) then
+        print("Valor c: ", c)
+    else
+        if ( c<=d )
+            print("Valor d d);
+    end
+
+    if (c-d != a) then
+        print(!falseç)
+    end
+
+end

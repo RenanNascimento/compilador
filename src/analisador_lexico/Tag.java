@@ -25,7 +25,7 @@ public class Tag {
 		VRG = (int)',',
 		SUM = (int)'+',
 		ASS = (int)'=',
-		AP 	= (int) '(',
+		AP 	= (int)'(',
 		FP	= (int)')',
 		MIN = (int)'-',
 		MUL	= (int)'*',
