@@ -84,7 +84,7 @@ public class Lexer {
 				line++; //conta linhas
 			} else if (ch == '*') {
 				readch();
-				if(ch == '/') {
+				if(ch == '/' && is_comentario_bloco) {
 					is_comentario_bloco = false;
 				} else {
 					// operador de multiplicacao
@@ -102,12 +102,12 @@ public class Lexer {
 				if (readch('&'))
 					return Word.and;
 				else
-					throw new InvalidTokenException(line, ch);
+					throw new InvalidTokenException(line, '&');
 			case '|':
 				if (readch('|'))
 					return Word.or;
 				else
-					throw new InvalidTokenException(line, ch);
+					throw new InvalidTokenException(line, '|');
 			case '=':
 				if (readch('='))
 					return Word.eq;

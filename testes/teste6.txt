@@ -1,5 +1,6 @@
 program
 
+    /*
         Teste6
     */
 
@@ -7,15 +8,15 @@ program
     //
     int a, b, c, d;
 
-    if ((c==a) | (c==b)) then
+    if ((c==a) || (c==b)) then
         print("Valor c: ", c)
     else
         if ( c<=d )
-            print("Valor d d);
+            print("Valor d" d);
     end
 
     if (c-d != a) then
-        print(!falseç)
+        print(!false)
     end
 
 end

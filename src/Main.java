@@ -10,6 +10,7 @@ import exception.InvalidTokenException;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 
@@ -24,9 +25,13 @@ public class Main {
 
 
 	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Entre com o caminho do arquivo: ");
+		String arq = input.next();
+
 		Lexer L = null;
 		try {
-			L = new Lexer(testes[5]);
+			L = new Lexer(arq);
 			System.out.println("**** Tokens lidos ****");
 			// Apenas para entrar no laço
 			Token T = new Token(0);
