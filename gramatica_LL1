@@ -20,14 +20,14 @@ write-stmt			::= print  "("  writable  ")"
 writable            ::= simple-expr  |  literal
 
 expression			::= simple-expr  expression'
-expression'			::= relop  simple-expr	|	@
+expression'			::= relop  simple-expr	|	λ
 
 simple-expr			::= term  |  simple-expr  addop term
 term                ::= factor-a  |  term  mulop  factor-a
 factor-a			::= factor  |  !  factor  |  "-"  factor
 factor          	::= identifier  |  constant  |  "("  expression  ")"
 relop				::= "=="	|  ">" relop'  |  "<" relop' |  "!="
-relop'				::=	"="		|	@
+relop'				::=	"="		|	λ
 addop				::= "+" 	|  "-"  |  "||"
 mulop               ::= "*" 	|  "/"  |  "&&"
 constant            ::= integer_const  |  literal
