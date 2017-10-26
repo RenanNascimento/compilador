@@ -8,8 +8,9 @@ stmt-list			::= stmt {stmt}
 stmt				::= assign-stmt ";"  |	if-stmt  |  while-stmt
 						| read-stmt ";"  |  write-stmt ";"
 assign-stmt			::= identifier "=" simple_expr
-if-stmt				::=   if  condition  then  stmt-list  end
-                    	| if  condition  then  stmt-list  else stmt-list end
+if-stmt				::= if  condition  then  stmt-list  if-stmt'
+if-stmt'			::=	end	|	else stmt-list end
+
 condition			::= expression
 
 while-stmt			::= do stmt-list stmt-sufix
