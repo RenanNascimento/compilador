@@ -3,15 +3,27 @@ package analisador_lexico;
 public class Token {
 
 	public final int tag; //constante que representa o token
+	public int line; //linha que o token apareceu
+	private String lexeme = "1";
 
-
-	public Token (int t) {
+	public Token (int t, int line) {
 		tag = t;
+		this.line = line;
 	}
 
+	public Token (Word w, int line) {
+		tag = w.tag;
+		lexeme = w.getLexeme();
+		this.line = line;
+	}
 
-	public String toString() {
-		return "" + tag;
+	public String toString(){
+		if(lexeme == "1") return "" + lexeme;
+		else return "" + tag;
+	}
+
+	public String getLexeme(){
+		return lexeme;
 	}
 
 
@@ -117,8 +129,12 @@ public class Token {
 			default:
 				valor = "" + (char)tag;
 		}
-		if (tag == Tag.LIT || tag == Tag.ID || tag == Tag.NUM){
+		if (tag == Tag.LIT || tag == Tag.ID){
+			System.out.println("< " + valor + ", " + T.getLexeme() + " >");
+		}
+		else if(tag == Tag.NUM){
 			System.out.println("< " + valor + ", " + T + " >");
+
 		} else {
 			System.out.println("< " + valor + " >");
 		}

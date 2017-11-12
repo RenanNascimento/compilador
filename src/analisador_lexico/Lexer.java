@@ -30,17 +30,17 @@ public class Lexer {
 		}
 
 		// Insere palavras reservadas na HashTable
-		reserve(new Word("program", Tag.PRG));
-		reserve(new Word("end", Tag.END));
-		reserve(new Word("int", Tag.INT));
-		reserve(new Word("string", Tag.STR));
-		reserve(new Word("if", Tag.IF));
-		reserve(new Word("then", Tag.THEN));
-		reserve(new Word("else", Tag.ELSE));
-		reserve(new Word("do", Tag.DO));
-		reserve(new Word("while", Tag.WHILE));
-		reserve(new Word("scan", Tag.SCAN));
-		reserve(new Word("print", Tag.PRINT));
+		reserve(new Word("program", Tag.PRG,0));
+		reserve(new Word("end", Tag.END,0));
+		reserve(new Word("int", Tag.INT,0));
+		reserve(new Word("string", Tag.STR,0));
+		reserve(new Word("if", Tag.IF,0));
+		reserve(new Word("then", Tag.THEN,0));
+		reserve(new Word("else", Tag.ELSE,0));
+		reserve(new Word("do", Tag.DO,0));
+		reserve(new Word("while", Tag.WHILE,0));
+		reserve(new Word("scan", Tag.SCAN,0));
+		reserve(new Word("print", Tag.PRINT,0));
 	}
 
 
@@ -77,7 +77,7 @@ public class Lexer {
 					is_comentario_bloco = true;
 				} else {
 					// operador de divisao
-					return new Token(Tag.DIV);
+					return new Token(Tag.DIV, line);
 				}
 			} else if (ch == '\n') {
 				is_comentario_linha = false;
@@ -88,7 +88,7 @@ public class Lexer {
 					is_comentario_bloco = false;
 				} else {
 					// operador de multiplicacao
-					return new Token(Tag.MUL);
+					return new Token(Tag.MUL, line);
 				}
 			} else if (ch == ' ' || ch == '\t' || ch == '\r' || ch == '\b' || is_comentario_linha || is_comentario_bloco)
 				continue;
@@ -100,36 +100,36 @@ public class Lexer {
 			//Operadores
 			case '&':
 				if (readch('&'))
-					return Word.and;
+					return new Token(Word.and, line);
 				else
 					throw new InvalidTokenException(line, '&');
 			case '|':
 				if (readch('|'))
-					return Word.or;
+					return new Token(Word.or, line);
 				else
 					throw new InvalidTokenException(line, '|');
 			case '=':
 				if (readch('='))
-					return Word.eq;
+					return new Token(Word.eq, line);
 				else
-					return new Token('=');
+					return new Token('=', line);
 			case '<':
 				if (readch('='))
-					return Word.le;
+					return new Token(Word.le, line);
 				else
-					return new Token('<');
+					return new Token('<', line);
 			case '>':
 				if (readch('='))
-					return Word.ge;
+					return new Token(Word.ge, line);
 				else
-					return new Token('>');
+					return new Token('>', line);
 			case '!':
 				if (readch('='))
-					return Word.ne;
+					return new Token(Word.ne, line);
 				else
-					return new Token('!');
+					return new Token('!', line);
 			case '*':
-				return new Token('*');
+				return new Token('*', line);
 		}
 
 		//	Números
@@ -139,7 +139,7 @@ public class Lexer {
 				value = 10*value + Character.digit(ch,10);
 				readch();
 			}while(Character.isDigit(ch));
-			return new Num(value);
+			return new Num(value, line);
 		}
 
 		// Literais
@@ -155,7 +155,7 @@ public class Lexer {
 			sb.append('\"');
 			readch();
 			String s = sb.toString();
-			Word w = new Word(s, Tag.LIT);
+			Word w = new Word(s, Tag.LIT, line);
 			return w;
 		}
 
@@ -168,16 +168,18 @@ public class Lexer {
 			} while(Token.isLetterOrDigit(ch));
 			String s = sb.toString();
 			Word w = words.get(s);
-			if (w != null)
-				return w; 		//palavra já existe na HashTable
-			w = new Word (s, Tag.ID);
+			if (w != null) {
+				Token T = new Token(w, line);        //palavra já existe na HashTable
+				return T;
+			}
+			w = new Word (s, Tag.ID, line);
 			words.put(s, w);
 			return w;
 		}
 
 		// Caracteres ASCII validos
 		if(Tag.validASCIITokens.contains(ch) || ch == (char)Tag.EOF){
-			Token t = new Token(ch);
+			Token t = new Token(ch, line);
 			ch = ' ';
 			return t;
 		}else{

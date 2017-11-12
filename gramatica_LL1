@@ -1,40 +1,28 @@
-program				::= program [decl-list] stmt-list end
-decl-list			::= decl {decl}
+program				::= program decl-list stmt-list end
+decl-list			::= decl decl-list | λ
 decl				::= type ident-list ";"
-ident-list			::= identifier {"," identifier}
+ident-list			::= identifier ident-list'
+ident-list'			::= "," identifier ident-list' | λ
 type				::= int | string
-
-stmt-list			::= stmt {stmt}
-stmt				::= assign-stmt ";"  |	if-stmt  |  while-stmt
-						| read-stmt ";"  |  write-stmt ";"
+stmt-list			::= stmt stmt-list'
+stmt-list'			::= stmt stmt-list' | λ
+stmt				::= assign-stmt ";"  |	if-stmt  |  while-stmt | read-stmt ";"  |  write-stmt ";"
 assign-stmt			::= identifier "=" simple_expr
-if-stmt				::= if  condition  then  stmt-list  if-stmt'
-if-stmt'			::=	end	|	else stmt-list end
-
-condition			::= expression
-
+if-stmt				::= if  expression  then  stmt-list  if-stmt' end
+if-stmt'			::=	else stmt-list | λ
 while-stmt			::= do stmt-list stmt-sufix
-stmt-sufix			::= while condition end
-
+stmt-sufix			::= while expression end
 read-stmt			::= scan  "("  identifier  ")"
-write-stmt			::= print  "("  writable  ")"
-writable            ::= simple-expr  |  literal
-
+write-stmt			::= print  "("  simple-expr  ")"
 expression			::= simple-expr  expression'
 expression'			::= relop  simple-expr	|	λ
-
-simple-expr			::= term  |  simple-expr  addop term
-term                ::= factor-a  |  term  mulop  factor-a
+simple-expr			::= term  simple-expr'
+simple-expr'		::= addop term simple-expr'  | λ  
+term                ::= factor-a  term'
+term'               ::= mulop factor-a term' | λ
 factor-a			::= factor  |  !  factor  |  "-"  factor
 factor          	::= identifier  |  constant  |  "("  expression  ")"
-relop				::= "=="	|  ">" relop'  |  "<" relop' |  "!="
-relop'				::=	"="		|	λ
+relop				::= "==" |  ">" | "<" | "!=" | ">=" | "<=" 
 addop				::= "+" 	|  "-"  |  "||"
 mulop               ::= "*" 	|  "/"  |  "&&"
 constant            ::= integer_const  |  literal
-integer_const		::= digit  {digit}
-literal				::= """  {caractere} """
-identifier			::= letter {letter  |  digit}
-letter				::= [A-Za-z]
-digit				::= {0-9}
-caractere         	::= um dos caracteres ASCII, exceto "" e quebra de linha

@@ -11,6 +11,8 @@ import exception.InvalidTokenException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.ArrayList;
+import analisador_sintatico.Parser;
 
 public class Main {
 
@@ -21,26 +23,35 @@ public class Main {
 			"testes/teste4.txt",
 			"testes/teste5.txt",
 			"testes/teste6.txt",
+			"testes/teste7.txt",
+			"testes/teste8.txt",
+			"testes/teste9.txt",
+			"testes/teste10.txt",
+			"testes/teste11.txt",
+			"testes/teste12.txt",
 	};
 
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("Entre com o caminho do arquivo: ");
-		String arq = input.next();
-
+		System.out.println("Entre com o numero do teste (1-12): ");
+		int arq = input.nextInt()-1;
+		ArrayList<Token> tokens = new ArrayList<Token> ();
 		Lexer L = null;
+		int line = -5;
 		try {
-			L = new Lexer(arq);
+			L = new Lexer(testes[arq]);
 			System.out.println("**** Tokens lidos ****");
 			// Apenas para entrar no laço
-			Token T = new Token(0);
+			Token T = new Token(0, line);
 			while (T.tag != Tag.EOF) {
 				try {
 					T = L.scan();
 					if(T.tag == Tag.EOF)
 						break;
-					T.imprimeToken(T);
+					//T.imprimeToken(T);
+					tokens.add(T);
+					line = T.line;
 				} catch (InvalidTokenException | IOException e) {
 					System.out.println(e.getMessage());
 					try {
@@ -50,7 +61,12 @@ public class Main {
 					}
 				}
 			}
-			L.imprimirTabela();
+			line++;
+			tokens.add(new Token(Tag.EOF, line));
+			//L.imprimirTabela();
+			Parser P = new Parser(tokens);
+			System.out.println("\n\n\n**** Inicio Parser ****");
+			P.init();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
