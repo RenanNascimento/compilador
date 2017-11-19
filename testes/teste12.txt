@@ -9,10 +9,13 @@ program
     int a, b, c, d;
 
     if ((c==a) || (c==b)) then
-        print("Valor c: " + c);
+        print("Valor c: ");
+	print(c);
     else
         if ( c<=d ) then
-            print("Valor d" + d);
+            print("Valor d");
+	    print(d);
+	end
     end
 
     if (c-d != a) then
