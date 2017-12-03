@@ -88,6 +88,34 @@ public class VerificadorSemantico {
     }
 
 
+    private void wrogStrOp(int line, String op){
+        System.out.println("Error(" + line + "): Operação '"+ op +"' inválida com 'string'");
+        System.exit(0);
+    }
+
+    /* Checa se a operacao realizada na string esta correta ('+' é a unica operação aceita) */
+    public void checkStrOp(Token tok, int line){
+        if(resultExprType == Tag.STR){
+            switch (tok.tag){
+                case Tag.MIN:
+                    wrogStrOp(line, "-");
+                    break;
+                case Tag.OR:
+                    wrogStrOp(line, "||");
+                    break;
+                case Tag.MUL:
+                    wrogStrOp(line, "*");
+                    break;
+                case Tag.DIV:
+                    wrogStrOp(line, "/");
+                    break;
+                case Tag.AND:
+                    wrogStrOp(line, "&&");
+                    break;
+            }
+        }
+    }
+
     public void resetResultExprType(){
         resultExprType = Tag.VOID;
     }
@@ -96,6 +124,7 @@ public class VerificadorSemantico {
         curType = tipo;
     }
 
+    /* Determina qual é o tipo do identificador que recebera o valor da expressao */
     public void setCurAssignStmtType(Token tok, int line){
         if(resultExprType == Tag.VOID){
             //Caso id nao tenha sido declarado

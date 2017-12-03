@@ -495,11 +495,11 @@ public class Parser {
                 break;
             //addop ::= "-"
             case Tag.MIN:
-                eat(Tag.MIN);
+                vs.checkStrOp(tok, line); eat(Tag.MIN);
                 break;
             //addop ::= "||"
             case Tag.OR:
-                eat(Tag.OR);
+                vs.checkStrOp(tok, line); eat(Tag.OR);
                 break;
             default:
                 error();
@@ -510,15 +510,15 @@ public class Parser {
         switch(tag) {
             //mulop ::= "*"
             case Tag.MUL:
-                eat(Tag.MUL);
+                vs.checkStrOp(tok, line); eat(Tag.MUL);
                 break;
             //mulop ::= "/"
             case Tag.DIV:
-                eat(Tag.DIV);
+                vs.checkStrOp(tok, line); eat(Tag.DIV);
                 break;
             //mulop ::= "&&"
             case Tag.AND:
-                eat(Tag.AND);
+                vs.checkStrOp(tok, line); eat(Tag.AND);
                 break;
             default:
                 error();
