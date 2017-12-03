@@ -45,8 +45,9 @@ public class Tag {
 		NUM   = 300,
 		ID    = 301,
 		LIT = 302,
+		VOID = 303,
+		ERROR = 304,
 		EOF = 65535;
-
 
 
 

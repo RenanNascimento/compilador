@@ -2,7 +2,7 @@ package analisador_sintatico;
 
 import analisador_lexico.Tag;
 import analisador_lexico.Token;
-
+import analisador_semantico.VerificadorSemantico;
 import java.util.ArrayList;
 
 public class Parser {
@@ -11,6 +11,7 @@ public class Parser {
     private int i;
     private int line;
     private ArrayList<Token> tokens = new ArrayList<Token> ();
+    private VerificadorSemantico vs;
 
     public Parser(ArrayList<Token> tokens){
         this.tokens=tokens;
@@ -18,6 +19,7 @@ public class Parser {
         tok=tokens.get(i);
         tag=tok.tag;
         line=tok.line;
+        vs = new VerificadorSemantico();
     }
 
     public void init(){
@@ -45,6 +47,14 @@ public class Parser {
 
     private void eat(int t){
         if(tag==t){
+            //Checa se a tag e um tipo basico
+            if(tag == Tag.INT || tag == Tag.STR){
+                vs.setCurType(tag);
+            }
+            //Caso ; deve resetar o resultado esperado de uma expressao
+            if(tag == Tag.PV){
+                vs.resetResultExprType();
+            }
             System.out.print("Token Consumido("+line+"): ");
             tok.imprimeToken(tok);
             advance();
@@ -61,6 +71,7 @@ public class Parser {
                     System.out.println("Fim de arquivo inesperado.");
                 else
                     eat(Tag.END);
+                    vs.imprimirTL();
                 break;
             default:
                 error();
@@ -102,7 +113,7 @@ public class Parser {
         switch(tag) {
             //ident-list ::= identifier ident-list'
             case Tag.ID:
-                eat(Tag.ID); identListPrime();
+                vs.putTL(tok, line); eat(Tag.ID); identListPrime();
                 break;
             default:
                 error();
@@ -113,7 +124,7 @@ public class Parser {
         switch(tag) {
             //ident-list' ::= "," identifier ident-list'
             case Tag.VRG:
-                eat(Tag.VRG); eat(Tag.ID); identListPrime();
+                eat(Tag.VRG); vs.putTL(tok, line); eat(Tag.ID); identListPrime();
                 break;
             //ident-list' λ
             case Tag.PV:
@@ -204,7 +215,7 @@ public class Parser {
         switch(tag) {
             //assign-stmt ::= identifier "=" simple_expr
             case Tag.ID:
-                eat(Tag.ID); eat(Tag.ASS); simpleExpr();
+                vs.setCurAssignStmtType(tok, line); eat(Tag.ID); eat(Tag.ASS); simpleExpr();
                 break;
             default:
                 error();
@@ -429,7 +440,7 @@ public class Parser {
         switch(tag) {
             //factor ::= identifier
             case Tag.ID:
-                eat(Tag.ID);
+                vs.checkExprIDType(tok, line); eat(Tag.ID);
                 break;
             //factor ::= constant
             case Tag.NUM:
@@ -518,11 +529,11 @@ public class Parser {
         switch (tag) {
             //constant ::= integer_const
             case Tag.NUM:
-                eat(Tag.NUM);
+                vs.checkExprNLType(tok, line); eat(Tag.NUM);
                 break;
             //constant ::= literal
             case Tag.LIT:
-                eat(Tag.LIT);
+                vs.checkExprNLType(tok, line); eat(Tag.LIT);
                 break;
             default:
                 error();

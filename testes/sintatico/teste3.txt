@@ -7,17 +7,18 @@ program
 	pontuacaoMaxima = 100;
 	
 	/* Entrada de dados
-		Verifica aprovação de candidatos */
+		Verifica aprovação de candidatos
 	do
 		print("Pontuacao Candidato: ");
 		scan(pontuacao);
 		print("Disponibilidade Candidato: ");
 		scan(disponibilidade);
 		
-		if (( pontuacao > pontuacaoMinima) && (disponibilidade=="Sim")) then
+		if ((pontuação > pontuacaoMinima) and (disponibilidade=="Sim") then
 			print("Candidato aprovado");
 		else
-			print("Candidato reprovado");
+			print("Candidato reprovado")
 		end
-	while (pontuacao >= 0)end
+	while (pontuação >= 0)end
 end
+*/
