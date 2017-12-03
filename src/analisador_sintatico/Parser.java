@@ -71,7 +71,7 @@ public class Parser {
                     System.out.println("Fim de arquivo inesperado.");
                 else
                     eat(Tag.END);
-                    vs.imprimirTL();
+                    vs.imprimirTS();
                 break;
             default:
                 error();
@@ -113,7 +113,7 @@ public class Parser {
         switch(tag) {
             //ident-list ::= identifier ident-list'
             case Tag.ID:
-                vs.putTL(tok, line); eat(Tag.ID); identListPrime();
+                vs.putTS(tok, line); eat(Tag.ID); identListPrime();
                 break;
             default:
                 error();
@@ -124,7 +124,7 @@ public class Parser {
         switch(tag) {
             //ident-list' ::= "," identifier ident-list'
             case Tag.VRG:
-                eat(Tag.VRG); vs.putTL(tok, line); eat(Tag.ID); identListPrime();
+                eat(Tag.VRG); vs.putTS(tok, line); eat(Tag.ID); identListPrime();
                 break;
             //ident-list' λ
             case Tag.PV:
@@ -226,7 +226,7 @@ public class Parser {
         switch(tag) {
             //if-stmt ::= if  expression  then  stmt-list  if-stmt' end
             case Tag.IF:
-                eat(Tag.IF); expression(); eat(Tag.THEN); stmtList(); ifStmtPrime(); eat(Tag.END);
+                eat(Tag.IF); vs.setStartingCondition(); expression(); vs.endStartingCondition(); eat(Tag.THEN); stmtList(); ifStmtPrime(); eat(Tag.END);
                 break;
             default:
                 error();
@@ -262,7 +262,7 @@ public class Parser {
         switch(tag) {
             //stmt-sufix ::= while expression end
             case Tag.WHILE:
-                eat(Tag.WHILE); expression(); eat(Tag.END);
+                eat(Tag.WHILE); vs.setStartingCondition(); expression(); vs.endStartingCondition(); eat(Tag.END);
                 break;
             default:
                 error();
@@ -499,7 +499,7 @@ public class Parser {
                 break;
             //addop ::= "||"
             case Tag.OR:
-                vs.checkStrOp(tok, line); eat(Tag.OR);
+                vs.checkStrOp(tok, line); vs.endStartingCondition(); eat(Tag.OR); vs.setStartingCondition();
                 break;
             default:
                 error();
@@ -518,7 +518,7 @@ public class Parser {
                 break;
             //mulop ::= "&&"
             case Tag.AND:
-                vs.checkStrOp(tok, line); eat(Tag.AND);
+                vs.checkStrOp(tok, line); vs.endStartingCondition(); eat(Tag.AND); vs.setStartingCondition();
                 break;
             default:
                 error();
