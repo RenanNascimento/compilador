@@ -135,7 +135,7 @@ public class VerificadorSemantico {
         }
         // Se resultExprType tem um valor diferente de VOID quer dizer que se esta trabalhando com uma assign-stmt
         if(resultExprType != Tag.VOID) {
-            //Caso seja um NUM
+            //Caso seja um  NUM
             if (tok instanceof Num) {
                 if (resultExprType != Tag.INT) {
                     wrongExprType(line, "int", String.valueOf(((Num) tok).value), "num", resultExprType);
@@ -143,7 +143,7 @@ public class VerificadorSemantico {
             } else {
                 //Caso contrario so pode ser um lit
                 if (resultExprType != Tag.STR) {
-                    wrongExprType(line, "string", tok.getLexeme(), "literal", resultExprType);
+                    wrongExprType(line, "string", tok.getLexeme(),  "literal", resultExprType);
                 }
             }
         }
