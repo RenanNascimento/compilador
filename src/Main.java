@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.ArrayList;
 import analisador_sintatico.Parser;
+import gerador_codigo.GeradorCodigo;
 
 public class Main {
 
@@ -67,6 +68,8 @@ public class Main {
 			Parser P = new Parser(tokens);
 			System.out.println("\n\n\n**** Inicio Parser ****");
 			P.init();
+			GeradorCodigo gerador = new GeradorCodigo("codigo.m", tokens);
+			gerador.gerar();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

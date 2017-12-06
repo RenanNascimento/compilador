@@ -22,7 +22,7 @@ term                ::= factor-a  term'
 term'               ::= mulop factor-a term' | λ
 factor-a			::= factor  |  !  factor  |  "-"  factor
 factor          	::= identifier  |  constant  |  "("  expression  ")"
-relop				::= "==" |  ">" | "<" | "!=" | ">=" | "<=" 
+relop				::= "==" |  ">" | "<" | "!=" | ">=" | "<="
 addop				::= "+" 	|  "-"  |  "||"
 mulop               ::= "*" 	|  "/"  |  "&&"
 constant            ::= integer_const  |  literal

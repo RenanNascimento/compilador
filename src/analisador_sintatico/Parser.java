@@ -55,8 +55,8 @@ public class Parser {
             if(tag == Tag.PV){
                 vs.resetResultExprType();
             }
-            System.out.print("Token Consumido("+line+"): ");
-            tok.imprimeToken(tok);
+            //System.out.print("Token Consumido("+line+"): ");
+            //tok.imprimeToken(tok);
             advance();
         }
         else error();
