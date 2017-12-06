@@ -1,0 +1,4556 @@
+"maze.ml" 2 1 5 "maze.ml" 2 1 14
+type(
+  bool ref
+)
+ident(
+  def activated "maze.ml" 5 51 51 "maze.ml" 1 0 -1
+)
+"maze.ml" 2 1 17 "maze.ml" 2 1 20
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"maze.ml" 2 1 21 "maze.ml" 2 1 26
+type(
+  bool
+)
+"maze.ml" 2 1 17 "maze.ml" 2 1 26
+type(
+  bool ref
+)
+"maze.ml" 5 51 55 "maze.ml" 5 51 56
+type(
+  int ref
+)
+ident(
+  def x "maze.ml" 6 65 65 "maze.ml" 1 0 -1
+)
+"maze.ml" 5 51 59 "maze.ml" 5 51 62
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"maze.ml" 5 51 63 "maze.ml" 5 51 64
+type(
+  int
+)
+"maze.ml" 5 51 59 "maze.ml" 5 51 64
+type(
+  int ref
+)
+"maze.ml" 6 65 69 "maze.ml" 6 65 70
+type(
+  int ref
+)
+ident(
+  def y "maze.ml" 8 80 80 "maze.ml" 1 0 -1
+)
+"maze.ml" 6 65 73 "maze.ml" 6 65 76
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"maze.ml" 6 65 77 "maze.ml" 6 65 78
+type(
+  int
+)
+"maze.ml" 6 65 73 "maze.ml" 6 65 78
+type(
+  int ref
+)
+"maze.ml" 9 119 123 "maze.ml" 9 119 126
+type(
+  dir ref
+)
+ident(
+  def dir "maze.ml" 11 140 140 "maze.ml" 1 0 -1
+)
+"maze.ml" 9 119 129 "maze.ml" 9 119 132
+type(
+  dir -> dir ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"maze.ml" 9 119 133 "maze.ml" 9 119 138
+type(
+  dir
+)
+"maze.ml" 9 119 129 "maze.ml" 9 119 138
+type(
+  dir ref
+)
+"maze.ml" 11 140 144 "maze.ml" 11 140 145
+type(
+  int
+)
+ident(
+  def w "maze.ml" 12 152 152 "maze.ml" 1 0 -1
+)
+"maze.ml" 11 140 148 "maze.ml" 11 140 151
+type(
+  int
+)
+"maze.ml" 12 152 156 "maze.ml" 12 152 158
+type(
+  int
+)
+ident(
+  def h1 "maze.ml" 13 185 185 "maze.ml" 1 0 -1
+)
+"maze.ml" 12 152 161 "maze.ml" 12 152 163
+type(
+  int
+)
+"maze.ml" 13 185 189 "maze.ml" 13 185 191
+type(
+  int
+)
+ident(
+  def h2 "maze.ml" 14 215 215 "maze.ml" 1 0 -1
+)
+"maze.ml" 13 185 194 "maze.ml" 13 185 196
+type(
+  int
+)
+"maze.ml" 14 215 219 "maze.ml" 14 215 220
+type(
+  int
+)
+ident(
+  def h "maze.ml" 16 230 230 "maze.ml" 1 0 -1
+)
+"maze.ml" 14 215 223 "maze.ml" 14 215 225
+type(
+  int
+)
+ident(
+  int_ref h1 "maze.ml" 12 152 156 "maze.ml" 12 152 158
+)
+"maze.ml" 14 215 225 "maze.ml" 14 215 226
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"maze.ml" 14 215 226 "maze.ml" 14 215 228
+type(
+  int
+)
+ident(
+  int_ref h2 "maze.ml" 13 185 189 "maze.ml" 13 185 191
+)
+"maze.ml" 14 215 223 "maze.ml" 14 215 228
+type(
+  int
+)
+"maze.ml" 16 230 234 "maze.ml" 16 230 239
+type(
+  int
+)
+ident(
+  def north "maze.ml" 17 244 244 "maze.ml" 1 0 -1
+)
+"maze.ml" 16 230 242 "maze.ml" 16 230 243
+type(
+  int
+)
+"maze.ml" 17 244 248 "maze.ml" 17 244 252
+type(
+  int
+)
+ident(
+  def west "maze.ml" 18 257 257 "maze.ml" 1 0 -1
+)
+"maze.ml" 17 244 255 "maze.ml" 17 244 256
+type(
+  int
+)
+"maze.ml" 18 257 261 "maze.ml" 18 257 266
+type(
+  int
+)
+ident(
+  def south "maze.ml" 19 271 271 "maze.ml" 1 0 -1
+)
+"maze.ml" 18 257 269 "maze.ml" 18 257 270
+type(
+  int
+)
+"maze.ml" 19 271 275 "maze.ml" 19 271 279
+type(
+  int
+)
+ident(
+  def east "maze.ml" 20 284 284 "maze.ml" 1 0 -1
+)
+"maze.ml" 19 271 282 "maze.ml" 19 271 283
+type(
+  int
+)
+"maze.ml" 20 284 288 "maze.ml" 20 284 294
+type(
+  int
+)
+ident(
+  def closed "maze.ml" 21 331 331 "maze.ml" 1 0 -1
+)
+"maze.ml" 20 284 297 "maze.ml" 20 284 302
+type(
+  int
+)
+ident(
+  int_ref north "maze.ml" 16 230 234 "maze.ml" 16 230 239
+)
+"maze.ml" 20 284 303 "maze.ml" 20 284 306
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( lor )
+)
+"maze.ml" 20 284 307 "maze.ml" 20 284 311
+type(
+  int
+)
+ident(
+  int_ref west "maze.ml" 17 244 248 "maze.ml" 17 244 252
+)
+"maze.ml" 20 284 297 "maze.ml" 20 284 311
+type(
+  int
+)
+"maze.ml" 20 284 312 "maze.ml" 20 284 315
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( lor )
+)
+"maze.ml" 20 284 316 "maze.ml" 20 284 321
+type(
+  int
+)
+ident(
+  int_ref south "maze.ml" 18 257 261 "maze.ml" 18 257 266
+)
+"maze.ml" 20 284 297 "maze.ml" 20 284 321
+type(
+  int
+)
+"maze.ml" 20 284 322 "maze.ml" 20 284 325
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( lor )
+)
+"maze.ml" 20 284 326 "maze.ml" 20 284 330
+type(
+  int
+)
+ident(
+  int_ref east "maze.ml" 19 271 275 "maze.ml" 19 271 279
+)
+"maze.ml" 20 284 297 "maze.ml" 20 284 330
+type(
+  int
+)
+"maze.ml" 21 331 335 "maze.ml" 21 331 342
+type(
+  int
+)
+ident(
+  def u_north "maze.ml" 22 359 359 "maze.ml" 1 0 -1
+)
+"maze.ml" 21 331 345 "maze.ml" 21 331 347
+type(
+  int
+)
+"maze.ml" 21 331 348 "maze.ml" 21 331 352
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( lxor )
+)
+"maze.ml" 21 331 353 "maze.ml" 21 331 358
+type(
+  int
+)
+ident(
+  int_ref north "maze.ml" 16 230 234 "maze.ml" 16 230 239
+)
+"maze.ml" 21 331 345 "maze.ml" 21 331 358
+type(
+  int
+)
+"maze.ml" 22 359 363 "maze.ml" 22 359 369
+type(
+  int
+)
+ident(
+  def u_west "maze.ml" 23 385 385 "maze.ml" 1 0 -1
+)
+"maze.ml" 22 359 372 "maze.ml" 22 359 374
+type(
+  int
+)
+"maze.ml" 22 359 375 "maze.ml" 22 359 379
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( lxor )
+)
+"maze.ml" 22 359 380 "maze.ml" 22 359 384
+type(
+  int
+)
+ident(
+  int_ref west "maze.ml" 17 244 248 "maze.ml" 17 244 252
+)
+"maze.ml" 22 359 372 "maze.ml" 22 359 384
+type(
+  int
+)
+"maze.ml" 23 385 389 "maze.ml" 23 385 396
+type(
+  int
+)
+ident(
+  def u_south "maze.ml" 24 413 413 "maze.ml" 1 0 -1
+)
+"maze.ml" 23 385 399 "maze.ml" 23 385 401
+type(
+  int
+)
+"maze.ml" 23 385 402 "maze.ml" 23 385 406
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( lxor )
+)
+"maze.ml" 23 385 407 "maze.ml" 23 385 412
+type(
+  int
+)
+ident(
+  int_ref south "maze.ml" 18 257 261 "maze.ml" 18 257 266
+)
+"maze.ml" 23 385 399 "maze.ml" 23 385 412
+type(
+  int
+)
+"maze.ml" 24 413 417 "maze.ml" 24 413 423
+type(
+  int
+)
+ident(
+  def u_east "maze.ml" 26 440 440 "maze.ml" 1 0 -1
+)
+"maze.ml" 24 413 426 "maze.ml" 24 413 428
+type(
+  int
+)
+"maze.ml" 24 413 429 "maze.ml" 24 413 433
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( lxor )
+)
+"maze.ml" 24 413 434 "maze.ml" 24 413 438
+type(
+  int
+)
+ident(
+  int_ref east "maze.ml" 19 271 275 "maze.ml" 19 271 279
+)
+"maze.ml" 24 413 426 "maze.ml" 24 413 438
+type(
+  int
+)
+"maze.ml" 26 440 444 "maze.ml" 26 440 449
+type(
+  int array array ref
+)
+ident(
+  def walls "maze.ml" 27 461 461 "maze.ml" 1 0 -1
+)
+"maze.ml" 26 440 452 "maze.ml" 26 440 455
+type(
+  int array array -> int array array ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"maze.ml" 26 440 456 "maze.ml" 26 440 460
+type(
+  int array array
+)
+"maze.ml" 26 440 452 "maze.ml" 26 440 460
+type(
+  int array array ref
+)
+"maze.ml" 27 461 465 "maze.ml" 27 461 471
+type(
+  int array array ref
+)
+ident(
+  def values "maze.ml" 29 484 484 "maze.ml" 1 0 -1
+)
+"maze.ml" 27 461 474 "maze.ml" 27 461 477
+type(
+  int array array -> int array array ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"maze.ml" 27 461 478 "maze.ml" 27 461 482
+type(
+  int array array
+)
+"maze.ml" 27 461 474 "maze.ml" 27 461 482
+type(
+  int array array ref
+)
+"maze.ml" 29 484 488 "maze.ml" 29 484 496
+type(
+  int -> int -> int
+)
+ident(
+  def get_wall "maze.ml" 30 518 518 "maze.ml" 1 0 -1
+)
+"maze.ml" 29 484 497 "maze.ml" 29 484 498
+type(
+  int
+)
+ident(
+  def i "maze.ml" 29 484 499 "maze.ml" 29 484 517
+)
+"maze.ml" 29 484 499 "maze.ml" 29 484 500
+type(
+  int
+)
+ident(
+  def j "maze.ml" 29 484 503 "maze.ml" 29 484 517
+)
+"maze.ml" 29 484 503 "maze.ml" 29 484 504
+type(
+  int array array ref -> int array array
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 29 484 504 "maze.ml" 29 484 509
+type(
+  int array array ref
+)
+ident(
+  int_ref walls "maze.ml" 26 440 444 "maze.ml" 26 440 449
+)
+"maze.ml" 29 484 503 "maze.ml" 29 484 509
+type(
+  int array array
+)
+"maze.ml" 29 484 511 "maze.ml" 29 484 512
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 29 484 497 "maze.ml" 29 484 498
+)
+"maze.ml" 29 484 503 "maze.ml" 29 484 513
+type(
+  int array
+)
+"maze.ml" 29 484 515 "maze.ml" 29 484 516
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 29 484 499 "maze.ml" 29 484 500
+)
+"maze.ml" 29 484 503 "maze.ml" 29 484 517
+type(
+  int
+)
+"maze.ml" 30 518 522 "maze.ml" 30 518 530
+type(
+  int -> int -> int -> unit
+)
+ident(
+  def set_wall "maze.ml" 31 559 559 "maze.ml" 1 0 -1
+)
+"maze.ml" 30 518 531 "maze.ml" 30 518 532
+type(
+  int
+)
+ident(
+  def i "maze.ml" 30 518 533 "maze.ml" 30 518 558
+)
+"maze.ml" 30 518 533 "maze.ml" 30 518 534
+type(
+  int
+)
+ident(
+  def j "maze.ml" 30 518 535 "maze.ml" 30 518 558
+)
+"maze.ml" 30 518 535 "maze.ml" 30 518 536
+type(
+  int
+)
+ident(
+  def w "maze.ml" 30 518 539 "maze.ml" 30 518 558
+)
+"maze.ml" 30 518 539 "maze.ml" 30 518 540
+type(
+  int array array ref -> int array array
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 30 518 540 "maze.ml" 30 518 545
+type(
+  int array array ref
+)
+ident(
+  int_ref walls "maze.ml" 26 440 444 "maze.ml" 26 440 449
+)
+"maze.ml" 30 518 539 "maze.ml" 30 518 545
+type(
+  int array array
+)
+"maze.ml" 30 518 547 "maze.ml" 30 518 548
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 30 518 531 "maze.ml" 30 518 532
+)
+"maze.ml" 30 518 539 "maze.ml" 30 518 549
+type(
+  int array
+)
+"maze.ml" 30 518 551 "maze.ml" 30 518 552
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 30 518 533 "maze.ml" 30 518 534
+)
+"maze.ml" 30 518 557 "maze.ml" 30 518 558
+type(
+  int
+)
+ident(
+  int_ref w "maze.ml" 30 518 535 "maze.ml" 30 518 536
+)
+"maze.ml" 30 518 539 "maze.ml" 30 518 558
+type(
+  unit
+)
+"maze.ml" 31 559 563 "maze.ml" 31 559 570
+type(
+  int -> int -> int
+)
+ident(
+  def get_val "maze.ml" 32 593 593 "maze.ml" 1 0 -1
+)
+"maze.ml" 31 559 571 "maze.ml" 31 559 572
+type(
+  int
+)
+ident(
+  def i "maze.ml" 31 559 573 "maze.ml" 31 559 592
+)
+"maze.ml" 31 559 573 "maze.ml" 31 559 574
+type(
+  int
+)
+ident(
+  def j "maze.ml" 31 559 577 "maze.ml" 31 559 592
+)
+"maze.ml" 31 559 577 "maze.ml" 31 559 578
+type(
+  int array array ref -> int array array
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 31 559 578 "maze.ml" 31 559 584
+type(
+  int array array ref
+)
+ident(
+  int_ref values "maze.ml" 27 461 465 "maze.ml" 27 461 471
+)
+"maze.ml" 31 559 577 "maze.ml" 31 559 584
+type(
+  int array array
+)
+"maze.ml" 31 559 586 "maze.ml" 31 559 587
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 31 559 571 "maze.ml" 31 559 572
+)
+"maze.ml" 31 559 577 "maze.ml" 31 559 588
+type(
+  int array
+)
+"maze.ml" 31 559 590 "maze.ml" 31 559 591
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 31 559 573 "maze.ml" 31 559 574
+)
+"maze.ml" 31 559 577 "maze.ml" 31 559 592
+type(
+  int
+)
+"maze.ml" 32 593 597 "maze.ml" 32 593 604
+type(
+  int -> int -> int -> unit
+)
+ident(
+  def set_val "maze.ml" 34 635 635 "maze.ml" 1 0 -1
+)
+"maze.ml" 32 593 605 "maze.ml" 32 593 606
+type(
+  int
+)
+ident(
+  def i "maze.ml" 32 593 607 "maze.ml" 32 593 633
+)
+"maze.ml" 32 593 607 "maze.ml" 32 593 608
+type(
+  int
+)
+ident(
+  def j "maze.ml" 32 593 609 "maze.ml" 32 593 633
+)
+"maze.ml" 32 593 609 "maze.ml" 32 593 610
+type(
+  int
+)
+ident(
+  def v "maze.ml" 32 593 613 "maze.ml" 32 593 633
+)
+"maze.ml" 32 593 613 "maze.ml" 32 593 614
+type(
+  int array array ref -> int array array
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 32 593 614 "maze.ml" 32 593 620
+type(
+  int array array ref
+)
+ident(
+  int_ref values "maze.ml" 27 461 465 "maze.ml" 27 461 471
+)
+"maze.ml" 32 593 613 "maze.ml" 32 593 620
+type(
+  int array array
+)
+"maze.ml" 32 593 622 "maze.ml" 32 593 623
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 32 593 605 "maze.ml" 32 593 606
+)
+"maze.ml" 32 593 613 "maze.ml" 32 593 624
+type(
+  int array
+)
+"maze.ml" 32 593 626 "maze.ml" 32 593 627
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 32 593 607 "maze.ml" 32 593 608
+)
+"maze.ml" 32 593 632 "maze.ml" 32 593 633
+type(
+  int
+)
+ident(
+  int_ref v "maze.ml" 32 593 609 "maze.ml" 32 593 610
+)
+"maze.ml" 32 593 613 "maze.ml" 32 593 633
+type(
+  unit
+)
+"maze.ml" 34 635 639 "maze.ml" 34 635 648
+type(
+  Format.formatter -> dir -> unit
+)
+ident(
+  def print_dir "maze.ml" 41 874 874 "maze.ml" 1 0 -1
+)
+"maze.ml" 34 635 649 "maze.ml" 34 635 652
+type(
+  Format.formatter
+)
+ident(
+  def fmt "maze.ml" 34 635 655 "maze.ml" 38 782 819
+)
+"maze.ml" 35 664 668 "maze.ml" 35 664 673
+type(
+  dir
+)
+"maze.ml" 35 664 677 "maze.ml" 35 664 691
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"maze.ml" 35 664 692 "maze.ml" 35 664 695
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "maze.ml" 34 635 649 "maze.ml" 34 635 652
+)
+"maze.ml" 35 664 696 "maze.ml" 35 664 703
+type(
+  (unit, Format.formatter, unit) format
+)
+"maze.ml" 35 664 677 "maze.ml" 35 664 703
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 36 704 708 "maze.ml" 36 704 713
+type(
+  dir
+)
+"maze.ml" 36 704 717 "maze.ml" 36 704 731
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"maze.ml" 36 704 732 "maze.ml" 36 704 735
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "maze.ml" 34 635 649 "maze.ml" 34 635 652
+)
+"maze.ml" 36 704 736 "maze.ml" 36 704 743
+type(
+  (unit, Format.formatter, unit) format
+)
+"maze.ml" 36 704 717 "maze.ml" 36 704 743
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 37 744 748 "maze.ml" 37 744 752
+type(
+  dir
+)
+"maze.ml" 37 744 756 "maze.ml" 37 744 770
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"maze.ml" 37 744 771 "maze.ml" 37 744 774
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "maze.ml" 34 635 649 "maze.ml" 34 635 652
+)
+"maze.ml" 37 744 775 "maze.ml" 37 744 781
+type(
+  (unit, Format.formatter, unit) format
+)
+"maze.ml" 37 744 756 "maze.ml" 37 744 781
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 38 782 786 "maze.ml" 38 782 790
+type(
+  dir
+)
+"maze.ml" 38 782 794 "maze.ml" 38 782 808
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"maze.ml" 38 782 809 "maze.ml" 38 782 812
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "maze.ml" 34 635 649 "maze.ml" 34 635 652
+)
+"maze.ml" 38 782 813 "maze.ml" 38 782 819
+type(
+  (unit, Format.formatter, unit) format
+)
+"maze.ml" 38 782 794 "maze.ml" 38 782 819
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 34 635 655 "maze.ml" 38 782 819
+type(
+  dir -> unit
+)
+"maze.ml" 41 874 878 "maze.ml" 41 874 887
+type(
+  int -> int -> dir -> unit
+)
+ident(
+  def make_door "maze.ml" 49 1270 1270 "maze.ml" 1 0 -1
+)
+"maze.ml" 41 874 888 "maze.ml" 41 874 889
+type(
+  int
+)
+ident(
+  def i "maze.ml" 41 874 890 "maze.ml" 47 1198 1268
+)
+"maze.ml" 41 874 890 "maze.ml" 41 874 891
+type(
+  int
+)
+ident(
+  def j "maze.ml" 41 874 892 "maze.ml" 47 1198 1268
+)
+"maze.ml" 41 874 892 "maze.ml" 41 874 893
+type(
+  dir
+)
+ident(
+  def d "maze.ml" 42 896 898 "maze.ml" 47 1198 1268
+)
+"maze.ml" 42 896 902 "maze.ml" 42 896 908
+type(
+  int -> int -> int -> unit
+)
+ident(
+  def remove "maze.ml" 43 968 970 "maze.ml" 47 1198 1268
+)
+"maze.ml" 42 896 909 "maze.ml" 42 896 910
+type(
+  int
+)
+ident(
+  def i "maze.ml" 42 896 911 "maze.ml" 42 896 964
+)
+"maze.ml" 42 896 911 "maze.ml" 42 896 912
+type(
+  int
+)
+ident(
+  def j "maze.ml" 42 896 913 "maze.ml" 42 896 964
+)
+"maze.ml" 42 896 913 "maze.ml" 42 896 914
+type(
+  int
+)
+ident(
+  def u "maze.ml" 42 896 917 "maze.ml" 42 896 964
+)
+"maze.ml" 42 896 921 "maze.ml" 42 896 922
+type(
+  int
+)
+ident(
+  def w "maze.ml" 42 896 941 "maze.ml" 42 896 964
+)
+"maze.ml" 42 896 925 "maze.ml" 42 896 933
+type(
+  int -> int -> int
+)
+ident(
+  int_ref get_wall "maze.ml" 29 484 488 "maze.ml" 29 484 496
+)
+"maze.ml" 42 896 934 "maze.ml" 42 896 935
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 42 896 909 "maze.ml" 42 896 910
+)
+"maze.ml" 42 896 936 "maze.ml" 42 896 937
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 42 896 911 "maze.ml" 42 896 912
+)
+"maze.ml" 42 896 925 "maze.ml" 42 896 937
+call(
+  stack
+)
+type(
+  int
+)
+"maze.ml" 42 896 941 "maze.ml" 42 896 949
+type(
+  int -> int -> int -> unit
+)
+ident(
+  int_ref set_wall "maze.ml" 30 518 522 "maze.ml" 30 518 530
+)
+"maze.ml" 42 896 950 "maze.ml" 42 896 951
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 42 896 909 "maze.ml" 42 896 910
+)
+"maze.ml" 42 896 952 "maze.ml" 42 896 953
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 42 896 911 "maze.ml" 42 896 912
+)
+"maze.ml" 42 896 955 "maze.ml" 42 896 956
+type(
+  int
+)
+ident(
+  int_ref w "maze.ml" 42 896 921 "maze.ml" 42 896 922
+)
+"maze.ml" 42 896 957 "maze.ml" 42 896 961
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( land )
+)
+"maze.ml" 42 896 962 "maze.ml" 42 896 963
+type(
+  int
+)
+ident(
+  int_ref u "maze.ml" 42 896 913 "maze.ml" 42 896 914
+)
+"maze.ml" 42 896 954 "maze.ml" 42 896 964
+type(
+  int
+)
+"maze.ml" 42 896 941 "maze.ml" 42 896 964
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 42 896 917 "maze.ml" 42 896 964
+type(
+  unit
+)
+"maze.ml" 43 968 976 "maze.ml" 43 968 977
+type(
+  dir
+)
+ident(
+  int_ref d "maze.ml" 41 874 892 "maze.ml" 41 874 893
+)
+"maze.ml" 44 983 987 "maze.ml" 44 983 992
+type(
+  dir
+)
+"maze.ml" 44 983 1004 "maze.ml" 44 983 1005
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 41 874 890 "maze.ml" 41 874 891
+)
+"maze.ml" 44 983 1006 "maze.ml" 44 983 1007
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"maze.ml" 44 983 1008 "maze.ml" 44 983 1009
+type(
+  int
+)
+ident(
+  int_ref h "maze.ml" 14 215 219 "maze.ml" 14 215 220
+)
+"maze.ml" 44 983 1009 "maze.ml" 44 983 1010
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 44 983 1010 "maze.ml" 44 983 1011
+type(
+  int
+)
+"maze.ml" 44 983 1008 "maze.ml" 44 983 1011
+type(
+  int
+)
+"maze.ml" 44 983 1003 "maze.ml" 44 983 1012
+type(
+  bool
+)
+"maze.ml" 44 983 996 "maze.ml" 44 983 1012
+type(
+  unit
+)
+"maze.ml" 44 983 1014 "maze.ml" 44 983 1020
+type(
+  int -> int -> int -> unit
+)
+ident(
+  int_ref remove "maze.ml" 42 896 902 "maze.ml" 42 896 908
+)
+"maze.ml" 44 983 1021 "maze.ml" 44 983 1022
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 41 874 888 "maze.ml" 41 874 889
+)
+"maze.ml" 44 983 1023 "maze.ml" 44 983 1024
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 41 874 890 "maze.ml" 41 874 891
+)
+"maze.ml" 44 983 1025 "maze.ml" 44 983 1032
+type(
+  int
+)
+ident(
+  int_ref u_north "maze.ml" 21 331 335 "maze.ml" 21 331 342
+)
+"maze.ml" 44 983 1014 "maze.ml" 44 983 1032
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 44 983 1034 "maze.ml" 44 983 1040
+type(
+  int -> int -> int -> unit
+)
+ident(
+  int_ref remove "maze.ml" 42 896 902 "maze.ml" 42 896 908
+)
+"maze.ml" 44 983 1041 "maze.ml" 44 983 1042
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 41 874 888 "maze.ml" 41 874 889
+)
+"maze.ml" 44 983 1044 "maze.ml" 44 983 1045
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 41 874 890 "maze.ml" 41 874 891
+)
+"maze.ml" 44 983 1045 "maze.ml" 44 983 1046
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"maze.ml" 44 983 1046 "maze.ml" 44 983 1047
+type(
+  int
+)
+"maze.ml" 44 983 1043 "maze.ml" 44 983 1048
+type(
+  int
+)
+"maze.ml" 44 983 1049 "maze.ml" 44 983 1056
+type(
+  int
+)
+ident(
+  int_ref u_south "maze.ml" 23 385 389 "maze.ml" 23 385 396
+)
+"maze.ml" 44 983 1034 "maze.ml" 44 983 1056
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 44 983 1014 "maze.ml" 44 983 1056
+type(
+  unit
+)
+"maze.ml" 44 983 996 "maze.ml" 44 983 1056
+type(
+  unit
+)
+"maze.ml" 45 1057 1061 "maze.ml" 45 1057 1065
+type(
+  dir
+)
+"maze.ml" 45 1057 1077 "maze.ml" 45 1057 1078
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 41 874 888 "maze.ml" 41 874 889
+)
+"maze.ml" 45 1057 1079 "maze.ml" 45 1057 1080
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"maze.ml" 45 1057 1081 "maze.ml" 45 1057 1082
+type(
+  int
+)
+"maze.ml" 45 1057 1076 "maze.ml" 45 1057 1083
+type(
+  bool
+)
+"maze.ml" 45 1057 1069 "maze.ml" 45 1057 1083
+type(
+  unit
+)
+"maze.ml" 45 1057 1085 "maze.ml" 45 1057 1091
+type(
+  int -> int -> int -> unit
+)
+ident(
+  int_ref remove "maze.ml" 42 896 902 "maze.ml" 42 896 908
+)
+"maze.ml" 45 1057 1092 "maze.ml" 45 1057 1093
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 41 874 888 "maze.ml" 41 874 889
+)
+"maze.ml" 45 1057 1094 "maze.ml" 45 1057 1095
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 41 874 890 "maze.ml" 41 874 891
+)
+"maze.ml" 45 1057 1096 "maze.ml" 45 1057 1102
+type(
+  int
+)
+ident(
+  int_ref u_west "maze.ml" 22 359 363 "maze.ml" 22 359 369
+)
+"maze.ml" 45 1057 1085 "maze.ml" 45 1057 1102
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 45 1057 1104 "maze.ml" 45 1057 1110
+type(
+  int -> int -> int -> unit
+)
+ident(
+  int_ref remove "maze.ml" 42 896 902 "maze.ml" 42 896 908
+)
+"maze.ml" 45 1057 1112 "maze.ml" 45 1057 1113
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 41 874 888 "maze.ml" 41 874 889
+)
+"maze.ml" 45 1057 1113 "maze.ml" 45 1057 1114
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 45 1057 1114 "maze.ml" 45 1057 1115
+type(
+  int
+)
+"maze.ml" 45 1057 1111 "maze.ml" 45 1057 1116
+type(
+  int
+)
+"maze.ml" 45 1057 1117 "maze.ml" 45 1057 1118
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 41 874 890 "maze.ml" 41 874 891
+)
+"maze.ml" 45 1057 1119 "maze.ml" 45 1057 1125
+type(
+  int
+)
+ident(
+  int_ref u_east "maze.ml" 24 413 417 "maze.ml" 24 413 423
+)
+"maze.ml" 45 1057 1104 "maze.ml" 45 1057 1125
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 45 1057 1085 "maze.ml" 45 1057 1125
+type(
+  unit
+)
+"maze.ml" 45 1057 1069 "maze.ml" 45 1057 1125
+type(
+  unit
+)
+"maze.ml" 46 1126 1130 "maze.ml" 46 1126 1135
+type(
+  dir
+)
+"maze.ml" 46 1126 1147 "maze.ml" 46 1126 1148
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 41 874 890 "maze.ml" 41 874 891
+)
+"maze.ml" 46 1126 1149 "maze.ml" 46 1126 1150
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"maze.ml" 46 1126 1151 "maze.ml" 46 1126 1152
+type(
+  int
+)
+"maze.ml" 46 1126 1146 "maze.ml" 46 1126 1153
+type(
+  bool
+)
+"maze.ml" 46 1126 1139 "maze.ml" 46 1126 1153
+type(
+  unit
+)
+"maze.ml" 46 1126 1155 "maze.ml" 46 1126 1161
+type(
+  int -> int -> int -> unit
+)
+ident(
+  int_ref remove "maze.ml" 42 896 902 "maze.ml" 42 896 908
+)
+"maze.ml" 46 1126 1162 "maze.ml" 46 1126 1163
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 41 874 888 "maze.ml" 41 874 889
+)
+"maze.ml" 46 1126 1164 "maze.ml" 46 1126 1165
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 41 874 890 "maze.ml" 41 874 891
+)
+"maze.ml" 46 1126 1166 "maze.ml" 46 1126 1173
+type(
+  int
+)
+ident(
+  int_ref u_south "maze.ml" 23 385 389 "maze.ml" 23 385 396
+)
+"maze.ml" 46 1126 1155 "maze.ml" 46 1126 1173
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 46 1126 1175 "maze.ml" 46 1126 1181
+type(
+  int -> int -> int -> unit
+)
+ident(
+  int_ref remove "maze.ml" 42 896 902 "maze.ml" 42 896 908
+)
+"maze.ml" 46 1126 1182 "maze.ml" 46 1126 1183
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 41 874 888 "maze.ml" 41 874 889
+)
+"maze.ml" 46 1126 1185 "maze.ml" 46 1126 1186
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 41 874 890 "maze.ml" 41 874 891
+)
+"maze.ml" 46 1126 1186 "maze.ml" 46 1126 1187
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 46 1126 1187 "maze.ml" 46 1126 1188
+type(
+  int
+)
+"maze.ml" 46 1126 1184 "maze.ml" 46 1126 1189
+type(
+  int
+)
+"maze.ml" 46 1126 1190 "maze.ml" 46 1126 1197
+type(
+  int
+)
+ident(
+  int_ref u_north "maze.ml" 21 331 335 "maze.ml" 21 331 342
+)
+"maze.ml" 46 1126 1175 "maze.ml" 46 1126 1197
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 46 1126 1155 "maze.ml" 46 1126 1197
+type(
+  unit
+)
+"maze.ml" 46 1126 1139 "maze.ml" 46 1126 1197
+type(
+  unit
+)
+"maze.ml" 47 1198 1202 "maze.ml" 47 1198 1206
+type(
+  dir
+)
+"maze.ml" 47 1198 1218 "maze.ml" 47 1198 1219
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 41 874 888 "maze.ml" 41 874 889
+)
+"maze.ml" 47 1198 1220 "maze.ml" 47 1198 1221
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"maze.ml" 47 1198 1222 "maze.ml" 47 1198 1223
+type(
+  int
+)
+ident(
+  int_ref w "maze.ml" 11 140 144 "maze.ml" 11 140 145
+)
+"maze.ml" 47 1198 1223 "maze.ml" 47 1198 1224
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 47 1198 1224 "maze.ml" 47 1198 1225
+type(
+  int
+)
+"maze.ml" 47 1198 1222 "maze.ml" 47 1198 1225
+type(
+  int
+)
+"maze.ml" 47 1198 1217 "maze.ml" 47 1198 1226
+type(
+  bool
+)
+"maze.ml" 47 1198 1210 "maze.ml" 47 1198 1226
+type(
+  unit
+)
+"maze.ml" 47 1198 1228 "maze.ml" 47 1198 1234
+type(
+  int -> int -> int -> unit
+)
+ident(
+  int_ref remove "maze.ml" 42 896 902 "maze.ml" 42 896 908
+)
+"maze.ml" 47 1198 1235 "maze.ml" 47 1198 1236
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 41 874 888 "maze.ml" 41 874 889
+)
+"maze.ml" 47 1198 1237 "maze.ml" 47 1198 1238
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 41 874 890 "maze.ml" 41 874 891
+)
+"maze.ml" 47 1198 1239 "maze.ml" 47 1198 1245
+type(
+  int
+)
+ident(
+  int_ref u_east "maze.ml" 24 413 417 "maze.ml" 24 413 423
+)
+"maze.ml" 47 1198 1228 "maze.ml" 47 1198 1245
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 47 1198 1247 "maze.ml" 47 1198 1253
+type(
+  int -> int -> int -> unit
+)
+ident(
+  int_ref remove "maze.ml" 42 896 902 "maze.ml" 42 896 908
+)
+"maze.ml" 47 1198 1255 "maze.ml" 47 1198 1256
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 41 874 888 "maze.ml" 41 874 889
+)
+"maze.ml" 47 1198 1256 "maze.ml" 47 1198 1257
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"maze.ml" 47 1198 1257 "maze.ml" 47 1198 1258
+type(
+  int
+)
+"maze.ml" 47 1198 1254 "maze.ml" 47 1198 1259
+type(
+  int
+)
+"maze.ml" 47 1198 1260 "maze.ml" 47 1198 1261
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 41 874 890 "maze.ml" 41 874 891
+)
+"maze.ml" 47 1198 1262 "maze.ml" 47 1198 1268
+type(
+  int
+)
+ident(
+  int_ref u_west "maze.ml" 22 359 363 "maze.ml" 22 359 369
+)
+"maze.ml" 47 1198 1247 "maze.ml" 47 1198 1268
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 47 1198 1228 "maze.ml" 47 1198 1268
+type(
+  unit
+)
+"maze.ml" 47 1198 1210 "maze.ml" 47 1198 1268
+type(
+  unit
+)
+"maze.ml" 43 968 970 "maze.ml" 47 1198 1268
+type(
+  unit
+)
+"maze.ml" 42 896 898 "maze.ml" 47 1198 1268
+type(
+  unit
+)
+"maze.ml" 49 1270 1274 "maze.ml" 49 1270 1285
+type(
+  int * int -> int * int -> unit
+)
+ident(
+  def make_door_2 "maze.ml" 59 1559 1559 "maze.ml" 1 0 -1
+)
+"maze.ml" 49 1270 1287 "maze.ml" 49 1270 1288
+type(
+  int
+)
+ident(
+  def i "maze.ml" 49 1270 1292 "maze.ml" 57 1536 1557
+)
+"maze.ml" 49 1270 1289 "maze.ml" 49 1270 1290
+type(
+  int
+)
+ident(
+  def j "maze.ml" 49 1270 1292 "maze.ml" 57 1536 1557
+)
+"maze.ml" 49 1270 1286 "maze.ml" 49 1270 1291
+type(
+  int * int
+)
+"maze.ml" 49 1270 1293 "maze.ml" 49 1270 1295
+type(
+  int
+)
+ident(
+  def i' "maze.ml" 50 1302 1304 "maze.ml" 57 1536 1557
+)
+"maze.ml" 49 1270 1296 "maze.ml" 49 1270 1298
+type(
+  int
+)
+ident(
+  def j' "maze.ml" 50 1302 1304 "maze.ml" 57 1536 1557
+)
+"maze.ml" 49 1270 1292 "maze.ml" 49 1270 1299
+type(
+  int * int
+)
+"maze.ml" 50 1302 1307 "maze.ml" 50 1302 1308
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 49 1270 1287 "maze.ml" 49 1270 1288
+)
+"maze.ml" 50 1302 1309 "maze.ml" 50 1302 1310
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"maze.ml" 50 1302 1311 "maze.ml" 50 1302 1313
+type(
+  int
+)
+ident(
+  int_ref i' "maze.ml" 49 1270 1293 "maze.ml" 49 1270 1295
+)
+"maze.ml" 50 1302 1307 "maze.ml" 50 1302 1313
+type(
+  bool
+)
+"maze.ml" 51 1319 1326 "maze.ml" 51 1319 1328
+type(
+  int
+)
+ident(
+  int_ref j' "maze.ml" 49 1270 1296 "maze.ml" 49 1270 1298
+)
+"maze.ml" 51 1319 1329 "maze.ml" 51 1319 1330
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"maze.ml" 51 1319 1331 "maze.ml" 51 1319 1332
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 49 1270 1289 "maze.ml" 49 1270 1290
+)
+"maze.ml" 51 1319 1332 "maze.ml" 51 1319 1333
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"maze.ml" 51 1319 1333 "maze.ml" 51 1319 1334
+type(
+  int
+)
+"maze.ml" 51 1319 1331 "maze.ml" 51 1319 1334
+type(
+  int
+)
+"maze.ml" 51 1319 1326 "maze.ml" 51 1319 1334
+type(
+  bool
+)
+"maze.ml" 51 1319 1340 "maze.ml" 51 1319 1349
+type(
+  int -> int -> dir -> unit
+)
+ident(
+  int_ref make_door "maze.ml" 41 874 878 "maze.ml" 41 874 887
+)
+"maze.ml" 51 1319 1350 "maze.ml" 51 1319 1351
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 49 1270 1287 "maze.ml" 49 1270 1288
+)
+"maze.ml" 51 1319 1352 "maze.ml" 51 1319 1353
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 49 1270 1289 "maze.ml" 49 1270 1290
+)
+"maze.ml" 51 1319 1354 "maze.ml" 51 1319 1359
+type(
+  dir
+)
+"maze.ml" 51 1319 1340 "maze.ml" 51 1319 1359
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 52 1360 1372 "maze.ml" 52 1360 1374
+type(
+  int
+)
+ident(
+  int_ref j' "maze.ml" 49 1270 1296 "maze.ml" 49 1270 1298
+)
+"maze.ml" 52 1360 1375 "maze.ml" 52 1360 1376
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"maze.ml" 52 1360 1377 "maze.ml" 52 1360 1378
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 49 1270 1289 "maze.ml" 49 1270 1290
+)
+"maze.ml" 52 1360 1378 "maze.ml" 52 1360 1379
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 52 1360 1379 "maze.ml" 52 1360 1380
+type(
+  int
+)
+"maze.ml" 52 1360 1377 "maze.ml" 52 1360 1380
+type(
+  int
+)
+"maze.ml" 52 1360 1372 "maze.ml" 52 1360 1380
+type(
+  bool
+)
+"maze.ml" 52 1360 1386 "maze.ml" 52 1360 1395
+type(
+  int -> int -> dir -> unit
+)
+ident(
+  int_ref make_door "maze.ml" 41 874 878 "maze.ml" 41 874 887
+)
+"maze.ml" 52 1360 1396 "maze.ml" 52 1360 1397
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 49 1270 1287 "maze.ml" 49 1270 1288
+)
+"maze.ml" 52 1360 1398 "maze.ml" 52 1360 1399
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 49 1270 1289 "maze.ml" 49 1270 1290
+)
+"maze.ml" 52 1360 1400 "maze.ml" 52 1360 1405
+type(
+  dir
+)
+"maze.ml" 52 1360 1386 "maze.ml" 52 1360 1405
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 53 1406 1415 "maze.ml" 53 1406 1427
+type(
+  unit
+)
+"maze.ml" 52 1360 1369 "maze.ml" 53 1406 1427
+type(
+  unit
+)
+"maze.ml" 51 1319 1323 "maze.ml" 53 1406 1427
+type(
+  unit
+)
+"maze.ml" 54 1428 1438 "maze.ml" 54 1428 1439
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 49 1270 1289 "maze.ml" 49 1270 1290
+)
+"maze.ml" 54 1428 1440 "maze.ml" 54 1428 1441
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"maze.ml" 54 1428 1442 "maze.ml" 54 1428 1444
+type(
+  int
+)
+ident(
+  int_ref j' "maze.ml" 49 1270 1296 "maze.ml" 49 1270 1298
+)
+"maze.ml" 54 1428 1438 "maze.ml" 54 1428 1444
+type(
+  bool
+)
+"maze.ml" 55 1451 1458 "maze.ml" 55 1451 1460
+type(
+  int
+)
+ident(
+  int_ref i' "maze.ml" 49 1270 1293 "maze.ml" 49 1270 1295
+)
+"maze.ml" 55 1451 1461 "maze.ml" 55 1451 1462
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"maze.ml" 55 1451 1463 "maze.ml" 55 1451 1464
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 49 1270 1287 "maze.ml" 49 1270 1288
+)
+"maze.ml" 55 1451 1464 "maze.ml" 55 1451 1465
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"maze.ml" 55 1451 1465 "maze.ml" 55 1451 1466
+type(
+  int
+)
+"maze.ml" 55 1451 1463 "maze.ml" 55 1451 1466
+type(
+  int
+)
+"maze.ml" 55 1451 1458 "maze.ml" 55 1451 1466
+type(
+  bool
+)
+"maze.ml" 55 1451 1472 "maze.ml" 55 1451 1481
+type(
+  int -> int -> dir -> unit
+)
+ident(
+  int_ref make_door "maze.ml" 41 874 878 "maze.ml" 41 874 887
+)
+"maze.ml" 55 1451 1482 "maze.ml" 55 1451 1483
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 49 1270 1287 "maze.ml" 49 1270 1288
+)
+"maze.ml" 55 1451 1484 "maze.ml" 55 1451 1485
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 49 1270 1289 "maze.ml" 49 1270 1290
+)
+"maze.ml" 55 1451 1486 "maze.ml" 55 1451 1490
+type(
+  dir
+)
+"maze.ml" 55 1451 1472 "maze.ml" 55 1451 1490
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 56 1491 1503 "maze.ml" 56 1491 1505
+type(
+  int
+)
+ident(
+  int_ref i' "maze.ml" 49 1270 1293 "maze.ml" 49 1270 1295
+)
+"maze.ml" 56 1491 1506 "maze.ml" 56 1491 1507
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"maze.ml" 56 1491 1508 "maze.ml" 56 1491 1509
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 49 1270 1287 "maze.ml" 49 1270 1288
+)
+"maze.ml" 56 1491 1509 "maze.ml" 56 1491 1510
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 56 1491 1510 "maze.ml" 56 1491 1511
+type(
+  int
+)
+"maze.ml" 56 1491 1508 "maze.ml" 56 1491 1511
+type(
+  int
+)
+"maze.ml" 56 1491 1503 "maze.ml" 56 1491 1511
+type(
+  bool
+)
+"maze.ml" 56 1491 1517 "maze.ml" 56 1491 1526
+type(
+  int -> int -> dir -> unit
+)
+ident(
+  int_ref make_door "maze.ml" 41 874 878 "maze.ml" 41 874 887
+)
+"maze.ml" 56 1491 1527 "maze.ml" 56 1491 1528
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 49 1270 1287 "maze.ml" 49 1270 1288
+)
+"maze.ml" 56 1491 1529 "maze.ml" 56 1491 1530
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 49 1270 1289 "maze.ml" 49 1270 1290
+)
+"maze.ml" 56 1491 1531 "maze.ml" 56 1491 1535
+type(
+  dir
+)
+"maze.ml" 56 1491 1517 "maze.ml" 56 1491 1535
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 57 1536 1545 "maze.ml" 57 1536 1557
+type(
+  unit
+)
+"maze.ml" 56 1491 1500 "maze.ml" 57 1536 1557
+type(
+  unit
+)
+"maze.ml" 55 1451 1455 "maze.ml" 57 1536 1557
+type(
+  unit
+)
+"maze.ml" 54 1428 1435 "maze.ml" 57 1536 1557
+type(
+  unit
+)
+"maze.ml" 50 1302 1304 "maze.ml" 57 1536 1557
+type(
+  unit
+)
+"maze.ml" 59 1559 1563 "maze.ml" 59 1559 1570
+type(
+  int -> int -> dir -> bool
+)
+ident(
+  def is_wall "maze.ml" 66 1727 1727 "maze.ml" 1 0 -1
+)
+"maze.ml" 59 1559 1571 "maze.ml" 59 1559 1572
+type(
+  int
+)
+ident(
+  def i "maze.ml" 59 1559 1573 "maze.ml" 64 1705 1725
+)
+"maze.ml" 59 1559 1573 "maze.ml" 59 1559 1574
+type(
+  int
+)
+ident(
+  def j "maze.ml" 59 1559 1575 "maze.ml" 64 1705 1725
+)
+"maze.ml" 59 1559 1575 "maze.ml" 59 1559 1576
+type(
+  dir
+)
+ident(
+  def d "maze.ml" 60 1579 1581 "maze.ml" 64 1705 1725
+)
+"maze.ml" 60 1579 1585 "maze.ml" 60 1579 1586
+type(
+  int
+)
+ident(
+  def w "maze.ml" 61 1605 1607 "maze.ml" 64 1705 1725
+)
+"maze.ml" 60 1579 1589 "maze.ml" 60 1579 1597
+type(
+  int -> int -> int
+)
+ident(
+  int_ref get_wall "maze.ml" 29 484 488 "maze.ml" 29 484 496
+)
+"maze.ml" 60 1579 1598 "maze.ml" 60 1579 1599
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 59 1559 1571 "maze.ml" 59 1559 1572
+)
+"maze.ml" 60 1579 1600 "maze.ml" 60 1579 1601
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 59 1559 1573 "maze.ml" 59 1559 1574
+)
+"maze.ml" 60 1579 1589 "maze.ml" 60 1579 1601
+call(
+  stack
+)
+type(
+  int
+)
+"maze.ml" 61 1605 1611 "maze.ml" 61 1605 1615
+type(
+  int
+)
+ident(
+  def mask "maze.ml" 64 1705 1707 "maze.ml" 64 1705 1725
+)
+"maze.ml" 61 1605 1624 "maze.ml" 61 1605 1625
+type(
+  dir
+)
+ident(
+  int_ref d "maze.ml" 59 1559 1575 "maze.ml" 59 1559 1576
+)
+"maze.ml" 62 1632 1638 "maze.ml" 62 1632 1643
+type(
+  dir
+)
+"maze.ml" 62 1632 1647 "maze.ml" 62 1632 1652
+type(
+  int
+)
+ident(
+  int_ref north "maze.ml" 16 230 234 "maze.ml" 16 230 239
+)
+"maze.ml" 62 1632 1655 "maze.ml" 62 1632 1660
+type(
+  dir
+)
+"maze.ml" 62 1632 1664 "maze.ml" 62 1632 1669
+type(
+  int
+)
+ident(
+  int_ref south "maze.ml" 18 257 261 "maze.ml" 18 257 266
+)
+"maze.ml" 62 1632 1672 "maze.ml" 62 1632 1676
+type(
+  dir
+)
+"maze.ml" 62 1632 1680 "maze.ml" 62 1632 1684
+type(
+  int
+)
+ident(
+  int_ref west "maze.ml" 17 244 248 "maze.ml" 17 244 252
+)
+"maze.ml" 62 1632 1687 "maze.ml" 62 1632 1691
+type(
+  dir
+)
+"maze.ml" 62 1632 1695 "maze.ml" 62 1632 1699
+type(
+  int
+)
+ident(
+  int_ref east "maze.ml" 19 271 275 "maze.ml" 19 271 279
+)
+"maze.ml" 61 1605 1618 "maze.ml" 62 1632 1699
+type(
+  int
+)
+"maze.ml" 64 1705 1708 "maze.ml" 64 1705 1709
+type(
+  int
+)
+ident(
+  int_ref w "maze.ml" 60 1579 1585 "maze.ml" 60 1579 1586
+)
+"maze.ml" 64 1705 1710 "maze.ml" 64 1705 1714
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( land )
+)
+"maze.ml" 64 1705 1715 "maze.ml" 64 1705 1719
+type(
+  int
+)
+ident(
+  int_ref mask "maze.ml" 61 1605 1611 "maze.ml" 61 1605 1615
+)
+"maze.ml" 64 1705 1707 "maze.ml" 64 1705 1720
+type(
+  int
+)
+"maze.ml" 64 1705 1721 "maze.ml" 64 1705 1723
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"maze.ml" 64 1705 1724 "maze.ml" 64 1705 1725
+type(
+  int
+)
+"maze.ml" 64 1705 1707 "maze.ml" 64 1705 1725
+type(
+  bool
+)
+"maze.ml" 61 1605 1607 "maze.ml" 64 1705 1725
+type(
+  bool
+)
+"maze.ml" 60 1579 1581 "maze.ml" 64 1705 1725
+type(
+  bool
+)
+"maze.ml" 66 1727 1771 "maze.ml" 66 1727 1778
+type(
+  'a -> 'a -> int
+)
+ident(
+  def compare "maze.ml" 66 1727 1788 "maze.ml" 66 1727 1792
+)
+"maze.ml" 66 1727 1781 "maze.ml" 66 1727 1788
+type(
+  'a -> 'a -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"maze.ml" 67 1793 1810 "maze.ml" 67 1793 1824
+call(
+  stack
+)
+"maze.ml" 69 1826 1830 "maze.ml" 69 1826 1837
+type(
+  int * int -> bool
+)
+ident(
+  def in_maze "maze.ml" 71 1883 1883 "maze.ml" 1 0 -1
+)
+"maze.ml" 69 1826 1839 "maze.ml" 69 1826 1840
+type(
+  int
+)
+ident(
+  def i "maze.ml" 69 1826 1846 "maze.ml" 69 1826 1881
+)
+"maze.ml" 69 1826 1841 "maze.ml" 69 1826 1842
+type(
+  int
+)
+ident(
+  def j "maze.ml" 69 1826 1846 "maze.ml" 69 1826 1881
+)
+"maze.ml" 69 1826 1838 "maze.ml" 69 1826 1843
+type(
+  int * int
+)
+"maze.ml" 69 1826 1846 "maze.ml" 69 1826 1847
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 69 1826 1839 "maze.ml" 69 1826 1840
+)
+"maze.ml" 69 1826 1848 "maze.ml" 69 1826 1850
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( >= )
+)
+"maze.ml" 69 1826 1851 "maze.ml" 69 1826 1852
+type(
+  int
+)
+"maze.ml" 69 1826 1846 "maze.ml" 69 1826 1852
+type(
+  bool
+)
+"maze.ml" 69 1826 1853 "maze.ml" 69 1826 1855
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"maze.ml" 69 1826 1856 "maze.ml" 69 1826 1857
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 69 1826 1839 "maze.ml" 69 1826 1840
+)
+"maze.ml" 69 1826 1858 "maze.ml" 69 1826 1859
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"maze.ml" 69 1826 1860 "maze.ml" 69 1826 1861
+type(
+  int
+)
+ident(
+  int_ref w "maze.ml" 11 140 144 "maze.ml" 11 140 145
+)
+"maze.ml" 69 1826 1856 "maze.ml" 69 1826 1861
+type(
+  bool
+)
+"maze.ml" 69 1826 1862 "maze.ml" 69 1826 1864
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"maze.ml" 69 1826 1865 "maze.ml" 69 1826 1866
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 69 1826 1841 "maze.ml" 69 1826 1842
+)
+"maze.ml" 69 1826 1867 "maze.ml" 69 1826 1869
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( >= )
+)
+"maze.ml" 69 1826 1870 "maze.ml" 69 1826 1872
+type(
+  int
+)
+ident(
+  int_ref h1 "maze.ml" 12 152 156 "maze.ml" 12 152 158
+)
+"maze.ml" 69 1826 1865 "maze.ml" 69 1826 1872
+type(
+  bool
+)
+"maze.ml" 69 1826 1873 "maze.ml" 69 1826 1875
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"maze.ml" 69 1826 1876 "maze.ml" 69 1826 1877
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 69 1826 1841 "maze.ml" 69 1826 1842
+)
+"maze.ml" 69 1826 1878 "maze.ml" 69 1826 1879
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"maze.ml" 69 1826 1880 "maze.ml" 69 1826 1881
+type(
+  int
+)
+ident(
+  int_ref h "maze.ml" 14 215 219 "maze.ml" 14 215 220
+)
+"maze.ml" 69 1826 1876 "maze.ml" 69 1826 1881
+type(
+  bool
+)
+"maze.ml" 69 1826 1865 "maze.ml" 69 1826 1881
+type(
+  bool
+)
+"maze.ml" 69 1826 1856 "maze.ml" 69 1826 1881
+type(
+  bool
+)
+"maze.ml" 69 1826 1846 "maze.ml" 69 1826 1881
+type(
+  bool
+)
+"maze.ml" 71 1883 1887 "maze.ml" 71 1883 1902
+type(
+  Visited.t -> int * int -> Visited.elt option
+)
+ident(
+  def random_neighbor "maze.ml" 81 2245 2245 "maze.ml" 1 0 -1
+)
+"maze.ml" 71 1883 1903 "maze.ml" 71 1883 1910
+type(
+  Visited.t
+)
+ident(
+  def visited "maze.ml" 71 1883 1911 "maze.ml" 79 2178 2243
+)
+"maze.ml" 71 1883 1912 "maze.ml" 71 1883 1913
+type(
+  int
+)
+ident(
+  def x "maze.ml" 72 1920 1922 "maze.ml" 79 2178 2243
+)
+"maze.ml" 71 1883 1915 "maze.ml" 71 1883 1916
+type(
+  int
+)
+ident(
+  def y "maze.ml" 72 1920 1922 "maze.ml" 79 2178 2243
+)
+"maze.ml" 71 1883 1911 "maze.ml" 71 1883 1917
+type(
+  int * int
+)
+"maze.ml" 72 1920 1926 "maze.ml" 72 1920 1929
+type(
+  Visited.elt list -> Visited.elt -> Visited.elt list
+)
+ident(
+  def aux "maze.ml" 76 2072 2074 "maze.ml" 79 2178 2243
+)
+"maze.ml" 72 1920 1930 "maze.ml" 72 1920 1937
+type(
+  Visited.elt list
+)
+ident(
+  def choices "maze.ml" 72 1920 1938 "maze.ml" 74 1999 2065
+)
+"maze.ml" 72 1920 1938 "maze.ml" 72 1920 1942
+type(
+  Visited.elt
+)
+ident(
+  def cell "maze.ml" 73 1945 1949 "maze.ml" 74 1999 2065
+)
+"maze.ml" 73 1945 1953 "maze.ml" 73 1945 1962
+type(
+  bool
+)
+ident(
+  def unvisited "maze.ml" 74 1999 2003 "maze.ml" 74 1999 2065
+)
+"maze.ml" 73 1945 1965 "maze.ml" 73 1945 1968
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"maze.ml" 73 1945 1970 "maze.ml" 73 1945 1981
+type(
+  Visited.elt -> Visited.t -> bool
+)
+ident(
+  ext_ref Visited.mem
+)
+"maze.ml" 73 1945 1982 "maze.ml" 73 1945 1986
+type(
+  Visited.elt
+)
+ident(
+  int_ref cell "maze.ml" 72 1920 1938 "maze.ml" 72 1920 1942
+)
+"maze.ml" 73 1945 1987 "maze.ml" 73 1945 1994
+type(
+  Visited.t
+)
+ident(
+  int_ref visited "maze.ml" 71 1883 1903 "maze.ml" 71 1883 1910
+)
+"maze.ml" 73 1945 1969 "maze.ml" 73 1945 1995
+call(
+  stack
+)
+type(
+  bool
+)
+"maze.ml" 73 1945 1965 "maze.ml" 73 1945 1995
+type(
+  bool
+)
+"maze.ml" 74 1999 2006 "maze.ml" 74 1999 2015
+type(
+  bool
+)
+ident(
+  int_ref unvisited "maze.ml" 73 1945 1953 "maze.ml" 73 1945 1962
+)
+"maze.ml" 74 1999 2016 "maze.ml" 74 1999 2018
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"maze.ml" 74 1999 2019 "maze.ml" 74 1999 2026
+type(
+  Visited.elt -> bool
+)
+ident(
+  int_ref in_maze "maze.ml" 69 1826 1830 "maze.ml" 69 1826 1837
+)
+"maze.ml" 74 1999 2027 "maze.ml" 74 1999 2031
+type(
+  Visited.elt
+)
+ident(
+  int_ref cell "maze.ml" 72 1920 1938 "maze.ml" 72 1920 1942
+)
+"maze.ml" 74 1999 2019 "maze.ml" 74 1999 2031
+call(
+  stack
+)
+type(
+  bool
+)
+"maze.ml" 74 1999 2006 "maze.ml" 74 1999 2031
+type(
+  bool
+)
+"maze.ml" 74 1999 2037 "maze.ml" 74 1999 2041
+type(
+  Visited.elt
+)
+ident(
+  int_ref cell "maze.ml" 72 1920 1938 "maze.ml" 72 1920 1942
+)
+"maze.ml" 74 1999 2045 "maze.ml" 74 1999 2052
+type(
+  Visited.elt list
+)
+ident(
+  int_ref choices "maze.ml" 72 1920 1930 "maze.ml" 72 1920 1937
+)
+"maze.ml" 74 1999 2037 "maze.ml" 74 1999 2052
+type(
+  Visited.elt list
+)
+"maze.ml" 74 1999 2058 "maze.ml" 74 1999 2065
+type(
+  Visited.elt list
+)
+ident(
+  int_ref choices "maze.ml" 72 1920 1930 "maze.ml" 72 1920 1937
+)
+"maze.ml" 74 1999 2003 "maze.ml" 74 1999 2065
+type(
+  Visited.elt list
+)
+"maze.ml" 73 1945 1949 "maze.ml" 74 1999 2065
+type(
+  Visited.elt list
+)
+"maze.ml" 76 2072 2078 "maze.ml" 76 2072 2085
+type(
+  Visited.elt list
+)
+ident(
+  def choices "maze.ml" 77 2146 2148 "maze.ml" 79 2178 2243
+)
+"maze.ml" 76 2072 2088 "maze.ml" 76 2072 2102
+type(
+  (Visited.elt list -> Visited.elt -> Visited.elt list) ->
+  Visited.elt list -> Visited.elt list -> Visited.elt list
+)
+ident(
+  ext_ref List.fold_left
+)
+"maze.ml" 76 2072 2103 "maze.ml" 76 2072 2106
+type(
+  Visited.elt list -> Visited.elt -> Visited.elt list
+)
+ident(
+  int_ref aux "maze.ml" 72 1920 1926 "maze.ml" 72 1920 1929
+)
+"maze.ml" 76 2072 2107 "maze.ml" 76 2072 2109
+type(
+  Visited.elt list
+)
+"maze.ml" 76 2072 2111 "maze.ml" 76 2072 2112
+type(
+  int
+)
+ident(
+  int_ref x "maze.ml" 71 1883 1912 "maze.ml" 71 1883 1913
+)
+"maze.ml" 76 2072 2112 "maze.ml" 76 2072 2113
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 76 2072 2113 "maze.ml" 76 2072 2114
+type(
+  int
+)
+"maze.ml" 76 2072 2111 "maze.ml" 76 2072 2114
+type(
+  int
+)
+"maze.ml" 76 2072 2116 "maze.ml" 76 2072 2117
+type(
+  int
+)
+ident(
+  int_ref y "maze.ml" 71 1883 1915 "maze.ml" 71 1883 1916
+)
+"maze.ml" 76 2072 2111 "maze.ml" 76 2072 2117
+type(
+  Visited.elt
+)
+"maze.ml" 76 2072 2119 "maze.ml" 76 2072 2120
+type(
+  int
+)
+ident(
+  int_ref x "maze.ml" 71 1883 1912 "maze.ml" 71 1883 1913
+)
+"maze.ml" 76 2072 2120 "maze.ml" 76 2072 2121
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"maze.ml" 76 2072 2121 "maze.ml" 76 2072 2122
+type(
+  int
+)
+"maze.ml" 76 2072 2119 "maze.ml" 76 2072 2122
+type(
+  int
+)
+"maze.ml" 76 2072 2124 "maze.ml" 76 2072 2125
+type(
+  int
+)
+ident(
+  int_ref y "maze.ml" 71 1883 1915 "maze.ml" 71 1883 1916
+)
+"maze.ml" 76 2072 2119 "maze.ml" 76 2072 2125
+type(
+  Visited.elt
+)
+"maze.ml" 76 2072 2127 "maze.ml" 76 2072 2128
+type(
+  int
+)
+ident(
+  int_ref x "maze.ml" 71 1883 1912 "maze.ml" 71 1883 1913
+)
+"maze.ml" 76 2072 2130 "maze.ml" 76 2072 2131
+type(
+  int
+)
+ident(
+  int_ref y "maze.ml" 71 1883 1915 "maze.ml" 71 1883 1916
+)
+"maze.ml" 76 2072 2131 "maze.ml" 76 2072 2132
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 76 2072 2132 "maze.ml" 76 2072 2133
+type(
+  int
+)
+"maze.ml" 76 2072 2130 "maze.ml" 76 2072 2133
+type(
+  int
+)
+"maze.ml" 76 2072 2127 "maze.ml" 76 2072 2133
+type(
+  Visited.elt
+)
+"maze.ml" 76 2072 2135 "maze.ml" 76 2072 2136
+type(
+  int
+)
+ident(
+  int_ref x "maze.ml" 71 1883 1912 "maze.ml" 71 1883 1913
+)
+"maze.ml" 76 2072 2138 "maze.ml" 76 2072 2139
+type(
+  int
+)
+ident(
+  int_ref y "maze.ml" 71 1883 1915 "maze.ml" 71 1883 1916
+)
+"maze.ml" 76 2072 2139 "maze.ml" 76 2072 2140
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"maze.ml" 76 2072 2140 "maze.ml" 76 2072 2141
+type(
+  int
+)
+"maze.ml" 76 2072 2138 "maze.ml" 76 2072 2141
+type(
+  int
+)
+"maze.ml" 76 2072 2135 "maze.ml" 76 2072 2141
+type(
+  Visited.elt
+)
+"maze.ml" 76 2072 2110 "maze.ml" 76 2072 2142
+type(
+  Visited.elt list
+)
+"maze.ml" 76 2072 2088 "maze.ml" 76 2072 2142
+call(
+  stack
+)
+type(
+  Visited.elt list
+)
+"maze.ml" 77 2146 2151 "maze.ml" 77 2146 2158
+type(
+  Visited.elt list
+)
+ident(
+  int_ref choices "maze.ml" 76 2072 2078 "maze.ml" 76 2072 2085
+)
+"maze.ml" 77 2146 2159 "maze.ml" 77 2146 2160
+type(
+  Visited.elt list -> Visited.elt list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"maze.ml" 77 2146 2161 "maze.ml" 77 2146 2163
+type(
+  Visited.elt list
+)
+"maze.ml" 77 2146 2151 "maze.ml" 77 2146 2163
+type(
+  bool
+)
+"maze.ml" 78 2165 2172 "maze.ml" 78 2165 2176
+type(
+  Visited.elt option
+)
+"maze.ml" 79 2178 2191 "maze.ml" 79 2178 2199
+type(
+  Visited.elt list -> int -> Visited.elt
+)
+ident(
+  ext_ref List.nth
+)
+"maze.ml" 79 2178 2200 "maze.ml" 79 2178 2207
+type(
+  Visited.elt list
+)
+ident(
+  int_ref choices "maze.ml" 76 2072 2078 "maze.ml" 76 2072 2085
+)
+"maze.ml" 79 2178 2209 "maze.ml" 79 2178 2219
+type(
+  int -> int
+)
+ident(
+  ext_ref Random.int
+)
+"maze.ml" 79 2178 2221 "maze.ml" 79 2178 2232
+type(
+  Visited.elt list -> int
+)
+ident(
+  ext_ref List.length
+)
+"maze.ml" 79 2178 2233 "maze.ml" 79 2178 2240
+type(
+  Visited.elt list
+)
+ident(
+  int_ref choices "maze.ml" 76 2072 2078 "maze.ml" 76 2072 2085
+)
+"maze.ml" 79 2178 2220 "maze.ml" 79 2178 2241
+call(
+  stack
+)
+type(
+  int
+)
+"maze.ml" 79 2178 2208 "maze.ml" 79 2178 2242
+call(
+  stack
+)
+type(
+  int
+)
+"maze.ml" 79 2178 2190 "maze.ml" 79 2178 2243
+call(
+  stack
+)
+type(
+  Visited.elt
+)
+"maze.ml" 79 2178 2185 "maze.ml" 79 2178 2243
+type(
+  Visited.elt option
+)
+"maze.ml" 77 2146 2148 "maze.ml" 79 2178 2243
+type(
+  Visited.elt option
+)
+"maze.ml" 76 2072 2074 "maze.ml" 79 2178 2243
+type(
+  Visited.elt option
+)
+"maze.ml" 72 1920 1922 "maze.ml" 79 2178 2243
+type(
+  Visited.elt option
+)
+"maze.ml" 81 2245 2249 "maze.ml" 81 2245 2258
+type(
+  unit -> unit
+)
+ident(
+  def make_maze "maze.ml" 114 3135 3135 "maze.ml" 1 0 -1
+)
+"maze.ml" 81 2245 2259 "maze.ml" 81 2245 2261
+type(
+  unit
+)
+"maze.ml" 82 2264 2274 "maze.ml" 82 2264 2279
+type(
+  Visited.t -> Visited.elt list -> Visited.elt -> unit
+)
+ident(
+  def visit "maze.ml" 82 2264 2266 "maze.ml" 93 2627 2658
+)
+"maze.ml" 82 2264 2280 "maze.ml" 82 2264 2287
+type(
+  Visited.t
+)
+ident(
+  def visited "maze.ml" 82 2264 2288 "maze.ml" 91 2565 2620
+)
+"maze.ml" 82 2264 2288 "maze.ml" 82 2264 2293
+type(
+  Visited.elt list
+)
+ident(
+  def stack "maze.ml" 82 2264 2294 "maze.ml" 91 2565 2620
+)
+"maze.ml" 82 2264 2294 "maze.ml" 82 2264 2298
+type(
+  Visited.elt
+)
+ident(
+  def cell "maze.ml" 83 2301 2305 "maze.ml" 91 2565 2620
+)
+"maze.ml" 83 2301 2309 "maze.ml" 83 2301 2316
+type(
+  Visited.t
+)
+ident(
+  def visited "maze.ml" 84 2347 2351 "maze.ml" 91 2565 2620
+)
+"maze.ml" 83 2301 2319 "maze.ml" 83 2301 2330
+type(
+  Visited.elt -> Visited.t -> Visited.t
+)
+ident(
+  ext_ref Visited.add
+)
+"maze.ml" 83 2301 2331 "maze.ml" 83 2301 2335
+type(
+  Visited.elt
+)
+ident(
+  int_ref cell "maze.ml" 82 2264 2294 "maze.ml" 82 2264 2298
+)
+"maze.ml" 83 2301 2336 "maze.ml" 83 2301 2343
+type(
+  Visited.t
+)
+ident(
+  int_ref visited "maze.ml" 82 2264 2280 "maze.ml" 82 2264 2287
+)
+"maze.ml" 83 2301 2319 "maze.ml" 83 2301 2343
+call(
+  stack
+)
+type(
+  Visited.t
+)
+"maze.ml" 84 2347 2357 "maze.ml" 84 2347 2372
+type(
+  Visited.t -> Visited.elt -> Visited.elt option
+)
+ident(
+  int_ref random_neighbor "maze.ml" 71 1883 1887 "maze.ml" 71 1883 1902
+)
+"maze.ml" 84 2347 2373 "maze.ml" 84 2347 2380
+type(
+  Visited.t
+)
+ident(
+  int_ref visited "maze.ml" 83 2301 2309 "maze.ml" 83 2301 2316
+)
+"maze.ml" 84 2347 2381 "maze.ml" 84 2347 2385
+type(
+  Visited.elt
+)
+ident(
+  int_ref cell "maze.ml" 82 2264 2294 "maze.ml" 82 2264 2298
+)
+"maze.ml" 84 2347 2357 "maze.ml" 84 2347 2385
+call(
+  stack
+)
+type(
+  Visited.elt option
+)
+"maze.ml" 85 2391 2404 "maze.ml" 85 2391 2412
+type(
+  Visited.elt
+)
+ident(
+  def neighbor "maze.ml" 86 2416 2426 "maze.ml" 87 2453 2501
+)
+"maze.ml" 85 2391 2399 "maze.ml" 85 2391 2412
+type(
+  Visited.elt option
+)
+"maze.ml" 86 2416 2426 "maze.ml" 86 2416 2437
+type(
+  Visited.elt -> Visited.elt -> unit
+)
+ident(
+  int_ref make_door_2 "maze.ml" 49 1270 1274 "maze.ml" 49 1270 1285
+)
+"maze.ml" 86 2416 2438 "maze.ml" 86 2416 2442
+type(
+  Visited.elt
+)
+ident(
+  int_ref cell "maze.ml" 82 2264 2294 "maze.ml" 82 2264 2298
+)
+"maze.ml" 86 2416 2443 "maze.ml" 86 2416 2451
+type(
+  Visited.elt
+)
+ident(
+  int_ref neighbor "maze.ml" 85 2391 2404 "maze.ml" 85 2391 2412
+)
+"maze.ml" 86 2416 2426 "maze.ml" 86 2416 2451
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 87 2453 2463 "maze.ml" 87 2453 2468
+type(
+  Visited.t -> Visited.elt list -> Visited.elt -> unit
+)
+ident(
+  int_ref visit "maze.ml" 82 2264 2274 "maze.ml" 82 2264 2279
+)
+"maze.ml" 87 2453 2469 "maze.ml" 87 2453 2476
+type(
+  Visited.t
+)
+ident(
+  int_ref visited "maze.ml" 83 2301 2309 "maze.ml" 83 2301 2316
+)
+"maze.ml" 87 2453 2478 "maze.ml" 87 2453 2482
+type(
+  Visited.elt
+)
+ident(
+  int_ref cell "maze.ml" 82 2264 2294 "maze.ml" 82 2264 2298
+)
+"maze.ml" 87 2453 2486 "maze.ml" 87 2453 2491
+type(
+  Visited.elt list
+)
+ident(
+  int_ref stack "maze.ml" 82 2264 2288 "maze.ml" 82 2264 2293
+)
+"maze.ml" 87 2453 2477 "maze.ml" 87 2453 2492
+type(
+  Visited.elt list
+)
+"maze.ml" 87 2453 2493 "maze.ml" 87 2453 2501
+type(
+  Visited.elt
+)
+ident(
+  int_ref neighbor "maze.ml" 85 2391 2404 "maze.ml" 85 2391 2412
+)
+"maze.ml" 87 2453 2463 "maze.ml" 87 2453 2501
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 86 2416 2426 "maze.ml" 87 2453 2501
+type(
+  unit
+)
+"maze.ml" 88 2502 2510 "maze.ml" 88 2502 2511
+type(
+  Visited.elt option
+)
+"maze.ml" 89 2515 2531 "maze.ml" 89 2515 2536
+type(
+  Visited.elt list
+)
+ident(
+  int_ref stack "maze.ml" 82 2264 2288 "maze.ml" 82 2264 2293
+)
+"maze.ml" 90 2542 2556 "maze.ml" 90 2542 2558
+type(
+  Visited.elt list
+)
+"maze.ml" 90 2542 2562 "maze.ml" 90 2542 2564
+type(
+  unit
+)
+"maze.ml" 91 2565 2579 "maze.ml" 91 2565 2583
+type(
+  Visited.elt
+)
+ident(
+  def cell "maze.ml" 91 2565 2596 "maze.ml" 91 2565 2620
+)
+"maze.ml" 91 2565 2587 "maze.ml" 91 2565 2592
+type(
+  Visited.elt list
+)
+ident(
+  def stack "maze.ml" 91 2565 2596 "maze.ml" 91 2565 2620
+)
+"maze.ml" 91 2565 2579 "maze.ml" 91 2565 2592
+type(
+  Visited.elt list
+)
+"maze.ml" 91 2565 2596 "maze.ml" 91 2565 2601
+type(
+  Visited.t -> Visited.elt list -> Visited.elt -> unit
+)
+ident(
+  int_ref visit "maze.ml" 82 2264 2274 "maze.ml" 82 2264 2279
+)
+"maze.ml" 91 2565 2602 "maze.ml" 91 2565 2609
+type(
+  Visited.t
+)
+ident(
+  int_ref visited "maze.ml" 83 2301 2309 "maze.ml" 83 2301 2316
+)
+"maze.ml" 91 2565 2610 "maze.ml" 91 2565 2615
+type(
+  Visited.elt list
+)
+ident(
+  int_ref stack "maze.ml" 91 2565 2587 "maze.ml" 91 2565 2592
+)
+"maze.ml" 91 2565 2616 "maze.ml" 91 2565 2620
+type(
+  Visited.elt
+)
+ident(
+  int_ref cell "maze.ml" 91 2565 2579 "maze.ml" 91 2565 2583
+)
+"maze.ml" 91 2565 2596 "maze.ml" 91 2565 2620
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 89 2515 2525 "maze.ml" 91 2565 2620
+type(
+  unit
+)
+"maze.ml" 84 2347 2351 "maze.ml" 91 2565 2620
+type(
+  unit
+)
+"maze.ml" 83 2301 2305 "maze.ml" 91 2565 2620
+type(
+  unit
+)
+"maze.ml" 93 2627 2629 "maze.ml" 93 2627 2634
+type(
+  Visited.t -> Visited.elt list -> Visited.elt -> unit
+)
+ident(
+  int_ref visit "maze.ml" 82 2264 2274 "maze.ml" 82 2264 2279
+)
+"maze.ml" 93 2627 2635 "maze.ml" 93 2627 2648
+type(
+  Visited.t
+)
+ident(
+  ext_ref Visited.empty
+)
+"maze.ml" 93 2627 2649 "maze.ml" 93 2627 2651
+type(
+  Visited.elt list
+)
+"maze.ml" 93 2627 2653 "maze.ml" 93 2627 2654
+type(
+  int
+)
+"maze.ml" 93 2627 2655 "maze.ml" 93 2627 2657
+type(
+  int
+)
+ident(
+  int_ref h1 "maze.ml" 12 152 156 "maze.ml" 12 152 158
+)
+"maze.ml" 93 2627 2652 "maze.ml" 93 2627 2658
+type(
+  Visited.elt
+)
+"maze.ml" 93 2627 2629 "maze.ml" 93 2627 2658
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 82 2264 2266 "maze.ml" 93 2627 2658
+type(
+  unit
+)
+"maze.ml" 114 3135 3139 "maze.ml" 114 3135 3149
+type(
+  unit -> unit
+)
+ident(
+  def initialize "maze.ml" 132 3638 3638 "maze.ml" 1 0 -1
+)
+"maze.ml" 114 3135 3150 "maze.ml" 114 3135 3152
+type(
+  unit
+)
+"maze.ml" 115 3155 3157 "maze.ml" 115 3155 3166
+type(
+  bool ref
+)
+ident(
+  int_ref activated "maze.ml" 2 1 5 "maze.ml" 2 1 14
+)
+"maze.ml" 115 3155 3167 "maze.ml" 115 3155 3169
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"maze.ml" 115 3155 3170 "maze.ml" 115 3155 3174
+type(
+  bool
+)
+"maze.ml" 115 3155 3157 "maze.ml" 115 3155 3174
+type(
+  unit
+)
+"maze.ml" 116 3176 3178 "maze.ml" 116 3176 3189
+type(
+  int -> unit
+)
+ident(
+  ext_ref Random.init
+)
+"maze.ml" 116 3176 3190 "maze.ml" 116 3176 3193
+type(
+  int
+)
+"maze.ml" 116 3176 3178 "maze.ml" 116 3176 3193
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 117 3195 3197 "maze.ml" 117 3195 3202
+type(
+  int array array ref
+)
+ident(
+  int_ref walls "maze.ml" 26 440 444 "maze.ml" 26 440 449
+)
+"maze.ml" 117 3195 3203 "maze.ml" 117 3195 3205
+type(
+  int array array ref -> int array array -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"maze.ml" 117 3195 3206 "maze.ml" 117 3195 3225
+type(
+  int -> int -> int -> int array array
+)
+ident(
+  ext_ref Array.create_matrix
+)
+"maze.ml" 117 3195 3226 "maze.ml" 117 3195 3227
+type(
+  int
+)
+ident(
+  int_ref w "maze.ml" 11 140 144 "maze.ml" 11 140 145
+)
+"maze.ml" 117 3195 3228 "maze.ml" 117 3195 3229
+type(
+  int
+)
+ident(
+  int_ref h "maze.ml" 14 215 219 "maze.ml" 14 215 220
+)
+"maze.ml" 117 3195 3230 "maze.ml" 117 3195 3236
+type(
+  int
+)
+ident(
+  int_ref closed "maze.ml" 20 284 288 "maze.ml" 20 284 294
+)
+"maze.ml" 117 3195 3206 "maze.ml" 117 3195 3236
+call(
+  stack
+)
+type(
+  int array array
+)
+"maze.ml" 117 3195 3197 "maze.ml" 117 3195 3236
+type(
+  unit
+)
+"maze.ml" 118 3238 3240 "maze.ml" 118 3238 3246
+type(
+  int array array ref
+)
+ident(
+  int_ref values "maze.ml" 27 461 465 "maze.ml" 27 461 471
+)
+"maze.ml" 118 3238 3247 "maze.ml" 118 3238 3249
+type(
+  int array array ref -> int array array -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"maze.ml" 118 3238 3250 "maze.ml" 118 3238 3260
+type(
+  int -> (int -> int array) -> int array array
+)
+ident(
+  ext_ref Array.init
+)
+"maze.ml" 118 3238 3261 "maze.ml" 118 3238 3262
+type(
+  int
+)
+ident(
+  int_ref w "maze.ml" 11 140 144 "maze.ml" 11 140 145
+)
+"maze.ml" 118 3238 3268 "maze.ml" 118 3238 3269
+type(
+  int
+)
+ident(
+  def i "maze.ml" 118 3238 3273 "maze.ml" 118 3238 3311
+)
+"maze.ml" 118 3238 3273 "maze.ml" 118 3238 3283
+type(
+  int -> (int -> int) -> int array
+)
+ident(
+  ext_ref Array.init
+)
+"maze.ml" 118 3238 3284 "maze.ml" 118 3238 3285
+type(
+  int
+)
+ident(
+  int_ref h "maze.ml" 14 215 219 "maze.ml" 14 215 220
+)
+"maze.ml" 118 3238 3291 "maze.ml" 118 3238 3292
+type(
+  int
+)
+"maze.ml" 118 3238 3296 "maze.ml" 118 3238 3306
+type(
+  int -> int
+)
+ident(
+  ext_ref Random.int
+)
+"maze.ml" 118 3238 3307 "maze.ml" 118 3238 3310
+type(
+  int
+)
+"maze.ml" 118 3238 3296 "maze.ml" 118 3238 3310
+call(
+  tail
+)
+type(
+  int
+)
+"maze.ml" 118 3238 3286 "maze.ml" 118 3238 3311
+type(
+  int -> int
+)
+"maze.ml" 118 3238 3273 "maze.ml" 118 3238 3311
+call(
+  tail
+)
+type(
+  int array
+)
+"maze.ml" 118 3238 3263 "maze.ml" 118 3238 3312
+type(
+  int -> int array
+)
+"maze.ml" 118 3238 3250 "maze.ml" 118 3238 3312
+call(
+  stack
+)
+type(
+  int array array
+)
+"maze.ml" 118 3238 3240 "maze.ml" 118 3238 3312
+type(
+  unit
+)
+"maze.ml" 120 3340 3350 "maze.ml" 120 3340 3351
+type(
+  int
+)
+"maze.ml" 120 3340 3355 "maze.ml" 120 3340 3356
+type(
+  int
+)
+ident(
+  int_ref w "maze.ml" 11 140 144 "maze.ml" 11 140 145
+)
+"maze.ml" 120 3340 3356 "maze.ml" 120 3340 3357
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 120 3340 3357 "maze.ml" 120 3340 3358
+type(
+  int
+)
+"maze.ml" 120 3340 3355 "maze.ml" 120 3340 3358
+type(
+  int
+)
+"maze.ml" 121 3362 3374 "maze.ml" 121 3362 3375
+type(
+  int
+)
+"maze.ml" 121 3362 3379 "maze.ml" 121 3362 3381
+type(
+  int
+)
+ident(
+  int_ref h1 "maze.ml" 12 152 156 "maze.ml" 12 152 158
+)
+"maze.ml" 121 3362 3381 "maze.ml" 121 3362 3382
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 121 3362 3382 "maze.ml" 121 3362 3383
+type(
+  int
+)
+"maze.ml" 121 3362 3379 "maze.ml" 121 3362 3383
+type(
+  int
+)
+"maze.ml" 122 3387 3396 "maze.ml" 122 3387 3397
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 121 3362 3366 "maze.ml" 126 3558 3566
+)
+"maze.ml" 122 3387 3398 "maze.ml" 122 3387 3400
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"maze.ml" 122 3387 3401 "maze.ml" 122 3387 3403
+type(
+  int
+)
+ident(
+  int_ref h1 "maze.ml" 12 152 156 "maze.ml" 12 152 158
+)
+"maze.ml" 122 3387 3403 "maze.ml" 122 3387 3404
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 122 3387 3404 "maze.ml" 122 3387 3405
+type(
+  int
+)
+"maze.ml" 122 3387 3401 "maze.ml" 122 3387 3405
+type(
+  int
+)
+"maze.ml" 122 3387 3396 "maze.ml" 122 3387 3405
+type(
+  bool
+)
+"maze.ml" 122 3387 3411 "maze.ml" 122 3387 3420
+type(
+  int -> int -> dir -> unit
+)
+ident(
+  int_ref make_door "maze.ml" 41 874 878 "maze.ml" 41 874 887
+)
+"maze.ml" 122 3387 3421 "maze.ml" 122 3387 3422
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 120 3340 3342 "maze.ml" 127 3567 3573
+)
+"maze.ml" 122 3387 3423 "maze.ml" 122 3387 3424
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 121 3362 3366 "maze.ml" 126 3558 3566
+)
+"maze.ml" 122 3387 3425 "maze.ml" 122 3387 3430
+type(
+  dir
+)
+"maze.ml" 122 3387 3411 "maze.ml" 122 3387 3430
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 122 3387 3393 "maze.ml" 122 3387 3430
+type(
+  unit
+)
+"maze.ml" 123 3433 3442 "maze.ml" 123 3433 3443
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 120 3340 3342 "maze.ml" 127 3567 3573
+)
+"maze.ml" 123 3433 3444 "maze.ml" 123 3433 3446
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"maze.ml" 123 3433 3447 "maze.ml" 123 3433 3448
+type(
+  int
+)
+ident(
+  int_ref w "maze.ml" 11 140 144 "maze.ml" 11 140 145
+)
+"maze.ml" 123 3433 3448 "maze.ml" 123 3433 3449
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 123 3433 3449 "maze.ml" 123 3433 3450
+type(
+  int
+)
+"maze.ml" 123 3433 3447 "maze.ml" 123 3433 3450
+type(
+  int
+)
+"maze.ml" 123 3433 3442 "maze.ml" 123 3433 3450
+type(
+  bool
+)
+"maze.ml" 123 3433 3456 "maze.ml" 123 3433 3465
+type(
+  int -> int -> dir -> unit
+)
+ident(
+  int_ref make_door "maze.ml" 41 874 878 "maze.ml" 41 874 887
+)
+"maze.ml" 123 3433 3466 "maze.ml" 123 3433 3467
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 120 3340 3342 "maze.ml" 127 3567 3573
+)
+"maze.ml" 123 3433 3468 "maze.ml" 123 3433 3469
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 121 3362 3366 "maze.ml" 126 3558 3566
+)
+"maze.ml" 123 3433 3470 "maze.ml" 123 3433 3474
+type(
+  dir
+)
+"maze.ml" 123 3433 3456 "maze.ml" 123 3433 3474
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 123 3433 3439 "maze.ml" 123 3433 3474
+type(
+  unit
+)
+"maze.ml" 124 3476 3485 "maze.ml" 124 3476 3486
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 121 3362 3366 "maze.ml" 126 3558 3566
+)
+"maze.ml" 124 3476 3487 "maze.ml" 124 3476 3489
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"maze.ml" 124 3476 3490 "maze.ml" 124 3476 3491
+type(
+  int
+)
+"maze.ml" 124 3476 3485 "maze.ml" 124 3476 3491
+type(
+  bool
+)
+"maze.ml" 124 3476 3497 "maze.ml" 124 3476 3506
+type(
+  int -> int -> dir -> unit
+)
+ident(
+  int_ref make_door "maze.ml" 41 874 878 "maze.ml" 41 874 887
+)
+"maze.ml" 124 3476 3507 "maze.ml" 124 3476 3508
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 120 3340 3342 "maze.ml" 127 3567 3573
+)
+"maze.ml" 124 3476 3509 "maze.ml" 124 3476 3510
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 121 3362 3366 "maze.ml" 126 3558 3566
+)
+"maze.ml" 124 3476 3511 "maze.ml" 124 3476 3516
+type(
+  dir
+)
+"maze.ml" 124 3476 3497 "maze.ml" 124 3476 3516
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 124 3476 3482 "maze.ml" 124 3476 3516
+type(
+  unit
+)
+"maze.ml" 125 3518 3527 "maze.ml" 125 3518 3528
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 120 3340 3342 "maze.ml" 127 3567 3573
+)
+"maze.ml" 125 3518 3529 "maze.ml" 125 3518 3531
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"maze.ml" 125 3518 3532 "maze.ml" 125 3518 3533
+type(
+  int
+)
+"maze.ml" 125 3518 3527 "maze.ml" 125 3518 3533
+type(
+  bool
+)
+"maze.ml" 125 3518 3539 "maze.ml" 125 3518 3548
+type(
+  int -> int -> dir -> unit
+)
+ident(
+  int_ref make_door "maze.ml" 41 874 878 "maze.ml" 41 874 887
+)
+"maze.ml" 125 3518 3549 "maze.ml" 125 3518 3550
+type(
+  int
+)
+ident(
+  int_ref i "maze.ml" 120 3340 3342 "maze.ml" 127 3567 3573
+)
+"maze.ml" 125 3518 3551 "maze.ml" 125 3518 3552
+type(
+  int
+)
+ident(
+  int_ref j "maze.ml" 121 3362 3366 "maze.ml" 126 3558 3566
+)
+"maze.ml" 125 3518 3553 "maze.ml" 125 3518 3557
+type(
+  dir
+)
+"maze.ml" 125 3518 3539 "maze.ml" 125 3518 3557
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 125 3518 3524 "maze.ml" 125 3518 3557
+type(
+  unit
+)
+"maze.ml" 124 3476 3482 "maze.ml" 125 3518 3557
+type(
+  unit
+)
+"maze.ml" 123 3433 3439 "maze.ml" 125 3518 3557
+type(
+  unit
+)
+"maze.ml" 122 3387 3393 "maze.ml" 125 3518 3557
+type(
+  unit
+)
+"maze.ml" 121 3362 3366 "maze.ml" 126 3558 3566
+type(
+  unit
+)
+"maze.ml" 120 3340 3342 "maze.ml" 127 3567 3573
+type(
+  unit
+)
+"maze.ml" 128 3575 3577 "maze.ml" 128 3575 3586
+type(
+  unit -> unit
+)
+ident(
+  int_ref make_maze "maze.ml" 81 2245 2249 "maze.ml" 81 2245 2258
+)
+"maze.ml" 128 3575 3587 "maze.ml" 128 3575 3589
+type(
+  unit
+)
+"maze.ml" 128 3575 3577 "maze.ml" 128 3575 3589
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 129 3591 3593 "maze.ml" 129 3591 3602
+type(
+  int -> int -> dir -> unit
+)
+ident(
+  int_ref make_door "maze.ml" 41 874 878 "maze.ml" 41 874 887
+)
+"maze.ml" 129 3591 3603 "maze.ml" 129 3591 3604
+type(
+  int
+)
+"maze.ml" 129 3591 3606 "maze.ml" 129 3591 3608
+type(
+  int
+)
+ident(
+  int_ref h1 "maze.ml" 12 152 156 "maze.ml" 12 152 158
+)
+"maze.ml" 129 3591 3608 "maze.ml" 129 3591 3609
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"maze.ml" 129 3591 3609 "maze.ml" 129 3591 3610
+type(
+  int
+)
+"maze.ml" 129 3591 3605 "maze.ml" 129 3591 3611
+type(
+  int
+)
+"maze.ml" 129 3591 3612 "maze.ml" 129 3591 3617
+type(
+  dir
+)
+"maze.ml" 129 3591 3593 "maze.ml" 129 3591 3617
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 128 3575 3577 "maze.ml" 129 3591 3617
+type(
+  unit
+)
+"maze.ml" 120 3340 3342 "maze.ml" 129 3591 3617
+type(
+  unit
+)
+"maze.ml" 118 3238 3240 "maze.ml" 129 3591 3617
+type(
+  unit
+)
+"maze.ml" 117 3195 3197 "maze.ml" 129 3591 3617
+type(
+  unit
+)
+"maze.ml" 116 3176 3178 "maze.ml" 129 3591 3617
+type(
+  unit
+)
+"maze.ml" 115 3155 3157 "maze.ml" 129 3591 3617
+type(
+  unit
+)
+"maze.ml" 132 3638 3642 "maze.ml" 132 3638 3645
+type(
+  unit -> int
+)
+ident(
+  def get "maze.ml" 133 3665 3665 "maze.ml" 1 0 -1
+)
+"maze.ml" 132 3638 3646 "maze.ml" 132 3638 3648
+type(
+  unit
+)
+"maze.ml" 132 3638 3651 "maze.ml" 132 3638 3658
+type(
+  int -> int -> int
+)
+ident(
+  int_ref get_val "maze.ml" 31 559 563 "maze.ml" 31 559 570
+)
+"maze.ml" 132 3638 3659 "maze.ml" 132 3638 3660
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 132 3638 3660 "maze.ml" 132 3638 3661
+type(
+  int ref
+)
+ident(
+  int_ref x "maze.ml" 5 51 55 "maze.ml" 5 51 56
+)
+"maze.ml" 132 3638 3659 "maze.ml" 132 3638 3661
+type(
+  int
+)
+"maze.ml" 132 3638 3662 "maze.ml" 132 3638 3663
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 132 3638 3663 "maze.ml" 132 3638 3664
+type(
+  int ref
+)
+ident(
+  int_ref y "maze.ml" 6 65 69 "maze.ml" 6 65 70
+)
+"maze.ml" 132 3638 3662 "maze.ml" 132 3638 3664
+type(
+  int
+)
+"maze.ml" 132 3638 3651 "maze.ml" 132 3638 3664
+call(
+  tail
+)
+type(
+  int
+)
+"maze.ml" 133 3665 3669 "maze.ml" 133 3665 3672
+type(
+  int -> unit
+)
+ident(
+  def set "maze.ml" 136 3751 3751 "maze.ml" 1 0 -1
+)
+"maze.ml" 133 3665 3673 "maze.ml" 133 3665 3674
+type(
+  int
+)
+ident(
+  def n "maze.ml" 135 3733 3735 "maze.ml" 135 3733 3750
+)
+"maze.ml" 135 3733 3735 "maze.ml" 135 3733 3742
+type(
+  int -> int -> int -> unit
+)
+ident(
+  int_ref set_val "maze.ml" 32 593 597 "maze.ml" 32 593 604
+)
+"maze.ml" 135 3733 3743 "maze.ml" 135 3733 3744
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 135 3733 3744 "maze.ml" 135 3733 3745
+type(
+  int ref
+)
+ident(
+  int_ref x "maze.ml" 5 51 55 "maze.ml" 5 51 56
+)
+"maze.ml" 135 3733 3743 "maze.ml" 135 3733 3745
+type(
+  int
+)
+"maze.ml" 135 3733 3746 "maze.ml" 135 3733 3747
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 135 3733 3747 "maze.ml" 135 3733 3748
+type(
+  int ref
+)
+ident(
+  int_ref y "maze.ml" 6 65 69 "maze.ml" 6 65 70
+)
+"maze.ml" 135 3733 3746 "maze.ml" 135 3733 3748
+type(
+  int
+)
+"maze.ml" 135 3733 3749 "maze.ml" 135 3733 3750
+type(
+  int
+)
+ident(
+  int_ref n "maze.ml" 133 3665 3673 "maze.ml" 133 3665 3674
+)
+"maze.ml" 135 3733 3735 "maze.ml" 135 3733 3750
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 136 3751 3755 "maze.ml" 136 3751 3759
+type(
+  unit -> bool
+)
+ident(
+  def move "maze.ml" 145 3922 3922 "maze.ml" 1 0 -1
+)
+"maze.ml" 136 3751 3760 "maze.ml" 136 3751 3762
+type(
+  unit
+)
+"maze.ml" 137 3766 3768 "maze.ml" 137 3766 3771
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"maze.ml" 137 3766 3773 "maze.ml" 137 3766 3780
+type(
+  int -> int -> dir -> bool
+)
+ident(
+  int_ref is_wall "maze.ml" 59 1559 1563 "maze.ml" 59 1559 1570
+)
+"maze.ml" 137 3766 3781 "maze.ml" 137 3766 3782
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 137 3766 3782 "maze.ml" 137 3766 3783
+type(
+  int ref
+)
+ident(
+  int_ref x "maze.ml" 5 51 55 "maze.ml" 5 51 56
+)
+"maze.ml" 137 3766 3781 "maze.ml" 137 3766 3783
+type(
+  int
+)
+"maze.ml" 137 3766 3784 "maze.ml" 137 3766 3785
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 137 3766 3785 "maze.ml" 137 3766 3786
+type(
+  int ref
+)
+ident(
+  int_ref y "maze.ml" 6 65 69 "maze.ml" 6 65 70
+)
+"maze.ml" 137 3766 3784 "maze.ml" 137 3766 3786
+type(
+  int
+)
+"maze.ml" 137 3766 3787 "maze.ml" 137 3766 3788
+type(
+  dir ref -> dir
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 137 3766 3788 "maze.ml" 137 3766 3791
+type(
+  dir ref
+)
+ident(
+  int_ref dir "maze.ml" 9 119 123 "maze.ml" 9 119 126
+)
+"maze.ml" 137 3766 3787 "maze.ml" 137 3766 3791
+type(
+  dir
+)
+"maze.ml" 137 3766 3772 "maze.ml" 137 3766 3792
+call(
+  stack
+)
+type(
+  bool
+)
+"maze.ml" 137 3766 3768 "maze.ml" 137 3766 3792
+type(
+  bool
+)
+"maze.ml" 137 3766 3793 "maze.ml" 137 3766 3795
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"maze.ml" 138 3796 3811 "maze.ml" 138 3796 3812
+type(
+  dir ref -> dir
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 138 3796 3812 "maze.ml" 138 3796 3815
+type(
+  dir ref
+)
+ident(
+  int_ref dir "maze.ml" 9 119 123 "maze.ml" 9 119 126
+)
+"maze.ml" 138 3796 3811 "maze.ml" 138 3796 3815
+type(
+  dir
+)
+"maze.ml" 139 3821 3827 "maze.ml" 139 3821 3832
+type(
+  dir
+)
+"maze.ml" 139 3821 3836 "maze.ml" 139 3821 3840
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"maze.ml" 139 3821 3841 "maze.ml" 139 3821 3842
+type(
+  int ref
+)
+ident(
+  int_ref y "maze.ml" 6 65 69 "maze.ml" 6 65 70
+)
+"maze.ml" 139 3821 3836 "maze.ml" 139 3821 3842
+type(
+  unit
+)
+"maze.ml" 140 3843 3849 "maze.ml" 140 3843 3854
+type(
+  dir
+)
+"maze.ml" 140 3843 3858 "maze.ml" 140 3843 3862
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.decr
+)
+"maze.ml" 140 3843 3863 "maze.ml" 140 3843 3864
+type(
+  int ref
+)
+ident(
+  int_ref y "maze.ml" 6 65 69 "maze.ml" 6 65 70
+)
+"maze.ml" 140 3843 3858 "maze.ml" 140 3843 3864
+type(
+  unit
+)
+"maze.ml" 141 3865 3871 "maze.ml" 141 3865 3875
+type(
+  dir
+)
+"maze.ml" 141 3865 3879 "maze.ml" 141 3865 3883
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.decr
+)
+"maze.ml" 141 3865 3884 "maze.ml" 141 3865 3885
+type(
+  int ref
+)
+ident(
+  int_ref x "maze.ml" 5 51 55 "maze.ml" 5 51 56
+)
+"maze.ml" 141 3865 3879 "maze.ml" 141 3865 3885
+type(
+  unit
+)
+"maze.ml" 142 3886 3892 "maze.ml" 142 3886 3896
+type(
+  dir
+)
+"maze.ml" 142 3886 3900 "maze.ml" 142 3886 3904
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"maze.ml" 142 3886 3905 "maze.ml" 142 3886 3906
+type(
+  int ref
+)
+ident(
+  int_ref x "maze.ml" 5 51 55 "maze.ml" 5 51 56
+)
+"maze.ml" 142 3886 3900 "maze.ml" 142 3886 3906
+type(
+  unit
+)
+"maze.ml" 138 3796 3799 "maze.ml" 143 3907 3913
+type(
+  unit
+)
+"maze.ml" 143 3907 3915 "maze.ml" 143 3907 3919
+type(
+  bool
+)
+"maze.ml" 138 3796 3798 "maze.ml" 143 3907 3920
+type(
+  bool
+)
+"maze.ml" 137 3766 3768 "maze.ml" 143 3907 3920
+type(
+  bool
+)
+"maze.ml" 145 3922 3926 "maze.ml" 145 3922 3935
+type(
+  unit -> unit
+)
+ident(
+  def turn_left "maze.ml" 151 4037 4037 "maze.ml" 1 0 -1
+)
+"maze.ml" 145 3922 3936 "maze.ml" 145 3922 3938
+type(
+  unit
+)
+"maze.ml" 145 3922 3941 "maze.ml" 145 3922 3944
+type(
+  dir ref
+)
+ident(
+  int_ref dir "maze.ml" 9 119 123 "maze.ml" 9 119 126
+)
+"maze.ml" 145 3922 3945 "maze.ml" 145 3922 3947
+type(
+  dir ref -> dir -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"maze.ml" 145 3922 3954 "maze.ml" 145 3922 3955
+type(
+  dir ref -> dir
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 145 3922 3955 "maze.ml" 145 3922 3958
+type(
+  dir ref
+)
+ident(
+  int_ref dir "maze.ml" 9 119 123 "maze.ml" 9 119 126
+)
+"maze.ml" 145 3922 3954 "maze.ml" 145 3922 3958
+type(
+  dir
+)
+"maze.ml" 146 3964 3968 "maze.ml" 146 3964 3973
+type(
+  dir
+)
+"maze.ml" 146 3964 3977 "maze.ml" 146 3964 3981
+type(
+  dir
+)
+"maze.ml" 147 3982 3986 "maze.ml" 147 3982 3990
+type(
+  dir
+)
+"maze.ml" 147 3982 3994 "maze.ml" 147 3982 3999
+type(
+  dir
+)
+"maze.ml" 148 4000 4004 "maze.ml" 148 4000 4009
+type(
+  dir
+)
+"maze.ml" 148 4000 4013 "maze.ml" 148 4000 4017
+type(
+  dir
+)
+"maze.ml" 149 4018 4022 "maze.ml" 149 4018 4026
+type(
+  dir
+)
+"maze.ml" 149 4018 4030 "maze.ml" 149 4018 4035
+type(
+  dir
+)
+"maze.ml" 145 3922 3948 "maze.ml" 149 4018 4035
+type(
+  dir
+)
+"maze.ml" 145 3922 3941 "maze.ml" 149 4018 4035
+type(
+  unit
+)
+"maze.ml" 151 4037 4041 "maze.ml" 151 4037 4051
+type(
+  unit -> unit
+)
+ident(
+  def turn_right "maze.ml" 157 4153 4153 "maze.ml" 1 0 -1
+)
+"maze.ml" 151 4037 4052 "maze.ml" 151 4037 4054
+type(
+  unit
+)
+"maze.ml" 151 4037 4057 "maze.ml" 151 4037 4060
+type(
+  dir ref
+)
+ident(
+  int_ref dir "maze.ml" 9 119 123 "maze.ml" 9 119 126
+)
+"maze.ml" 151 4037 4061 "maze.ml" 151 4037 4063
+type(
+  dir ref -> dir -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"maze.ml" 151 4037 4070 "maze.ml" 151 4037 4071
+type(
+  dir ref -> dir
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 151 4037 4071 "maze.ml" 151 4037 4074
+type(
+  dir ref
+)
+ident(
+  int_ref dir "maze.ml" 9 119 123 "maze.ml" 9 119 126
+)
+"maze.ml" 151 4037 4070 "maze.ml" 151 4037 4074
+type(
+  dir
+)
+"maze.ml" 152 4080 4084 "maze.ml" 152 4080 4089
+type(
+  dir
+)
+"maze.ml" 152 4080 4093 "maze.ml" 152 4080 4097
+type(
+  dir
+)
+"maze.ml" 153 4098 4102 "maze.ml" 153 4098 4106
+type(
+  dir
+)
+"maze.ml" 153 4098 4110 "maze.ml" 153 4098 4115
+type(
+  dir
+)
+"maze.ml" 154 4116 4120 "maze.ml" 154 4116 4125
+type(
+  dir
+)
+"maze.ml" 154 4116 4129 "maze.ml" 154 4116 4133
+type(
+  dir
+)
+"maze.ml" 155 4134 4138 "maze.ml" 155 4134 4142
+type(
+  dir
+)
+"maze.ml" 155 4134 4146 "maze.ml" 155 4134 4151
+type(
+  dir
+)
+"maze.ml" 151 4037 4064 "maze.ml" 155 4134 4151
+type(
+  dir
+)
+"maze.ml" 151 4037 4057 "maze.ml" 155 4134 4151
+type(
+  unit
+)
+"maze.ml" 159 4166 4170 "maze.ml" 159 4166 4173
+type(
+  unit -> int
+)
+ident(
+  def get "maze.ml" 161 4250 4250 "maze.ml" 1 0 -1
+)
+"maze.ml" 159 4166 4174 "maze.ml" 159 4166 4176
+type(
+  unit
+)
+"maze.ml" 160 4180 4185 "maze.ml" 160 4180 4186
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 160 4180 4186 "maze.ml" 160 4180 4195
+type(
+  bool ref
+)
+ident(
+  int_ref activated "maze.ml" 2 1 5 "maze.ml" 2 1 14
+)
+"maze.ml" 160 4180 4185 "maze.ml" 160 4180 4195
+type(
+  bool
+)
+"maze.ml" 160 4180 4201 "maze.ml" 160 4180 4204
+type(
+  unit -> int
+)
+ident(
+  int_ref get "maze.ml" 132 3638 3642 "maze.ml" 132 3638 3645
+)
+"maze.ml" 160 4180 4205 "maze.ml" 160 4180 4207
+type(
+  unit
+)
+"maze.ml" 160 4180 4201 "maze.ml" 160 4180 4207
+call(
+  tail
+)
+type(
+  int
+)
+"maze.ml" 160 4180 4219 "maze.ml" 160 4180 4225
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.printf
+)
+"maze.ml" 160 4180 4226 "maze.ml" 160 4180 4242
+type(
+  (unit, Format.formatter, unit) format
+)
+"maze.ml" 160 4180 4219 "maze.ml" 160 4180 4242
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 160 4180 4244 "maze.ml" 160 4180 4245
+type(
+  int
+)
+"maze.ml" 160 4180 4213 "maze.ml" 160 4180 4249
+type(
+  int
+)
+"maze.ml" 160 4180 4182 "maze.ml" 160 4180 4249
+type(
+  int
+)
+"maze.ml" 161 4250 4254 "maze.ml" 161 4250 4257
+type(
+  int -> unit
+)
+ident(
+  def set "maze.ml" 163 4324 4324 "maze.ml" 1 0 -1
+)
+"maze.ml" 161 4250 4258 "maze.ml" 161 4250 4259
+type(
+  int
+)
+ident(
+  def n "maze.ml" 162 4263 4265 "maze.ml" 162 4263 4323
+)
+"maze.ml" 162 4263 4268 "maze.ml" 162 4263 4269
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 162 4263 4269 "maze.ml" 162 4263 4278
+type(
+  bool ref
+)
+ident(
+  int_ref activated "maze.ml" 2 1 5 "maze.ml" 2 1 14
+)
+"maze.ml" 162 4263 4268 "maze.ml" 162 4263 4278
+type(
+  bool
+)
+"maze.ml" 162 4263 4284 "maze.ml" 162 4263 4287
+type(
+  int -> unit
+)
+ident(
+  int_ref set "maze.ml" 133 3665 3669 "maze.ml" 133 3665 3672
+)
+"maze.ml" 162 4263 4288 "maze.ml" 162 4263 4289
+type(
+  int
+)
+ident(
+  int_ref n "maze.ml" 161 4250 4258 "maze.ml" 161 4250 4259
+)
+"maze.ml" 162 4263 4284 "maze.ml" 162 4263 4289
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 162 4263 4295 "maze.ml" 162 4263 4301
+type(
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  ext_ref Format.printf
+)
+"maze.ml" 162 4263 4302 "maze.ml" 162 4263 4321
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"maze.ml" 162 4263 4322 "maze.ml" 162 4263 4323
+type(
+  int
+)
+ident(
+  int_ref n "maze.ml" 161 4250 4258 "maze.ml" 161 4250 4259
+)
+"maze.ml" 162 4263 4295 "maze.ml" 162 4263 4323
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 162 4263 4265 "maze.ml" 162 4263 4323
+type(
+  unit
+)
+"maze.ml" 163 4324 4328 "maze.ml" 163 4324 4332
+type(
+  unit -> bool
+)
+ident(
+  def move "maze.ml" 165 4414 4414 "maze.ml" 1 0 -1
+)
+"maze.ml" 163 4324 4333 "maze.ml" 163 4324 4335
+type(
+  unit
+)
+"maze.ml" 164 4339 4344 "maze.ml" 164 4339 4345
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 164 4339 4345 "maze.ml" 164 4339 4354
+type(
+  bool ref
+)
+ident(
+  int_ref activated "maze.ml" 2 1 5 "maze.ml" 2 1 14
+)
+"maze.ml" 164 4339 4344 "maze.ml" 164 4339 4354
+type(
+  bool
+)
+"maze.ml" 164 4339 4360 "maze.ml" 164 4339 4364
+type(
+  unit -> bool
+)
+ident(
+  int_ref move "maze.ml" 136 3751 3755 "maze.ml" 136 3751 3759
+)
+"maze.ml" 164 4339 4365 "maze.ml" 164 4339 4367
+type(
+  unit
+)
+"maze.ml" 164 4339 4360 "maze.ml" 164 4339 4367
+call(
+  tail
+)
+type(
+  bool
+)
+"maze.ml" 164 4339 4379 "maze.ml" 164 4339 4385
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.printf
+)
+"maze.ml" 164 4339 4386 "maze.ml" 164 4339 4403
+type(
+  (unit, Format.formatter, unit) format
+)
+"maze.ml" 164 4339 4379 "maze.ml" 164 4339 4403
+call(
+  stack
+)
+type(
+  unit
+)
+"maze.ml" 164 4339 4405 "maze.ml" 164 4339 4409
+type(
+  bool
+)
+"maze.ml" 164 4339 4373 "maze.ml" 164 4339 4413
+type(
+  bool
+)
+"maze.ml" 164 4339 4341 "maze.ml" 164 4339 4413
+type(
+  bool
+)
+"maze.ml" 165 4414 4418 "maze.ml" 165 4414 4427
+type(
+  unit -> unit
+)
+ident(
+  def turn_left "maze.ml" 167 4502 4502 "maze.ml" 1 0 -1
+)
+"maze.ml" 165 4414 4428 "maze.ml" 165 4414 4430
+type(
+  unit
+)
+"maze.ml" 166 4434 4439 "maze.ml" 166 4434 4440
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 166 4434 4440 "maze.ml" 166 4434 4449
+type(
+  bool ref
+)
+ident(
+  int_ref activated "maze.ml" 2 1 5 "maze.ml" 2 1 14
+)
+"maze.ml" 166 4434 4439 "maze.ml" 166 4434 4449
+type(
+  bool
+)
+"maze.ml" 166 4434 4455 "maze.ml" 166 4434 4464
+type(
+  unit -> unit
+)
+ident(
+  int_ref turn_left "maze.ml" 145 3922 3926 "maze.ml" 145 3922 3935
+)
+"maze.ml" 166 4434 4465 "maze.ml" 166 4434 4467
+type(
+  unit
+)
+"maze.ml" 166 4434 4455 "maze.ml" 166 4434 4467
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 166 4434 4473 "maze.ml" 166 4434 4479
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.printf
+)
+"maze.ml" 166 4434 4480 "maze.ml" 166 4434 4501
+type(
+  (unit, Format.formatter, unit) format
+)
+"maze.ml" 166 4434 4473 "maze.ml" 166 4434 4501
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 166 4434 4436 "maze.ml" 166 4434 4501
+type(
+  unit
+)
+"maze.ml" 167 4502 4506 "maze.ml" 167 4502 4516
+type(
+  unit -> unit
+)
+ident(
+  def turn_right "maze.ml" 168 4523 4592 "maze.ml" 1 0 -1
+)
+"maze.ml" 167 4502 4517 "maze.ml" 167 4502 4519
+type(
+  unit
+)
+"maze.ml" 168 4523 4528 "maze.ml" 168 4523 4529
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"maze.ml" 168 4523 4529 "maze.ml" 168 4523 4538
+type(
+  bool ref
+)
+ident(
+  int_ref activated "maze.ml" 2 1 5 "maze.ml" 2 1 14
+)
+"maze.ml" 168 4523 4528 "maze.ml" 168 4523 4538
+type(
+  bool
+)
+"maze.ml" 168 4523 4544 "maze.ml" 168 4523 4554
+type(
+  unit -> unit
+)
+ident(
+  int_ref turn_right "maze.ml" 151 4037 4041 "maze.ml" 151 4037 4051
+)
+"maze.ml" 168 4523 4555 "maze.ml" 168 4523 4557
+type(
+  unit
+)
+"maze.ml" 168 4523 4544 "maze.ml" 168 4523 4557
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 168 4523 4563 "maze.ml" 168 4523 4569
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.printf
+)
+"maze.ml" 168 4523 4570 "maze.ml" 168 4523 4592
+type(
+  (unit, Format.formatter, unit) format
+)
+"maze.ml" 168 4523 4563 "maze.ml" 168 4523 4592
+call(
+  tail
+)
+type(
+  unit
+)
+"maze.ml" 168 4523 4525 "maze.ml" 168 4523 4592
+type(
+  unit
+)

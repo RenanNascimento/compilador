@@ -1,0 +1,22 @@
+"version.ml" 1 0 4 "version.ml" 1 0 11
+type(
+  string
+)
+ident(
+  def version "version.ml" 2 20 20 "version.ml" 1 0 -1
+)
+"version.ml" 1 0 14 "version.ml" 1 0 19
+type(
+  string
+)
+"version.ml" 2 20 24 "version.ml" 2 20 28
+type(
+  string
+)
+ident(
+  def date "version.ml" 2 20 61 "version.ml" 1 0 -1
+)
+"version.ml" 2 20 31 "version.ml" 2 20 61
+type(
+  string
+)

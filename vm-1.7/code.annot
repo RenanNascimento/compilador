@@ -1,0 +1,4446 @@
+"code.ml" 8 67 71 "code.ml" 8 67 83
+type(
+  in_channel -> (Instr.t * string option) list
+)
+ident(
+  def from_channel "code.ml" 17 293 293 "code.ml" 1 0 -1
+)
+"code.ml" 8 67 84 "code.ml" 8 67 87
+type(
+  in_channel
+)
+ident(
+  def cin "code.ml" 9 90 92 "code.ml" 15 243 291
+)
+"code.ml" 9 90 92 "code.ml" 9 90 105
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Hstring.clear
+)
+"code.ml" 9 90 106 "code.ml" 9 90 108
+type(
+  unit
+)
+"code.ml" 9 90 92 "code.ml" 9 90 108
+call(
+  stack
+)
+type(
+  unit
+)
+"code.ml" 10 110 112 "code.ml" 10 110 123
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Label.clear
+)
+"code.ml" 10 110 124 "code.ml" 10 110 126
+type(
+  unit
+)
+"code.ml" 10 110 112 "code.ml" 10 110 126
+call(
+  stack
+)
+type(
+  unit
+)
+"code.ml" 11 128 134 "code.ml" 11 128 136
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lb "code.ml" 12 166 168 "code.ml" 15 243 291
+)
+"code.ml" 11 128 139 "code.ml" 11 128 158
+type(
+  in_channel -> Lexing.lexbuf
+)
+ident(
+  ext_ref Lexing.from_channel
+)
+"code.ml" 11 128 159 "code.ml" 11 128 162
+type(
+  in_channel
+)
+ident(
+  int_ref cin "code.ml" 8 67 84 "code.ml" 8 67 87
+)
+"code.ml" 11 128 139 "code.ml" 11 128 162
+call(
+  stack
+)
+type(
+  Lexing.lexbuf
+)
+"code.ml" 13 172 176 "code.ml" 13 172 192
+type(
+  (Lexing.lexbuf -> Code_parser.token) ->
+  Lexing.lexbuf -> (Instr.t * string option) list
+)
+ident(
+  ext_ref Code_parser.main
+)
+"code.ml" 13 172 193 "code.ml" 13 172 209
+type(
+  Lexing.lexbuf -> Code_parser.token
+)
+ident(
+  ext_ref Code_lexer.token
+)
+"code.ml" 13 172 210 "code.ml" 13 172 212
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lb "code.ml" 11 128 134 "code.ml" 11 128 136
+)
+"code.ml" 13 172 176 "code.ml" 13 172 212
+call(
+  stack
+)
+type(
+  (Instr.t * string option) list
+)
+"code.ml" 14 213 220 "code.ml" 14 213 239
+type(
+  exn
+)
+"code.ml" 15 243 247 "code.ml" 15 243 252
+type(
+  exn -> (Instr.t * string option) list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"code.ml" 15 243 267 "code.ml" 15 243 286
+type(
+  Lexing.lexbuf -> int
+)
+ident(
+  ext_ref Lexing.lexeme_start
+)
+"code.ml" 15 243 287 "code.ml" 15 243 289
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lb "code.ml" 11 128 134 "code.ml" 11 128 136
+)
+"code.ml" 15 243 266 "code.ml" 15 243 290
+call(
+  stack
+)
+type(
+  int
+)
+"code.ml" 15 243 253 "code.ml" 15 243 291
+type(
+  exn
+)
+"code.ml" 15 243 247 "code.ml" 15 243 291
+type(
+  (Instr.t * string option) list
+)
+"code.ml" 12 166 168 "code.ml" 15 243 291
+type(
+  (Instr.t * string option) list
+)
+"code.ml" 11 128 130 "code.ml" 15 243 291
+type(
+  (Instr.t * string option) list
+)
+"code.ml" 10 110 112 "code.ml" 15 243 291
+type(
+  (Instr.t * string option) list
+)
+"code.ml" 9 90 92 "code.ml" 15 243 291
+type(
+  (Instr.t * string option) list
+)
+"code.ml" 17 293 297 "code.ml" 17 293 306
+type(
+  string -> (Instr.t * string option) list
+)
+ident(
+  def from_file "code.ml" 23 387 387 "code.ml" 1 0 -1
+)
+"code.ml" 17 293 307 "code.ml" 17 293 308
+type(
+  string
+)
+ident(
+  def f "code.ml" 18 311 313 "code.ml" 21 382 385
+)
+"code.ml" 18 311 317 "code.ml" 18 311 320
+type(
+  in_channel
+)
+ident(
+  def cin "code.ml" 19 336 338 "code.ml" 21 382 385
+)
+"code.ml" 18 311 323 "code.ml" 18 311 330
+type(
+  string -> in_channel
+)
+ident(
+  ext_ref Pervasives.open_in
+)
+"code.ml" 18 311 331 "code.ml" 18 311 332
+type(
+  string
+)
+ident(
+  int_ref f "code.ml" 17 293 307 "code.ml" 17 293 308
+)
+"code.ml" 18 311 323 "code.ml" 18 311 332
+call(
+  stack
+)
+type(
+  in_channel
+)
+"code.ml" 19 336 342 "code.ml" 19 336 343
+type(
+  (Instr.t * string option) list
+)
+ident(
+  def c "code.ml" 20 366 368 "code.ml" 21 382 385
+)
+"code.ml" 19 336 346 "code.ml" 19 336 358
+type(
+  in_channel -> (Instr.t * string option) list
+)
+ident(
+  int_ref from_channel "code.ml" 8 67 71 "code.ml" 8 67 83
+)
+"code.ml" 19 336 359 "code.ml" 19 336 362
+type(
+  in_channel
+)
+ident(
+  int_ref cin "code.ml" 18 311 317 "code.ml" 18 311 320
+)
+"code.ml" 19 336 346 "code.ml" 19 336 362
+call(
+  stack
+)
+type(
+  (Instr.t * string option) list
+)
+"code.ml" 20 366 368 "code.ml" 20 366 376
+type(
+  in_channel -> unit
+)
+ident(
+  ext_ref Pervasives.close_in
+)
+"code.ml" 20 366 377 "code.ml" 20 366 380
+type(
+  in_channel
+)
+ident(
+  int_ref cin "code.ml" 18 311 317 "code.ml" 18 311 320
+)
+"code.ml" 20 366 368 "code.ml" 20 366 380
+call(
+  stack
+)
+type(
+  unit
+)
+"code.ml" 21 382 384 "code.ml" 21 382 385
+type(
+  (Instr.t * string option) list
+)
+ident(
+  int_ref c "code.ml" 19 336 342 "code.ml" 19 336 343
+)
+"code.ml" 20 366 368 "code.ml" 21 382 385
+type(
+  (Instr.t * string option) list
+)
+"code.ml" 19 336 338 "code.ml" 21 382 385
+type(
+  (Instr.t * string option) list
+)
+"code.ml" 18 311 313 "code.ml" 21 382 385
+type(
+  (Instr.t * string option) list
+)
+"code.ml" 23 387 391 "code.ml" 23 387 398
+type(
+  (Instr.t * 'a) list -> Instr.t array
+)
+ident(
+  def compile "code.ml" 48 1183 1183 "code.ml" 1 0 -1
+)
+"code.ml" 23 387 399 "code.ml" 23 387 400
+type(
+  (Instr.t * 'a) list
+)
+ident(
+  def c "code.ml" 25 468 470 "code.ml" 46 1178 1181
+)
+"code.ml" 25 468 474 "code.ml" 25 468 480
+type(
+  (Label.t, unit) Hashtbl.t
+)
+ident(
+  def labels "code.ml" 26 504 506 "code.ml" 46 1178 1181
+)
+"code.ml" 25 468 483 "code.ml" 25 468 497
+type(
+  ?random:bool -> int -> (Label.t, unit) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"code.ml" 25 468 498 "code.ml" 25 468 500
+type(
+  int
+)
+"code.ml" 25 468 483 "code.ml" 25 468 500
+call(
+  stack
+)
+type(
+  (Label.t, unit) Hashtbl.t
+)
+"code.ml" 26 504 510 "code.ml" 26 504 519
+type(
+  Instr.t -> unit
+)
+ident(
+  def add_label "code.ml" 31 658 660 "code.ml" 46 1178 1181
+)
+"code.ml" 27 531 542 "code.ml" 27 531 543
+type(
+  Label.t
+)
+ident(
+  def l "code.ml" 27 531 564 "code.ml" 27 531 587
+)
+"code.ml" 27 531 537 "code.ml" 27 531 543
+type(
+  Instr.t
+)
+"code.ml" 27 531 549 "code.ml" 27 531 550
+type(
+  Label.t
+)
+ident(
+  def l "code.ml" 27 531 564 "code.ml" 27 531 587
+)
+"code.ml" 27 531 546 "code.ml" 27 531 550
+type(
+  Instr.t
+)
+"code.ml" 27 531 537 "code.ml" 27 531 550
+type(
+  Instr.t
+)
+"code.ml" 27 531 559 "code.ml" 27 531 560
+type(
+  Label.t
+)
+ident(
+  def l "code.ml" 27 531 564 "code.ml" 27 531 587
+)
+"code.ml" 27 531 553 "code.ml" 27 531 560
+type(
+  Instr.t
+)
+"code.ml" 27 531 537 "code.ml" 27 531 560
+type(
+  Instr.t
+)
+"code.ml" 27 531 564 "code.ml" 27 531 575
+type(
+  (Label.t, unit) Hashtbl.t -> Label.t -> unit -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"code.ml" 27 531 576 "code.ml" 27 531 582
+type(
+  (Label.t, unit) Hashtbl.t
+)
+ident(
+  int_ref labels "code.ml" 25 468 474 "code.ml" 25 468 480
+)
+"code.ml" 27 531 583 "code.ml" 27 531 584
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 27 531 542 "code.ml" 27 531 543
+)
+"code.ml" 27 531 585 "code.ml" 27 531 587
+type(
+  unit
+)
+"code.ml" 27 531 564 "code.ml" 27 531 587
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 28 588 594 "code.ml" 28 588 595
+type(
+  Instr.t
+)
+"code.ml" 28 588 599 "code.ml" 28 588 601
+type(
+  unit
+)
+"code.ml" 26 504 522 "code.ml" 28 588 601
+type(
+  Instr.t -> unit
+)
+"code.ml" 31 658 664 "code.ml" 31 658 665
+type(
+  int
+)
+ident(
+  def n "code.ml" 34 792 794 "code.ml" 46 1178 1181
+)
+"code.ml" 31 658 668 "code.ml" 31 658 682
+type(
+  (int -> Instr.t * 'a -> int) -> int -> (Instr.t * 'a) list -> int
+)
+ident(
+  ext_ref List.fold_left
+)
+"code.ml" 31 658 688 "code.ml" 31 658 689
+type(
+  int
+)
+ident(
+  def i "code.ml" 31 658 693 "code.ml" 31 658 729
+)
+"code.ml" 31 658 708 "code.ml" 31 658 709
+type(
+  Label.t
+)
+"code.ml" 31 658 702 "code.ml" 31 658 709
+type(
+  Instr.t
+)
+"code.ml" 31 658 710 "code.ml" 31 658 711
+type(
+  'a
+)
+"code.ml" 31 658 702 "code.ml" 31 658 711
+type(
+  Instr.t * 'a
+)
+"code.ml" 31 658 715 "code.ml" 31 658 716
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 31 658 688 "code.ml" 31 658 689
+)
+"code.ml" 31 658 719 "code.ml" 31 658 720
+type(
+  Instr.t * 'a
+)
+"code.ml" 31 658 724 "code.ml" 31 658 725
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 31 658 688 "code.ml" 31 658 689
+)
+"code.ml" 31 658 726 "code.ml" 31 658 727
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"code.ml" 31 658 728 "code.ml" 31 658 729
+type(
+  int
+)
+"code.ml" 31 658 724 "code.ml" 31 658 729
+type(
+  int
+)
+"code.ml" 31 658 693 "code.ml" 31 658 729
+type(
+  Instr.t * 'a -> int
+)
+"code.ml" 31 658 683 "code.ml" 31 658 730
+type(
+  int -> Instr.t * 'a -> int
+)
+"code.ml" 31 658 731 "code.ml" 31 658 732
+type(
+  int
+)
+"code.ml" 31 658 733 "code.ml" 31 658 734
+type(
+  (Instr.t * 'a) list
+)
+ident(
+  int_ref c "code.ml" 23 387 399 "code.ml" 23 387 400
+)
+"code.ml" 31 658 668 "code.ml" 31 658 734
+call(
+  stack
+)
+type(
+  int
+)
+"code.ml" 34 792 798 "code.ml" 34 792 799
+type(
+  Instr.t array
+)
+ident(
+  def a "code.ml" 35 824 826 "code.ml" 46 1178 1181
+)
+"code.ml" 34 792 802 "code.ml" 34 792 814
+type(
+  int -> Instr.t -> Instr.t array
+)
+ident(
+  ext_ref Array.create
+)
+"code.ml" 34 792 815 "code.ml" 34 792 816
+type(
+  int
+)
+ident(
+  int_ref n "code.ml" 31 658 664 "code.ml" 31 658 665
+)
+"code.ml" 34 792 817 "code.ml" 34 792 820
+type(
+  Instr.t
+)
+"code.ml" 34 792 802 "code.ml" 34 792 820
+type(
+  Instr.t array
+)
+"code.ml" 35 824 830 "code.ml" 35 824 832
+type(
+  int ref
+)
+ident(
+  def pc "code.ml" 36 844 846 "code.ml" 46 1178 1181
+)
+"code.ml" 35 824 835 "code.ml" 35 824 838
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"code.ml" 35 824 839 "code.ml" 35 824 840
+type(
+  int
+)
+"code.ml" 35 824 835 "code.ml" 35 824 840
+type(
+  int ref
+)
+"code.ml" 36 844 846 "code.ml" 36 844 855
+type(
+  (Instr.t * 'a -> unit) -> (Instr.t * 'a) list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"code.ml" 38 871 886 "code.ml" 38 871 887
+type(
+  Label.t
+)
+ident(
+  def l "code.ml" 38 871 893 "code.ml" 38 871 909
+)
+"code.ml" 38 871 880 "code.ml" 38 871 887
+type(
+  Instr.t
+)
+"code.ml" 38 871 888 "code.ml" 38 871 889
+type(
+  'a
+)
+"code.ml" 38 871 880 "code.ml" 38 871 889
+type(
+  Instr.t * 'a
+)
+"code.ml" 38 871 893 "code.ml" 38 871 894
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 38 871 886 "code.ml" 38 871 887
+)
+"code.ml" 38 871 906 "code.ml" 38 871 907
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"code.ml" 38 871 907 "code.ml" 38 871 909
+type(
+  int ref
+)
+ident(
+  int_ref pc "code.ml" 35 824 830 "code.ml" 35 824 832
+)
+"code.ml" 38 871 906 "code.ml" 38 871 909
+type(
+  int
+)
+"code.ml" 38 871 893 "code.ml" 38 871 909
+type(
+  unit
+)
+"code.ml" 39 910 919 "code.ml" 39 910 920
+type(
+  Instr.t
+)
+ident(
+  def i "code.ml" 39 910 926 "code.ml" 39 910 960
+)
+"code.ml" 39 910 921 "code.ml" 39 910 922
+type(
+  'a
+)
+"code.ml" 39 910 919 "code.ml" 39 910 922
+type(
+  Instr.t * 'a
+)
+"code.ml" 39 910 926 "code.ml" 39 910 927
+type(
+  Instr.t array
+)
+ident(
+  int_ref a "code.ml" 34 792 798 "code.ml" 34 792 799
+)
+"code.ml" 39 910 929 "code.ml" 39 910 930
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"code.ml" 39 910 930 "code.ml" 39 910 932
+type(
+  int ref
+)
+ident(
+  int_ref pc "code.ml" 35 824 830 "code.ml" 35 824 832
+)
+"code.ml" 39 910 929 "code.ml" 39 910 932
+type(
+  int
+)
+"code.ml" 39 910 937 "code.ml" 39 910 938
+type(
+  Instr.t
+)
+ident(
+  int_ref i "code.ml" 39 910 919 "code.ml" 39 910 920
+)
+"code.ml" 39 910 926 "code.ml" 39 910 938
+type(
+  unit
+)
+"code.ml" 39 910 940 "code.ml" 39 910 944
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"code.ml" 39 910 945 "code.ml" 39 910 947
+type(
+  int ref
+)
+ident(
+  int_ref pc "code.ml" 35 824 830 "code.ml" 35 824 832
+)
+"code.ml" 39 910 940 "code.ml" 39 910 947
+type(
+  unit
+)
+"code.ml" 39 910 949 "code.ml" 39 910 958
+type(
+  Instr.t -> unit
+)
+ident(
+  int_ref add_label "code.ml" 26 504 510 "code.ml" 26 504 519
+)
+"code.ml" 39 910 959 "code.ml" 39 910 960
+type(
+  Instr.t
+)
+ident(
+  int_ref i "code.ml" 39 910 919 "code.ml" 39 910 920
+)
+"code.ml" 39 910 949 "code.ml" 39 910 960
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 39 910 940 "code.ml" 39 910 960
+type(
+  unit
+)
+"code.ml" 39 910 926 "code.ml" 39 910 960
+type(
+  unit
+)
+"code.ml" 37 857 861 "code.ml" 39 910 961
+type(
+  Instr.t * 'a -> unit
+)
+"code.ml" 40 962 966 "code.ml" 40 962 967
+type(
+  (Instr.t * 'a) list
+)
+ident(
+  int_ref c "code.ml" 23 387 399 "code.ml" 23 387 400
+)
+"code.ml" 36 844 846 "code.ml" 40 962 967
+call(
+  stack
+)
+type(
+  unit
+)
+"code.ml" 42 1029 1035 "code.ml" 42 1029 1046
+type(
+  Label.t -> unit
+)
+ident(
+  def check_label "code.ml" 45 1128 1130 "code.ml" 46 1178 1181
+)
+"code.ml" 42 1029 1047 "code.ml" 42 1029 1048
+type(
+  Label.t
+)
+ident(
+  def l "code.ml" 43 1052 1056 "code.ml" 43 1052 1121
+)
+"code.ml" 43 1052 1059 "code.ml" 43 1052 1060
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 42 1029 1047 "code.ml" 42 1029 1048
+)
+"code.ml" 43 1052 1059 "code.ml" 43 1052 1068
+type(
+  int
+)
+"code.ml" 43 1052 1069 "code.ml" 43 1052 1070
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"code.ml" 43 1052 1071 "code.ml" 43 1052 1073
+type(
+  int
+)
+"code.ml" 43 1052 1059 "code.ml" 43 1052 1073
+type(
+  bool
+)
+"code.ml" 43 1052 1079 "code.ml" 43 1052 1087
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"code.ml" 43 1052 1089 "code.ml" 43 1052 1107
+type(
+  string
+)
+"code.ml" 43 1052 1108 "code.ml" 43 1052 1109
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"code.ml" 43 1052 1110 "code.ml" 43 1052 1111
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 42 1029 1047 "code.ml" 42 1029 1048
+)
+"code.ml" 43 1052 1110 "code.ml" 43 1052 1120
+type(
+  string
+)
+"code.ml" 43 1052 1088 "code.ml" 43 1052 1121
+call(
+  stack
+)
+type(
+  string
+)
+"code.ml" 43 1052 1079 "code.ml" 43 1052 1121
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 43 1052 1056 "code.ml" 43 1052 1121
+type(
+  unit
+)
+"code.ml" 45 1128 1130 "code.ml" 45 1128 1142
+type(
+  (Label.t -> unit -> unit) -> (Label.t, unit) Hashtbl.t -> unit
+)
+ident(
+  ext_ref Hashtbl.iter
+)
+"code.ml" 45 1128 1148 "code.ml" 45 1128 1149
+type(
+  Label.t
+)
+ident(
+  def l "code.ml" 45 1128 1150 "code.ml" 45 1128 1168
+)
+"code.ml" 45 1128 1150 "code.ml" 45 1128 1151
+type(
+  unit
+)
+"code.ml" 45 1128 1155 "code.ml" 45 1128 1166
+type(
+  Label.t -> unit
+)
+ident(
+  int_ref check_label "code.ml" 42 1029 1035 "code.ml" 42 1029 1046
+)
+"code.ml" 45 1128 1167 "code.ml" 45 1128 1168
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 45 1128 1148 "code.ml" 45 1128 1149
+)
+"code.ml" 45 1128 1155 "code.ml" 45 1128 1168
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 45 1128 1143 "code.ml" 45 1128 1169
+type(
+  Label.t -> unit -> unit
+)
+"code.ml" 45 1128 1170 "code.ml" 45 1128 1176
+type(
+  (Label.t, unit) Hashtbl.t
+)
+ident(
+  int_ref labels "code.ml" 25 468 474 "code.ml" 25 468 480
+)
+"code.ml" 45 1128 1130 "code.ml" 45 1128 1176
+call(
+  stack
+)
+type(
+  unit
+)
+"code.ml" 46 1178 1180 "code.ml" 46 1178 1181
+type(
+  Instr.t array
+)
+ident(
+  int_ref a "code.ml" 34 792 798 "code.ml" 34 792 799
+)
+"code.ml" 45 1128 1130 "code.ml" 46 1178 1181
+type(
+  Instr.t array
+)
+"code.ml" 42 1029 1031 "code.ml" 46 1178 1181
+type(
+  Instr.t array
+)
+"code.ml" 36 844 846 "code.ml" 46 1178 1181
+type(
+  Instr.t array
+)
+"code.ml" 35 824 826 "code.ml" 46 1178 1181
+type(
+  Instr.t array
+)
+"code.ml" 34 792 794 "code.ml" 46 1178 1181
+type(
+  Instr.t array
+)
+"code.ml" 31 658 660 "code.ml" 46 1178 1181
+type(
+  Instr.t array
+)
+"code.ml" 26 504 506 "code.ml" 46 1178 1181
+type(
+  Instr.t array
+)
+"code.ml" 25 468 470 "code.ml" 46 1178 1181
+type(
+  Instr.t array
+)
+"code.ml" 48 1183 1187 "code.ml" 48 1183 1203
+type(
+  string -> Instr.t array
+)
+ident(
+  def load_and_compile "code.ml" 50 1231 1231 "code.ml" 1 0 -1
+)
+"code.ml" 48 1183 1204 "code.ml" 48 1183 1205
+type(
+  string
+)
+ident(
+  def f "code.ml" 48 1183 1208 "code.ml" 48 1183 1229
+)
+"code.ml" 48 1183 1208 "code.ml" 48 1183 1215
+type(
+  (Instr.t * string option) list -> Instr.t array
+)
+ident(
+  int_ref compile "code.ml" 23 387 391 "code.ml" 23 387 398
+)
+"code.ml" 48 1183 1217 "code.ml" 48 1183 1226
+type(
+  string -> (Instr.t * string option) list
+)
+ident(
+  int_ref from_file "code.ml" 17 293 297 "code.ml" 17 293 306
+)
+"code.ml" 48 1183 1227 "code.ml" 48 1183 1228
+type(
+  string
+)
+ident(
+  int_ref f "code.ml" 48 1183 1204 "code.ml" 48 1183 1205
+)
+"code.ml" 48 1183 1216 "code.ml" 48 1183 1229
+call(
+  stack
+)
+type(
+  (Instr.t * string option) list
+)
+"code.ml" 48 1183 1208 "code.ml" 48 1183 1229
+call(
+  tail
+)
+type(
+  Instr.t array
+)
+"code.ml" 52 1244 1248 "code.ml" 52 1244 1259
+type(
+  Format.formatter -> Label.t -> unit
+)
+ident(
+  def print_label "code.ml" 58 1381 1381 "code.ml" 1 0 -1
+)
+"code.ml" 52 1244 1260 "code.ml" 52 1244 1263
+type(
+  Format.formatter
+)
+ident(
+  def fmt "code.ml" 52 1244 1264 "code.ml" 56 1333 1379
+)
+"code.ml" 52 1244 1264 "code.ml" 52 1244 1265
+type(
+  Label.t
+)
+ident(
+  def l "code.ml" 53 1269 1271 "code.ml" 56 1333 1379
+)
+"code.ml" 53 1269 1274 "code.ml" 53 1269 1275
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 52 1244 1264 "code.ml" 52 1244 1265
+)
+"code.ml" 53 1269 1274 "code.ml" 53 1269 1283
+type(
+  int
+)
+"code.ml" 53 1269 1284 "code.ml" 53 1269 1285
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"code.ml" 53 1269 1286 "code.ml" 53 1269 1288
+type(
+  int
+)
+"code.ml" 53 1269 1274 "code.ml" 53 1269 1288
+type(
+  bool
+)
+"code.ml" 54 1294 1298 "code.ml" 54 1294 1305
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 54 1294 1306 "code.ml" 54 1294 1309
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 52 1244 1260 "code.ml" 52 1244 1263
+)
+"code.ml" 54 1294 1310 "code.ml" 54 1294 1314
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"code.ml" 54 1294 1315 "code.ml" 54 1294 1316
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 52 1244 1264 "code.ml" 52 1244 1265
+)
+"code.ml" 54 1294 1315 "code.ml" 54 1294 1325
+type(
+  string
+)
+"code.ml" 54 1294 1298 "code.ml" 54 1294 1325
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 56 1333 1337 "code.ml" 56 1333 1344
+type(
+  Format.formatter ->
+  (string -> int -> unit, Format.formatter, unit) format ->
+  string -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 56 1333 1345 "code.ml" 56 1333 1348
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 52 1244 1260 "code.ml" 52 1244 1263
+)
+"code.ml" 56 1333 1349 "code.ml" 56 1333 1358
+type(
+  (string -> int -> unit, Format.formatter, unit) format
+)
+"code.ml" 56 1333 1359 "code.ml" 56 1333 1360
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 52 1244 1264 "code.ml" 52 1244 1265
+)
+"code.ml" 56 1333 1359 "code.ml" 56 1333 1369
+type(
+  string
+)
+"code.ml" 56 1333 1370 "code.ml" 56 1333 1371
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 52 1244 1264 "code.ml" 52 1244 1265
+)
+"code.ml" 56 1333 1370 "code.ml" 56 1333 1379
+type(
+  int
+)
+"code.ml" 56 1333 1337 "code.ml" 56 1333 1379
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 53 1269 1271 "code.ml" 56 1333 1379
+type(
+  unit
+)
+"code.ml" 58 1381 1385 "code.ml" 58 1381 1394
+type(
+  Format.formatter -> string option -> unit
+)
+ident(
+  def print_com "code.ml" 62 1463 1463 "code.ml" 1 0 -1
+)
+"code.ml" 58 1381 1395 "code.ml" 58 1381 1398
+type(
+  Format.formatter
+)
+ident(
+  def fmt "code.ml" 58 1381 1401 "code.ml" 60 1447 1461
+)
+"code.ml" 59 1410 1419 "code.ml" 59 1410 1420
+type(
+  string
+)
+ident(
+  def s "code.ml" 59 1410 1424 "code.ml" 59 1410 1446
+)
+"code.ml" 59 1410 1414 "code.ml" 59 1410 1420
+type(
+  string option
+)
+"code.ml" 59 1410 1424 "code.ml" 59 1410 1431
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 59 1410 1432 "code.ml" 59 1410 1435
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 58 1381 1395 "code.ml" 58 1381 1398
+)
+"code.ml" 59 1410 1436 "code.ml" 59 1410 1444
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"code.ml" 59 1410 1445 "code.ml" 59 1410 1446
+type(
+  string
+)
+ident(
+  int_ref s "code.ml" 59 1410 1419 "code.ml" 59 1410 1420
+)
+"code.ml" 59 1410 1424 "code.ml" 59 1410 1446
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 60 1447 1451 "code.ml" 60 1447 1455
+type(
+  string option
+)
+"code.ml" 60 1447 1459 "code.ml" 60 1447 1461
+type(
+  unit
+)
+"code.ml" 58 1381 1401 "code.ml" 60 1447 1461
+type(
+  string option -> unit
+)
+"code.ml" 62 1463 1467 "code.ml" 62 1463 1479
+type(
+  Format.formatter -> Instr.t -> unit
+)
+ident(
+  def print_instr' "code.ml" 162 4777 4777 "code.ml" 1 0 -1
+)
+"code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+type(
+  Format.formatter
+)
+ident(
+  def fmt "code.ml" 62 1463 1486 "code.ml" 160 4745 4775
+)
+"code.ml" 63 1495 1499 "code.ml" 63 1495 1502
+type(
+  Instr.t
+)
+"code.ml" 63 1495 1506 "code.ml" 63 1495 1513
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 63 1495 1514 "code.ml" 63 1495 1517
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 63 1495 1518 "code.ml" 63 1495 1523
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 63 1495 1506 "code.ml" 63 1495 1523
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 64 1524 1528 "code.ml" 64 1524 1531
+type(
+  Instr.t
+)
+"code.ml" 64 1524 1535 "code.ml" 64 1524 1542
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 64 1524 1543 "code.ml" 64 1524 1546
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 64 1524 1547 "code.ml" 64 1524 1552
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 64 1524 1535 "code.ml" 64 1524 1552
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 65 1553 1557 "code.ml" 65 1553 1560
+type(
+  Instr.t
+)
+"code.ml" 65 1553 1564 "code.ml" 65 1553 1571
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 65 1553 1572 "code.ml" 65 1553 1575
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 65 1553 1576 "code.ml" 65 1553 1581
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 65 1553 1564 "code.ml" 65 1553 1581
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 66 1582 1586 "code.ml" 66 1582 1589
+type(
+  Instr.t
+)
+"code.ml" 66 1582 1593 "code.ml" 66 1582 1600
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 66 1582 1601 "code.ml" 66 1582 1604
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 66 1582 1605 "code.ml" 66 1582 1610
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 66 1582 1593 "code.ml" 66 1582 1610
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 67 1611 1615 "code.ml" 67 1611 1618
+type(
+  Instr.t
+)
+"code.ml" 67 1611 1622 "code.ml" 67 1611 1629
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 67 1611 1630 "code.ml" 67 1611 1633
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 67 1611 1634 "code.ml" 67 1611 1639
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 67 1611 1622 "code.ml" 67 1611 1639
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 68 1640 1644 "code.ml" 68 1640 1647
+type(
+  Instr.t
+)
+"code.ml" 68 1640 1651 "code.ml" 68 1640 1658
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 68 1640 1659 "code.ml" 68 1640 1662
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 68 1640 1663 "code.ml" 68 1640 1668
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 68 1640 1651 "code.ml" 68 1640 1668
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 69 1669 1673 "code.ml" 69 1669 1676
+type(
+  Instr.t
+)
+"code.ml" 69 1669 1680 "code.ml" 69 1669 1687
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 69 1669 1688 "code.ml" 69 1669 1691
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 69 1669 1692 "code.ml" 69 1669 1697
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 69 1669 1680 "code.ml" 69 1669 1697
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 70 1698 1702 "code.ml" 70 1698 1707
+type(
+  Instr.t
+)
+"code.ml" 70 1698 1711 "code.ml" 70 1698 1718
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 70 1698 1719 "code.ml" 70 1698 1722
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 70 1698 1723 "code.ml" 70 1698 1730
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 70 1698 1711 "code.ml" 70 1698 1730
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 71 1731 1735 "code.ml" 71 1731 1738
+type(
+  Instr.t
+)
+"code.ml" 71 1731 1742 "code.ml" 71 1731 1749
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 71 1731 1750 "code.ml" 71 1731 1753
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 71 1731 1754 "code.ml" 71 1731 1759
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 71 1731 1742 "code.ml" 71 1731 1759
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 72 1760 1764 "code.ml" 72 1760 1769
+type(
+  Instr.t
+)
+"code.ml" 72 1760 1773 "code.ml" 72 1760 1780
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 72 1760 1781 "code.ml" 72 1760 1784
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 72 1760 1785 "code.ml" 72 1760 1792
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 72 1760 1773 "code.ml" 72 1760 1792
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 73 1793 1797 "code.ml" 73 1793 1804
+type(
+  Instr.t
+)
+"code.ml" 73 1793 1808 "code.ml" 73 1793 1815
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 73 1793 1816 "code.ml" 73 1793 1819
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 73 1793 1820 "code.ml" 73 1793 1829
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 73 1793 1808 "code.ml" 73 1793 1829
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 75 1863 1867 "code.ml" 75 1863 1872
+type(
+  Instr.t
+)
+"code.ml" 75 1863 1876 "code.ml" 75 1863 1883
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 75 1863 1884 "code.ml" 75 1863 1887
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 75 1863 1888 "code.ml" 75 1863 1895
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 75 1863 1876 "code.ml" 75 1863 1895
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 76 1896 1900 "code.ml" 76 1896 1904
+type(
+  Instr.t
+)
+"code.ml" 76 1896 1908 "code.ml" 76 1896 1915
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 76 1896 1916 "code.ml" 76 1896 1919
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 76 1896 1920 "code.ml" 76 1896 1926
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 76 1896 1908 "code.ml" 76 1896 1926
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 77 1927 1931 "code.ml" 77 1927 1935
+type(
+  Instr.t
+)
+"code.ml" 77 1927 1939 "code.ml" 77 1927 1946
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 77 1927 1947 "code.ml" 77 1927 1950
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 77 1927 1951 "code.ml" 77 1927 1957
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 77 1927 1939 "code.ml" 77 1927 1957
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 78 1958 1962 "code.ml" 78 1958 1966
+type(
+  Instr.t
+)
+"code.ml" 78 1958 1970 "code.ml" 78 1958 1977
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 78 1958 1978 "code.ml" 78 1958 1981
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 78 1958 1982 "code.ml" 78 1958 1988
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 78 1958 1970 "code.ml" 78 1958 1988
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 79 1989 1993 "code.ml" 79 1989 1997
+type(
+  Instr.t
+)
+"code.ml" 79 1989 2001 "code.ml" 79 1989 2008
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 79 1989 2009 "code.ml" 79 1989 2012
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 79 1989 2013 "code.ml" 79 1989 2019
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 79 1989 2001 "code.ml" 79 1989 2019
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 80 2020 2024 "code.ml" 80 2020 2028
+type(
+  Instr.t
+)
+"code.ml" 80 2020 2032 "code.ml" 80 2020 2039
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 80 2020 2040 "code.ml" 80 2020 2043
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 80 2020 2044 "code.ml" 80 2020 2050
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 80 2020 2032 "code.ml" 80 2020 2050
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 81 2051 2055 "code.ml" 81 2051 2059
+type(
+  Instr.t
+)
+"code.ml" 81 2051 2063 "code.ml" 81 2051 2070
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 81 2051 2071 "code.ml" 81 2051 2074
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 81 2051 2075 "code.ml" 81 2051 2081
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 81 2051 2063 "code.ml" 81 2051 2081
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 82 2082 2086 "code.ml" 82 2082 2093
+type(
+  Instr.t
+)
+"code.ml" 82 2082 2097 "code.ml" 82 2082 2104
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 82 2082 2105 "code.ml" 82 2082 2108
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 82 2082 2109 "code.ml" 82 2082 2118
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 82 2082 2097 "code.ml" 82 2082 2118
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 84 2155 2159 "code.ml" 84 2155 2163
+type(
+  Instr.t
+)
+"code.ml" 84 2155 2167 "code.ml" 84 2155 2174
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 84 2155 2175 "code.ml" 84 2155 2178
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 84 2155 2179 "code.ml" 84 2155 2185
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 84 2155 2167 "code.ml" 84 2155 2185
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 86 2220 2224 "code.ml" 86 2220 2230
+type(
+  Instr.t
+)
+"code.ml" 86 2220 2234 "code.ml" 86 2220 2241
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 86 2220 2242 "code.ml" 86 2220 2245
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 86 2220 2246 "code.ml" 86 2220 2254
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 86 2220 2234 "code.ml" 86 2220 2254
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 88 2285 2295 "code.ml" 88 2285 2296
+type(
+  int
+)
+ident(
+  def n "code.ml" 88 2285 2300 "code.ml" 88 2285 2324
+)
+"code.ml" 88 2285 2289 "code.ml" 88 2285 2296
+type(
+  Instr.t
+)
+"code.ml" 88 2285 2300 "code.ml" 88 2285 2307
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 88 2285 2308 "code.ml" 88 2285 2311
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 88 2285 2312 "code.ml" 88 2285 2322
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"code.ml" 88 2285 2323 "code.ml" 88 2285 2324
+type(
+  int
+)
+ident(
+  int_ref n "code.ml" 88 2285 2295 "code.ml" 88 2285 2296
+)
+"code.ml" 88 2285 2300 "code.ml" 88 2285 2324
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 89 2325 2329 "code.ml" 89 2325 2335
+type(
+  Instr.t
+)
+"code.ml" 89 2325 2339 "code.ml" 89 2325 2346
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 89 2325 2347 "code.ml" 89 2325 2350
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 89 2325 2351 "code.ml" 89 2325 2359
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 89 2325 2339 "code.ml" 89 2325 2359
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 90 2360 2364 "code.ml" 90 2360 2368
+type(
+  Instr.t
+)
+"code.ml" 90 2360 2372 "code.ml" 90 2360 2379
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 90 2360 2380 "code.ml" 90 2360 2383
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 90 2360 2384 "code.ml" 90 2360 2390
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 90 2360 2372 "code.ml" 90 2360 2390
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 92 2407 2411 "code.ml" 92 2407 2416
+type(
+  Instr.t
+)
+"code.ml" 92 2407 2420 "code.ml" 92 2407 2427
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 92 2407 2428 "code.ml" 92 2407 2431
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 92 2407 2432 "code.ml" 92 2407 2439
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 92 2407 2420 "code.ml" 92 2407 2439
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 93 2440 2444 "code.ml" 93 2440 2451
+type(
+  Instr.t
+)
+"code.ml" 93 2440 2455 "code.ml" 93 2440 2462
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 93 2440 2463 "code.ml" 93 2440 2466
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 93 2440 2467 "code.ml" 93 2440 2475
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 93 2440 2455 "code.ml" 93 2440 2475
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 95 2496 2500 "code.ml" 95 2496 2504
+type(
+  Instr.t
+)
+"code.ml" 95 2496 2508 "code.ml" 95 2496 2515
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 95 2496 2516 "code.ml" 95 2496 2519
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 95 2496 2520 "code.ml" 95 2496 2526
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 95 2496 2508 "code.ml" 95 2496 2526
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 96 2527 2531 "code.ml" 96 2527 2535
+type(
+  Instr.t
+)
+"code.ml" 96 2527 2539 "code.ml" 96 2527 2546
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 96 2527 2547 "code.ml" 96 2527 2550
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 96 2527 2551 "code.ml" 96 2527 2557
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 96 2527 2539 "code.ml" 96 2527 2557
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 97 2558 2562 "code.ml" 97 2558 2566
+type(
+  Instr.t
+)
+"code.ml" 97 2558 2570 "code.ml" 97 2558 2577
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 97 2558 2578 "code.ml" 97 2558 2581
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 97 2558 2582 "code.ml" 97 2558 2588
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 97 2558 2570 "code.ml" 97 2558 2588
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 98 2589 2593 "code.ml" 98 2589 2597
+type(
+  Instr.t
+)
+"code.ml" 98 2589 2601 "code.ml" 98 2589 2608
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 98 2589 2609 "code.ml" 98 2589 2612
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 98 2589 2613 "code.ml" 98 2589 2619
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 98 2589 2601 "code.ml" 98 2589 2619
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 99 2620 2624 "code.ml" 99 2620 2628
+type(
+  Instr.t
+)
+"code.ml" 99 2620 2632 "code.ml" 99 2620 2639
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 99 2620 2640 "code.ml" 99 2620 2643
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 99 2620 2644 "code.ml" 99 2620 2650
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 99 2620 2632 "code.ml" 99 2620 2650
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 100 2651 2655 "code.ml" 100 2651 2659
+type(
+  Instr.t
+)
+"code.ml" 100 2651 2663 "code.ml" 100 2651 2670
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 100 2651 2671 "code.ml" 100 2651 2674
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 100 2651 2675 "code.ml" 100 2651 2681
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 100 2651 2663 "code.ml" 100 2651 2681
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 102 2698 2708 "code.ml" 102 2698 2709
+type(
+  int
+)
+ident(
+  def i "code.ml" 102 2698 2713 "code.ml" 102 2698 2737
+)
+"code.ml" 102 2698 2702 "code.ml" 102 2698 2709
+type(
+  Instr.t
+)
+"code.ml" 102 2698 2713 "code.ml" 102 2698 2720
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 102 2698 2721 "code.ml" 102 2698 2724
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 102 2698 2725 "code.ml" 102 2698 2735
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"code.ml" 102 2698 2736 "code.ml" 102 2698 2737
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 102 2698 2708 "code.ml" 102 2698 2709
+)
+"code.ml" 102 2698 2713 "code.ml" 102 2698 2737
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 103 2738 2748 "code.ml" 103 2738 2749
+type(
+  int
+)
+ident(
+  def i "code.ml" 103 2738 2753 "code.ml" 103 2738 2777
+)
+"code.ml" 103 2738 2742 "code.ml" 103 2738 2749
+type(
+  Instr.t
+)
+"code.ml" 103 2738 2753 "code.ml" 103 2738 2760
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 103 2738 2761 "code.ml" 103 2738 2764
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 103 2738 2765 "code.ml" 103 2738 2775
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"code.ml" 103 2738 2776 "code.ml" 103 2738 2777
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 103 2738 2748 "code.ml" 103 2738 2749
+)
+"code.ml" 103 2738 2753 "code.ml" 103 2738 2777
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 104 2778 2788 "code.ml" 104 2778 2789
+type(
+  float
+)
+ident(
+  def f "code.ml" 104 2778 2793 "code.ml" 104 2778 2817
+)
+"code.ml" 104 2778 2782 "code.ml" 104 2778 2789
+type(
+  Instr.t
+)
+"code.ml" 104 2778 2793 "code.ml" 104 2778 2800
+type(
+  Format.formatter ->
+  (float -> unit, Format.formatter, unit) format -> float -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 104 2778 2801 "code.ml" 104 2778 2804
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 104 2778 2805 "code.ml" 104 2778 2815
+type(
+  (float -> unit, Format.formatter, unit) format
+)
+"code.ml" 104 2778 2816 "code.ml" 104 2778 2817
+type(
+  float
+)
+ident(
+  int_ref f "code.ml" 104 2778 2788 "code.ml" 104 2778 2789
+)
+"code.ml" 104 2778 2793 "code.ml" 104 2778 2817
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 105 2818 2828 "code.ml" 105 2818 2829
+type(
+  Hstring.t
+)
+ident(
+  def s "code.ml" 105 2818 2833 "code.ml" 105 2818 2868
+)
+"code.ml" 105 2818 2822 "code.ml" 105 2818 2829
+type(
+  Instr.t
+)
+"code.ml" 105 2818 2833 "code.ml" 105 2818 2840
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 105 2818 2841 "code.ml" 105 2818 2844
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 105 2818 2845 "code.ml" 105 2818 2859
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"code.ml" 105 2818 2860 "code.ml" 105 2818 2861
+type(
+  Hstring.t
+)
+ident(
+  int_ref s "code.ml" 105 2818 2828 "code.ml" 105 2818 2829
+)
+"code.ml" 105 2818 2860 "code.ml" 105 2818 2868
+type(
+  string
+)
+"code.ml" 105 2818 2833 "code.ml" 105 2818 2868
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 106 2869 2879 "code.ml" 106 2869 2880
+type(
+  int
+)
+ident(
+  def i "code.ml" 106 2869 2884 "code.ml" 106 2869 2908
+)
+"code.ml" 106 2869 2873 "code.ml" 106 2869 2880
+type(
+  Instr.t
+)
+"code.ml" 106 2869 2884 "code.ml" 106 2869 2891
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 106 2869 2892 "code.ml" 106 2869 2895
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 106 2869 2896 "code.ml" 106 2869 2906
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"code.ml" 106 2869 2907 "code.ml" 106 2869 2908
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 106 2869 2879 "code.ml" 106 2869 2880
+)
+"code.ml" 106 2869 2884 "code.ml" 106 2869 2908
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 107 2909 2919 "code.ml" 107 2909 2920
+type(
+  int
+)
+ident(
+  def i "code.ml" 107 2909 2924 "code.ml" 107 2909 2948
+)
+"code.ml" 107 2909 2913 "code.ml" 107 2909 2920
+type(
+  Instr.t
+)
+"code.ml" 107 2909 2924 "code.ml" 107 2909 2931
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 107 2909 2932 "code.ml" 107 2909 2935
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 107 2909 2936 "code.ml" 107 2909 2946
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"code.ml" 107 2909 2947 "code.ml" 107 2909 2948
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 107 2909 2919 "code.ml" 107 2909 2920
+)
+"code.ml" 107 2909 2924 "code.ml" 107 2909 2948
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 108 2949 2953 "code.ml" 108 2949 2959
+type(
+  Instr.t
+)
+"code.ml" 108 2949 2963 "code.ml" 108 2949 2970
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 108 2949 2971 "code.ml" 108 2949 2974
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 108 2949 2975 "code.ml" 108 2949 2983
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 108 2949 2963 "code.ml" 108 2949 2983
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 109 2984 2988 "code.ml" 109 2984 2994
+type(
+  Instr.t
+)
+"code.ml" 109 2984 2998 "code.ml" 109 2984 3005
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 109 2984 3006 "code.ml" 109 2984 3009
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 109 2984 3010 "code.ml" 109 2984 3018
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 109 2984 2998 "code.ml" 109 2984 3018
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 110 3019 3023 "code.ml" 110 3019 3029
+type(
+  Instr.t
+)
+"code.ml" 110 3019 3033 "code.ml" 110 3019 3040
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 110 3019 3041 "code.ml" 110 3019 3044
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 110 3019 3045 "code.ml" 110 3019 3053
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 110 3019 3033 "code.ml" 110 3019 3053
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 111 3054 3063 "code.ml" 111 3054 3064
+type(
+  int
+)
+ident(
+  def i "code.ml" 111 3054 3068 "code.ml" 111 3054 3091
+)
+"code.ml" 111 3054 3058 "code.ml" 111 3054 3064
+type(
+  Instr.t
+)
+"code.ml" 111 3054 3068 "code.ml" 111 3054 3075
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 111 3054 3076 "code.ml" 111 3054 3079
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 111 3054 3080 "code.ml" 111 3054 3089
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"code.ml" 111 3054 3090 "code.ml" 111 3054 3091
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 111 3054 3063 "code.ml" 111 3054 3064
+)
+"code.ml" 111 3054 3068 "code.ml" 111 3054 3091
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 112 3092 3096 "code.ml" 112 3092 3101
+type(
+  Instr.t
+)
+"code.ml" 112 3092 3105 "code.ml" 112 3092 3112
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 112 3092 3113 "code.ml" 112 3092 3116
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 112 3092 3117 "code.ml" 112 3092 3124
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 112 3092 3105 "code.ml" 112 3092 3124
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 113 3125 3133 "code.ml" 113 3125 3134
+type(
+  int
+)
+ident(
+  def i "code.ml" 113 3125 3138 "code.ml" 113 3125 3160
+)
+"code.ml" 113 3125 3129 "code.ml" 113 3125 3134
+type(
+  Instr.t
+)
+"code.ml" 113 3125 3138 "code.ml" 113 3125 3145
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 113 3125 3146 "code.ml" 113 3125 3149
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 113 3125 3150 "code.ml" 113 3125 3158
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"code.ml" 113 3125 3159 "code.ml" 113 3125 3160
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 113 3125 3133 "code.ml" 113 3125 3134
+)
+"code.ml" 113 3125 3138 "code.ml" 113 3125 3160
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 114 3161 3165 "code.ml" 114 3161 3169
+type(
+  Instr.t
+)
+"code.ml" 114 3161 3173 "code.ml" 114 3161 3180
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 114 3161 3181 "code.ml" 114 3161 3184
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 114 3161 3185 "code.ml" 114 3161 3191
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 114 3161 3173 "code.ml" 114 3161 3191
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 116 3208 3216 "code.ml" 116 3208 3217
+type(
+  int
+)
+ident(
+  def i "code.ml" 116 3208 3221 "code.ml" 116 3208 3243
+)
+"code.ml" 116 3208 3212 "code.ml" 116 3208 3217
+type(
+  Instr.t
+)
+"code.ml" 116 3208 3221 "code.ml" 116 3208 3228
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 116 3208 3229 "code.ml" 116 3208 3232
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 116 3208 3233 "code.ml" 116 3208 3241
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"code.ml" 116 3208 3242 "code.ml" 116 3208 3243
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 116 3208 3216 "code.ml" 116 3208 3217
+)
+"code.ml" 116 3208 3221 "code.ml" 116 3208 3243
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 117 3244 3248 "code.ml" 117 3244 3252
+type(
+  Instr.t
+)
+"code.ml" 117 3244 3256 "code.ml" 117 3244 3263
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 117 3244 3264 "code.ml" 117 3244 3267
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 117 3244 3268 "code.ml" 117 3244 3274
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 117 3244 3256 "code.ml" 117 3244 3274
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 119 3291 3302 "code.ml" 119 3291 3303
+type(
+  int
+)
+ident(
+  def i "code.ml" 119 3291 3307 "code.ml" 119 3291 3332
+)
+"code.ml" 119 3291 3295 "code.ml" 119 3291 3303
+type(
+  Instr.t
+)
+"code.ml" 119 3291 3307 "code.ml" 119 3291 3314
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 119 3291 3315 "code.ml" 119 3291 3318
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 119 3291 3319 "code.ml" 119 3291 3330
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"code.ml" 119 3291 3331 "code.ml" 119 3291 3332
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 119 3291 3302 "code.ml" 119 3291 3303
+)
+"code.ml" 119 3291 3307 "code.ml" 119 3291 3332
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 120 3333 3344 "code.ml" 120 3333 3345
+type(
+  int
+)
+ident(
+  def i "code.ml" 120 3333 3349 "code.ml" 120 3333 3374
+)
+"code.ml" 120 3333 3337 "code.ml" 120 3333 3345
+type(
+  Instr.t
+)
+"code.ml" 120 3333 3349 "code.ml" 120 3333 3356
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 120 3333 3357 "code.ml" 120 3333 3360
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 120 3333 3361 "code.ml" 120 3333 3372
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"code.ml" 120 3333 3373 "code.ml" 120 3333 3374
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 120 3333 3344 "code.ml" 120 3333 3345
+)
+"code.ml" 120 3333 3349 "code.ml" 120 3333 3374
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 121 3375 3385 "code.ml" 121 3375 3386
+type(
+  int
+)
+ident(
+  def i "code.ml" 121 3375 3390 "code.ml" 121 3375 3414
+)
+"code.ml" 121 3375 3379 "code.ml" 121 3375 3386
+type(
+  Instr.t
+)
+"code.ml" 121 3375 3390 "code.ml" 121 3375 3397
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 121 3375 3398 "code.ml" 121 3375 3401
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 121 3375 3402 "code.ml" 121 3375 3412
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"code.ml" 121 3375 3413 "code.ml" 121 3375 3414
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 121 3375 3385 "code.ml" 121 3375 3386
+)
+"code.ml" 121 3375 3390 "code.ml" 121 3375 3414
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 122 3415 3419 "code.ml" 122 3415 3425
+type(
+  Instr.t
+)
+"code.ml" 122 3415 3429 "code.ml" 122 3415 3436
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 122 3415 3437 "code.ml" 122 3415 3440
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 122 3415 3441 "code.ml" 122 3415 3449
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 122 3415 3429 "code.ml" 122 3415 3449
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 124 3466 3477 "code.ml" 124 3466 3478
+type(
+  int
+)
+ident(
+  def i "code.ml" 124 3466 3485 "code.ml" 124 3466 3515
+)
+"code.ml" 124 3466 3479 "code.ml" 124 3466 3480
+type(
+  int
+)
+ident(
+  def j "code.ml" 124 3466 3485 "code.ml" 124 3466 3515
+)
+"code.ml" 124 3466 3470 "code.ml" 124 3466 3481
+type(
+  Instr.t
+)
+"code.ml" 124 3466 3485 "code.ml" 124 3466 3492
+type(
+  Format.formatter ->
+  (int -> int -> unit, Format.formatter, unit) format -> int -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 124 3466 3493 "code.ml" 124 3466 3496
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 124 3466 3497 "code.ml" 124 3466 3511
+type(
+  (int -> int -> unit, Format.formatter, unit) format
+)
+"code.ml" 124 3466 3512 "code.ml" 124 3466 3513
+type(
+  int
+)
+ident(
+  int_ref i "code.ml" 124 3466 3477 "code.ml" 124 3466 3478
+)
+"code.ml" 124 3466 3514 "code.ml" 124 3466 3515
+type(
+  int
+)
+ident(
+  int_ref j "code.ml" 124 3466 3479 "code.ml" 124 3466 3480
+)
+"code.ml" 124 3466 3485 "code.ml" 124 3466 3515
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 125 3516 3520 "code.ml" 125 3516 3524
+type(
+  Instr.t
+)
+"code.ml" 125 3516 3528 "code.ml" 125 3516 3535
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 125 3516 3536 "code.ml" 125 3516 3539
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 125 3516 3540 "code.ml" 125 3516 3546
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 125 3516 3528 "code.ml" 125 3516 3546
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 127 3571 3575 "code.ml" 127 3571 3581
+type(
+  Instr.t
+)
+"code.ml" 127 3571 3585 "code.ml" 127 3571 3592
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 127 3571 3593 "code.ml" 127 3571 3596
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 127 3571 3597 "code.ml" 127 3571 3605
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 127 3571 3585 "code.ml" 127 3571 3605
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 128 3606 3610 "code.ml" 128 3606 3616
+type(
+  Instr.t
+)
+"code.ml" 128 3606 3620 "code.ml" 128 3606 3627
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 128 3606 3628 "code.ml" 128 3606 3631
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 128 3606 3632 "code.ml" 128 3606 3640
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 128 3606 3620 "code.ml" 128 3606 3640
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 129 3641 3645 "code.ml" 129 3641 3651
+type(
+  Instr.t
+)
+"code.ml" 129 3641 3655 "code.ml" 129 3641 3662
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 129 3641 3663 "code.ml" 129 3641 3666
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 129 3641 3667 "code.ml" 129 3641 3675
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 129 3641 3655 "code.ml" 129 3641 3675
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 130 3676 3680 "code.ml" 130 3676 3684
+type(
+  Instr.t
+)
+"code.ml" 130 3676 3688 "code.ml" 130 3676 3695
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 130 3676 3696 "code.ml" 130 3676 3699
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 130 3676 3700 "code.ml" 130 3676 3706
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 130 3676 3688 "code.ml" 130 3676 3706
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 132 3737 3741 "code.ml" 132 3737 3749
+type(
+  Instr.t
+)
+"code.ml" 132 3737 3753 "code.ml" 132 3737 3760
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 132 3737 3761 "code.ml" 132 3737 3764
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 132 3737 3765 "code.ml" 132 3737 3775
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 132 3737 3753 "code.ml" 132 3737 3775
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 133 3776 3780 "code.ml" 133 3776 3789
+type(
+  Instr.t
+)
+"code.ml" 133 3776 3793 "code.ml" 133 3776 3800
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 133 3776 3801 "code.ml" 133 3776 3804
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 133 3776 3805 "code.ml" 133 3776 3816
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 133 3776 3793 "code.ml" 133 3776 3816
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 134 3817 3821 "code.ml" 134 3817 3831
+type(
+  Instr.t
+)
+"code.ml" 134 3817 3836 "code.ml" 134 3817 3843
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 134 3817 3844 "code.ml" 134 3817 3847
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 134 3817 3848 "code.ml" 134 3817 3860
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 134 3817 3836 "code.ml" 134 3817 3860
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 135 3861 3865 "code.ml" 135 3861 3873
+type(
+  Instr.t
+)
+"code.ml" 135 3861 3878 "code.ml" 135 3861 3885
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 135 3861 3886 "code.ml" 135 3861 3889
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 135 3861 3890 "code.ml" 135 3861 3900
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 135 3861 3878 "code.ml" 135 3861 3900
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 136 3901 3905 "code.ml" 136 3901 3913
+type(
+  Instr.t
+)
+"code.ml" 136 3901 3918 "code.ml" 136 3901 3925
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 136 3901 3926 "code.ml" 136 3901 3929
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 136 3901 3930 "code.ml" 136 3901 3940
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 136 3901 3918 "code.ml" 136 3901 3940
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 137 3941 3945 "code.ml" 137 3941 3953
+type(
+  Instr.t
+)
+"code.ml" 137 3941 3958 "code.ml" 137 3941 3965
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 137 3941 3966 "code.ml" 137 3941 3969
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 137 3941 3970 "code.ml" 137 3941 3980
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 137 3941 3958 "code.ml" 137 3941 3980
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 138 3981 3985 "code.ml" 138 3981 4001
+type(
+  Instr.t
+)
+"code.ml" 138 3981 4005 "code.ml" 138 3981 4012
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 138 3981 4013 "code.ml" 138 3981 4016
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 138 3981 4017 "code.ml" 138 3981 4035
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 138 3981 4005 "code.ml" 138 3981 4035
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 139 4036 4040 "code.ml" 139 4036 4055
+type(
+  Instr.t
+)
+"code.ml" 139 4036 4060 "code.ml" 139 4036 4067
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 139 4036 4068 "code.ml" 139 4036 4071
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 139 4036 4072 "code.ml" 139 4036 4089
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 139 4036 4060 "code.ml" 139 4036 4089
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 140 4090 4094 "code.ml" 140 4090 4102
+type(
+  Instr.t
+)
+"code.ml" 140 4090 4106 "code.ml" 140 4090 4113
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 140 4090 4114 "code.ml" 140 4090 4117
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 140 4090 4118 "code.ml" 140 4090 4128
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 140 4090 4106 "code.ml" 140 4090 4128
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 141 4129 4133 "code.ml" 141 4129 4140
+type(
+  Instr.t
+)
+"code.ml" 141 4129 4145 "code.ml" 141 4129 4152
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 141 4129 4153 "code.ml" 141 4129 4156
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 141 4129 4157 "code.ml" 141 4129 4166
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 141 4129 4145 "code.ml" 141 4129 4166
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 143 4186 4190 "code.ml" 143 4186 4193
+type(
+  Instr.t
+)
+"code.ml" 143 4186 4197 "code.ml" 143 4186 4204
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 143 4186 4205 "code.ml" 143 4186 4208
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 143 4186 4209 "code.ml" 143 4186 4214
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 143 4186 4197 "code.ml" 143 4186 4214
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 144 4215 4219 "code.ml" 144 4215 4222
+type(
+  Instr.t
+)
+"code.ml" 144 4215 4226 "code.ml" 144 4215 4233
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 144 4215 4234 "code.ml" 144 4215 4237
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 144 4215 4238 "code.ml" 144 4215 4243
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 144 4215 4226 "code.ml" 144 4215 4243
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 145 4244 4248 "code.ml" 145 4244 4252
+type(
+  Instr.t
+)
+"code.ml" 145 4244 4256 "code.ml" 145 4244 4263
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 145 4244 4264 "code.ml" 145 4244 4267
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 145 4244 4268 "code.ml" 145 4244 4274
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 145 4244 4256 "code.ml" 145 4244 4274
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 146 4275 4279 "code.ml" 146 4275 4287
+type(
+  Instr.t
+)
+"code.ml" 146 4275 4291 "code.ml" 146 4275 4298
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 146 4275 4299 "code.ml" 146 4275 4302
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 146 4275 4303 "code.ml" 146 4275 4313
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 146 4275 4291 "code.ml" 146 4275 4313
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 147 4314 4318 "code.ml" 147 4314 4327
+type(
+  Instr.t
+)
+"code.ml" 147 4314 4331 "code.ml" 147 4314 4338
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 147 4314 4339 "code.ml" 147 4314 4342
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 147 4314 4343 "code.ml" 147 4314 4354
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 147 4314 4331 "code.ml" 147 4314 4354
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 149 4369 4379 "code.ml" 149 4369 4380
+type(
+  Label.t
+)
+"code.ml" 149 4369 4373 "code.ml" 149 4369 4380
+type(
+  Instr.t
+)
+"code.ml" 149 4369 4384 "code.ml" 149 4369 4386
+type(
+  unit
+)
+"code.ml" 150 4387 4396 "code.ml" 150 4387 4397
+type(
+  Label.t
+)
+ident(
+  def l "code.ml" 150 4387 4401 "code.ml" 150 4387 4436
+)
+"code.ml" 150 4387 4391 "code.ml" 150 4387 4397
+type(
+  Instr.t
+)
+"code.ml" 150 4387 4401 "code.ml" 150 4387 4408
+type(
+  Format.formatter ->
+  ((Format.formatter -> Label.t -> unit) -> Label.t -> unit,
+   Format.formatter, unit)
+  format -> (Format.formatter -> Label.t -> unit) -> Label.t -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 150 4387 4409 "code.ml" 150 4387 4412
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 150 4387 4413 "code.ml" 150 4387 4422
+type(
+  ((Format.formatter -> Label.t -> unit) -> Label.t -> unit,
+   Format.formatter, unit)
+  format
+)
+"code.ml" 150 4387 4423 "code.ml" 150 4387 4434
+type(
+  Format.formatter -> Label.t -> unit
+)
+ident(
+  int_ref print_label "code.ml" 52 1244 1248 "code.ml" 52 1244 1259
+)
+"code.ml" 150 4387 4435 "code.ml" 150 4387 4436
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 150 4387 4396 "code.ml" 150 4387 4397
+)
+"code.ml" 150 4387 4401 "code.ml" 150 4387 4436
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 151 4437 4444 "code.ml" 151 4437 4445
+type(
+  Label.t
+)
+ident(
+  def l "code.ml" 151 4437 4449 "code.ml" 151 4437 4482
+)
+"code.ml" 151 4437 4441 "code.ml" 151 4437 4445
+type(
+  Instr.t
+)
+"code.ml" 151 4437 4449 "code.ml" 151 4437 4456
+type(
+  Format.formatter ->
+  ((Format.formatter -> Label.t -> unit) -> Label.t -> unit,
+   Format.formatter, unit)
+  format -> (Format.formatter -> Label.t -> unit) -> Label.t -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 151 4437 4457 "code.ml" 151 4437 4460
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 151 4437 4461 "code.ml" 151 4437 4468
+type(
+  ((Format.formatter -> Label.t -> unit) -> Label.t -> unit,
+   Format.formatter, unit)
+  format
+)
+"code.ml" 151 4437 4469 "code.ml" 151 4437 4480
+type(
+  Format.formatter -> Label.t -> unit
+)
+ident(
+  int_ref print_label "code.ml" 52 1244 1248 "code.ml" 52 1244 1259
+)
+"code.ml" 151 4437 4481 "code.ml" 151 4437 4482
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 151 4437 4444 "code.ml" 151 4437 4445
+)
+"code.ml" 151 4437 4449 "code.ml" 151 4437 4482
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 152 4483 4493 "code.ml" 152 4483 4494
+type(
+  Label.t
+)
+ident(
+  def l "code.ml" 152 4483 4498 "code.ml" 152 4483 4534
+)
+"code.ml" 152 4483 4487 "code.ml" 152 4483 4494
+type(
+  Instr.t
+)
+"code.ml" 152 4483 4498 "code.ml" 152 4483 4505
+type(
+  Format.formatter ->
+  ((Format.formatter -> Label.t -> unit) -> Label.t -> unit,
+   Format.formatter, unit)
+  format -> (Format.formatter -> Label.t -> unit) -> Label.t -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 152 4483 4506 "code.ml" 152 4483 4509
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 152 4483 4510 "code.ml" 152 4483 4520
+type(
+  ((Format.formatter -> Label.t -> unit) -> Label.t -> unit,
+   Format.formatter, unit)
+  format
+)
+"code.ml" 152 4483 4521 "code.ml" 152 4483 4532
+type(
+  Format.formatter -> Label.t -> unit
+)
+ident(
+  int_ref print_label "code.ml" 52 1244 1248 "code.ml" 52 1244 1259
+)
+"code.ml" 152 4483 4533 "code.ml" 152 4483 4534
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 152 4483 4493 "code.ml" 152 4483 4494
+)
+"code.ml" 152 4483 4498 "code.ml" 152 4483 4534
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 154 4554 4558 "code.ml" 154 4554 4562
+type(
+  Instr.t
+)
+"code.ml" 154 4554 4566 "code.ml" 154 4554 4573
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 154 4554 4574 "code.ml" 154 4554 4577
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 154 4554 4578 "code.ml" 154 4554 4584
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 154 4554 4566 "code.ml" 154 4554 4584
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 155 4585 4589 "code.ml" 155 4585 4595
+type(
+  Instr.t
+)
+"code.ml" 155 4585 4599 "code.ml" 155 4585 4606
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 155 4585 4607 "code.ml" 155 4585 4610
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 155 4585 4611 "code.ml" 155 4585 4619
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 155 4585 4599 "code.ml" 155 4585 4619
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 157 4643 4647 "code.ml" 157 4643 4652
+type(
+  Instr.t
+)
+"code.ml" 157 4643 4656 "code.ml" 157 4643 4663
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 157 4643 4664 "code.ml" 157 4643 4667
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 157 4643 4668 "code.ml" 157 4643 4675
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 157 4643 4656 "code.ml" 157 4643 4675
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 158 4676 4680 "code.ml" 158 4676 4683
+type(
+  Instr.t
+)
+"code.ml" 158 4676 4687 "code.ml" 158 4676 4694
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 158 4676 4695 "code.ml" 158 4676 4698
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 158 4676 4699 "code.ml" 158 4676 4704
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 158 4676 4687 "code.ml" 158 4676 4704
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 159 4705 4713 "code.ml" 159 4705 4714
+type(
+  string
+)
+ident(
+  def s "code.ml" 159 4705 4718 "code.ml" 159 4705 4744
+)
+"code.ml" 159 4705 4709 "code.ml" 159 4705 4714
+type(
+  Instr.t
+)
+"code.ml" 159 4705 4718 "code.ml" 159 4705 4725
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 159 4705 4726 "code.ml" 159 4705 4729
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 159 4705 4730 "code.ml" 159 4705 4742
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"code.ml" 159 4705 4743 "code.ml" 159 4705 4744
+type(
+  string
+)
+ident(
+  int_ref s "code.ml" 159 4705 4713 "code.ml" 159 4705 4714
+)
+"code.ml" 159 4705 4718 "code.ml" 159 4705 4744
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 160 4745 4749 "code.ml" 160 4745 4753
+type(
+  Instr.t
+)
+"code.ml" 160 4745 4757 "code.ml" 160 4745 4764
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 160 4745 4765 "code.ml" 160 4745 4768
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 62 1463 1480 "code.ml" 62 1463 1483
+)
+"code.ml" 160 4745 4769 "code.ml" 160 4745 4775
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 160 4745 4757 "code.ml" 160 4745 4775
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 62 1463 1486 "code.ml" 160 4745 4775
+type(
+  Instr.t -> unit
+)
+"code.ml" 162 4777 4781 "code.ml" 162 4777 4792
+type(
+  Format.formatter -> Instr.t * string option -> unit
+)
+ident(
+  def print_instr "code.ml" 164 4844 4844 "code.ml" 1 0 -1
+)
+"code.ml" 162 4777 4793 "code.ml" 162 4777 4796
+type(
+  Format.formatter
+)
+ident(
+  def fmt "code.ml" 162 4777 4797 "code.ml" 162 4777 4841
+)
+"code.ml" 162 4777 4798 "code.ml" 162 4777 4799
+type(
+  Instr.t
+)
+ident(
+  def i "code.ml" 162 4777 4805 "code.ml" 162 4777 4841
+)
+"code.ml" 162 4777 4800 "code.ml" 162 4777 4801
+type(
+  string option
+)
+ident(
+  def c "code.ml" 162 4777 4805 "code.ml" 162 4777 4841
+)
+"code.ml" 162 4777 4797 "code.ml" 162 4777 4802
+type(
+  Instr.t * string option
+)
+"code.ml" 162 4777 4805 "code.ml" 162 4777 4817
+type(
+  Format.formatter -> Instr.t -> unit
+)
+ident(
+  int_ref print_instr' "code.ml" 62 1463 1467 "code.ml" 62 1463 1479
+)
+"code.ml" 162 4777 4818 "code.ml" 162 4777 4821
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 162 4777 4793 "code.ml" 162 4777 4796
+)
+"code.ml" 162 4777 4822 "code.ml" 162 4777 4823
+type(
+  Instr.t
+)
+ident(
+  int_ref i "code.ml" 162 4777 4798 "code.ml" 162 4777 4799
+)
+"code.ml" 162 4777 4805 "code.ml" 162 4777 4823
+call(
+  stack
+)
+type(
+  unit
+)
+"code.ml" 162 4777 4826 "code.ml" 162 4777 4835
+type(
+  Format.formatter -> string option -> unit
+)
+ident(
+  int_ref print_com "code.ml" 58 1381 1385 "code.ml" 58 1381 1394
+)
+"code.ml" 162 4777 4836 "code.ml" 162 4777 4839
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 162 4777 4793 "code.ml" 162 4777 4796
+)
+"code.ml" 162 4777 4840 "code.ml" 162 4777 4841
+type(
+  string option
+)
+ident(
+  int_ref c "code.ml" 162 4777 4800 "code.ml" 162 4777 4801
+)
+"code.ml" 162 4777 4826 "code.ml" 162 4777 4841
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 162 4777 4805 "code.ml" 162 4777 4841
+type(
+  unit
+)
+"code.ml" 168 4921 4925 "code.ml" 168 4921 4932
+type(
+  Format.formatter -> Instr.t * string option -> unit
+)
+ident(
+  def print_i "code.ml" 173 5125 5125 "code.ml" 1 0 -1
+)
+"code.ml" 168 4921 4933 "code.ml" 168 4921 4936
+type(
+  Format.formatter
+)
+ident(
+  def fmt "code.ml" 168 4921 4939 "code.ml" 171 5080 5123
+)
+"code.ml" 169 4948 4958 "code.ml" 169 4948 4959
+type(
+  Label.t
+)
+ident(
+  def l "code.ml" 169 4948 4962 "code.ml" 169 4948 5015
+)
+"code.ml" 169 4948 4952 "code.ml" 169 4948 4959
+type(
+  Instr.t
+)
+"code.ml" 169 4948 4960 "code.ml" 169 4948 4961
+type(
+  string option
+)
+"code.ml" 169 4948 4952 "code.ml" 169 4948 4961
+type(
+  Instr.t * string option
+)
+"code.ml" 169 4948 4967 "code.ml" 169 4948 4968
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 169 4948 4958 "code.ml" 169 4948 4959
+)
+"code.ml" 169 4948 4967 "code.ml" 169 4948 4976
+type(
+  int
+)
+"code.ml" 169 4948 4977 "code.ml" 169 4948 4978
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"code.ml" 169 4948 4979 "code.ml" 169 4948 4981
+type(
+  int
+)
+"code.ml" 169 4948 4967 "code.ml" 169 4948 4981
+type(
+  bool
+)
+"code.ml" 169 4948 4985 "code.ml" 169 4948 4992
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 169 4948 4993 "code.ml" 169 4948 4996
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 168 4921 4933 "code.ml" 168 4921 4936
+)
+"code.ml" 169 4948 4997 "code.ml" 169 4948 5004
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"code.ml" 169 4948 5005 "code.ml" 169 4948 5006
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 169 4948 4958 "code.ml" 169 4948 4959
+)
+"code.ml" 169 4948 5005 "code.ml" 169 4948 5015
+type(
+  string
+)
+"code.ml" 169 4948 4985 "code.ml" 169 4948 5015
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 170 5016 5026 "code.ml" 170 5016 5027
+type(
+  Label.t
+)
+ident(
+  def l "code.ml" 170 5016 5033 "code.ml" 170 5016 5079
+)
+"code.ml" 170 5016 5020 "code.ml" 170 5016 5027
+type(
+  Instr.t
+)
+"code.ml" 170 5016 5028 "code.ml" 170 5016 5029
+type(
+  string option
+)
+"code.ml" 170 5016 5020 "code.ml" 170 5016 5029
+type(
+  Instr.t * string option
+)
+"code.ml" 170 5016 5033 "code.ml" 170 5016 5040
+type(
+  Format.formatter ->
+  (string -> int -> unit, Format.formatter, unit) format ->
+  string -> int -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 170 5016 5041 "code.ml" 170 5016 5044
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 168 4921 4933 "code.ml" 168 4921 4936
+)
+"code.ml" 170 5016 5045 "code.ml" 170 5016 5058
+type(
+  (string -> int -> unit, Format.formatter, unit) format
+)
+"code.ml" 170 5016 5059 "code.ml" 170 5016 5060
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 170 5016 5026 "code.ml" 170 5016 5027
+)
+"code.ml" 170 5016 5059 "code.ml" 170 5016 5069
+type(
+  string
+)
+"code.ml" 170 5016 5070 "code.ml" 170 5016 5071
+type(
+  Label.t
+)
+ident(
+  int_ref l "code.ml" 170 5016 5026 "code.ml" 170 5016 5027
+)
+"code.ml" 170 5016 5070 "code.ml" 170 5016 5079
+type(
+  int
+)
+"code.ml" 170 5016 5033 "code.ml" 170 5016 5079
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 171 5080 5084 "code.ml" 171 5080 5085
+type(
+  Instr.t * string option
+)
+ident(
+  def i "code.ml" 171 5080 5089 "code.ml" 171 5080 5123
+)
+"code.ml" 171 5080 5089 "code.ml" 171 5080 5096
+type(
+  Format.formatter ->
+  ((Format.formatter -> Instr.t * string option -> unit) ->
+   Instr.t * string option -> unit, Format.formatter, unit)
+  format ->
+  (Format.formatter -> Instr.t * string option -> unit) ->
+  Instr.t * string option -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 171 5080 5097 "code.ml" 171 5080 5100
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 168 4921 4933 "code.ml" 168 4921 4936
+)
+"code.ml" 171 5080 5101 "code.ml" 171 5080 5109
+type(
+  ((Format.formatter -> Instr.t * string option -> unit) ->
+   Instr.t * string option -> unit, Format.formatter, unit)
+  format
+)
+"code.ml" 171 5080 5110 "code.ml" 171 5080 5121
+type(
+  Format.formatter -> Instr.t * string option -> unit
+)
+ident(
+  int_ref print_instr "code.ml" 162 4777 4781 "code.ml" 162 4777 4792
+)
+"code.ml" 171 5080 5122 "code.ml" 171 5080 5123
+type(
+  Instr.t * string option
+)
+ident(
+  int_ref i "code.ml" 171 5080 5084 "code.ml" 171 5080 5085
+)
+"code.ml" 171 5080 5089 "code.ml" 171 5080 5123
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 168 4921 4939 "code.ml" 171 5080 5123
+type(
+  Instr.t * string option -> unit
+)
+"code.ml" 173 5125 5129 "code.ml" 173 5125 5139
+type(
+  Format.formatter -> (Instr.t * string option) list -> unit
+)
+ident(
+  def print_list "code.ml" 176 5215 5215 "code.ml" 1 0 -1
+)
+"code.ml" 173 5125 5140 "code.ml" 173 5125 5143
+type(
+  Format.formatter
+)
+ident(
+  def fmt "code.ml" 173 5125 5144 "code.ml" 174 5148 5213
+)
+"code.ml" 173 5125 5144 "code.ml" 173 5125 5145
+type(
+  (Instr.t * string option) list
+)
+ident(
+  def c "code.ml" 174 5148 5150 "code.ml" 174 5148 5213
+)
+"code.ml" 174 5148 5150 "code.ml" 174 5148 5157
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 174 5148 5158 "code.ml" 174 5148 5161
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 173 5125 5140 "code.ml" 173 5125 5143
+)
+"code.ml" 174 5148 5162 "code.ml" 174 5148 5166
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 174 5148 5150 "code.ml" 174 5148 5166
+call(
+  stack
+)
+type(
+  unit
+)
+"code.ml" 174 5148 5168 "code.ml" 174 5148 5177
+type(
+  (Instr.t * string option -> unit) -> (Instr.t * string option) list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"code.ml" 174 5148 5179 "code.ml" 174 5148 5186
+type(
+  Format.formatter -> Instr.t * string option -> unit
+)
+ident(
+  int_ref print_i "code.ml" 168 4921 4925 "code.ml" 168 4921 4932
+)
+"code.ml" 174 5148 5187 "code.ml" 174 5148 5190
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 173 5125 5140 "code.ml" 173 5125 5143
+)
+"code.ml" 174 5148 5178 "code.ml" 174 5148 5191
+call(
+  stack
+)
+type(
+  Instr.t * string option -> unit
+)
+"code.ml" 174 5148 5192 "code.ml" 174 5148 5193
+type(
+  (Instr.t * string option) list
+)
+ident(
+  int_ref c "code.ml" 173 5125 5144 "code.ml" 173 5125 5145
+)
+"code.ml" 174 5148 5168 "code.ml" 174 5148 5193
+call(
+  stack
+)
+type(
+  unit
+)
+"code.ml" 174 5148 5195 "code.ml" 174 5148 5202
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 174 5148 5203 "code.ml" 174 5148 5206
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 173 5125 5140 "code.ml" 173 5125 5143
+)
+"code.ml" 174 5148 5207 "code.ml" 174 5148 5213
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 174 5148 5195 "code.ml" 174 5148 5213
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 174 5148 5168 "code.ml" 174 5148 5213
+type(
+  unit
+)
+"code.ml" 174 5148 5150 "code.ml" 174 5148 5213
+type(
+  unit
+)
+"code.ml" 176 5215 5219 "code.ml" 176 5215 5230
+type(
+  Format.formatter -> (Instr.t * string option) array -> unit
+)
+ident(
+  def print_array "code.ml" 179 5307 5307 "code.ml" 1 0 -1
+)
+"code.ml" 176 5215 5231 "code.ml" 176 5215 5234
+type(
+  Format.formatter
+)
+ident(
+  def fmt "code.ml" 176 5215 5235 "code.ml" 177 5239 5305
+)
+"code.ml" 176 5215 5235 "code.ml" 176 5215 5236
+type(
+  (Instr.t * string option) array
+)
+ident(
+  def c "code.ml" 177 5239 5241 "code.ml" 177 5239 5305
+)
+"code.ml" 177 5239 5241 "code.ml" 177 5239 5248
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 177 5239 5249 "code.ml" 177 5239 5252
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 176 5215 5231 "code.ml" 176 5215 5234
+)
+"code.ml" 177 5239 5253 "code.ml" 177 5239 5257
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 177 5239 5241 "code.ml" 177 5239 5257
+call(
+  stack
+)
+type(
+  unit
+)
+"code.ml" 177 5239 5259 "code.ml" 177 5239 5269
+type(
+  (Instr.t * string option -> unit) ->
+  (Instr.t * string option) array -> unit
+)
+ident(
+  ext_ref Array.iter
+)
+"code.ml" 177 5239 5271 "code.ml" 177 5239 5278
+type(
+  Format.formatter -> Instr.t * string option -> unit
+)
+ident(
+  int_ref print_i "code.ml" 168 4921 4925 "code.ml" 168 4921 4932
+)
+"code.ml" 177 5239 5279 "code.ml" 177 5239 5282
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 176 5215 5231 "code.ml" 176 5215 5234
+)
+"code.ml" 177 5239 5270 "code.ml" 177 5239 5283
+call(
+  stack
+)
+type(
+  Instr.t * string option -> unit
+)
+"code.ml" 177 5239 5284 "code.ml" 177 5239 5285
+type(
+  (Instr.t * string option) array
+)
+ident(
+  int_ref c "code.ml" 176 5215 5235 "code.ml" 176 5215 5236
+)
+"code.ml" 177 5239 5259 "code.ml" 177 5239 5285
+call(
+  stack
+)
+type(
+  unit
+)
+"code.ml" 177 5239 5287 "code.ml" 177 5239 5294
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"code.ml" 177 5239 5295 "code.ml" 177 5239 5298
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "code.ml" 176 5215 5231 "code.ml" 176 5215 5234
+)
+"code.ml" 177 5239 5299 "code.ml" 177 5239 5305
+type(
+  (unit, Format.formatter, unit) format
+)
+"code.ml" 177 5239 5287 "code.ml" 177 5239 5305
+call(
+  tail
+)
+type(
+  unit
+)
+"code.ml" 177 5239 5259 "code.ml" 177 5239 5305
+type(
+  unit
+)
+"code.ml" 177 5239 5241 "code.ml" 177 5239 5305
+type(
+  unit
+)
+"code.ml" 179 5307 5311 "code.ml" 179 5307 5326
+type(
+  Instr.t * string option -> string
+)
+ident(
+  def string_of_instr "code.ml" 179 5307 5361 "code.ml" 1 0 -1
+)
+"code.ml" 179 5307 5329 "code.ml" 179 5307 5349
+type(
+  (Format.formatter -> Instr.t * string option -> unit) ->
+  Instr.t * string option -> string
+)
+ident(
+  ext_ref Util.print_to_string
+)
+"code.ml" 179 5307 5350 "code.ml" 179 5307 5361
+type(
+  Format.formatter -> Instr.t * string option -> unit
+)
+ident(
+  int_ref print_instr "code.ml" 162 4777 4781 "code.ml" 162 4777 4792
+)
+"code.ml" 179 5307 5329 "code.ml" 179 5307 5361
+call(
+  stack
+)
+type(
+  Instr.t * string option -> string
+)

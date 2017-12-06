@@ -1,0 +1,179 @@
+"label.ml" 4 56 60 "label.ml" 4 56 65
+type(
+  (string, t) Hashtbl.t
+)
+ident(
+  def table "label.ml" 6 87 87 "label.ml" 1 0 -1
+)
+"label.ml" 4 56 68 "label.ml" 4 56 82
+type(
+  ?random:bool -> int -> (string, t) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"label.ml" 4 56 83 "label.ml" 4 56 85
+type(
+  int
+)
+"label.ml" 4 56 68 "label.ml" 4 56 85
+call(
+  stack
+)
+type(
+  (string, t) Hashtbl.t
+)
+"label.ml" 6 87 91 "label.ml" 6 87 96
+type(
+  unit -> unit
+)
+ident(
+  def clear "label.ml" 8 123 123 "label.ml" 1 0 -1
+)
+"label.ml" 6 87 97 "label.ml" 6 87 99
+type(
+  unit
+)
+"label.ml" 6 87 102 "label.ml" 6 87 115
+type(
+  (string, t) Hashtbl.t -> unit
+)
+ident(
+  ext_ref Hashtbl.clear
+)
+"label.ml" 6 87 116 "label.ml" 6 87 121
+type(
+  (string, t) Hashtbl.t
+)
+ident(
+  int_ref table "label.ml" 4 56 60 "label.ml" 4 56 65
+)
+"label.ml" 6 87 102 "label.ml" 6 87 121
+call(
+  tail
+)
+type(
+  unit
+)
+"label.ml" 8 123 127 "label.ml" 8 123 133
+type(
+  string -> t
+)
+ident(
+  def create "label.ml" 14 263 268 "label.ml" 1 0 -1
+)
+"label.ml" 8 123 134 "label.ml" 8 123 135
+type(
+  string
+)
+ident(
+  def s "label.ml" 9 138 140 "label.ml" 14 263 268
+)
+"label.ml" 10 144 148 "label.ml" 10 144 160
+type(
+  (string, t) Hashtbl.t -> string -> t
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"label.ml" 10 144 161 "label.ml" 10 144 166
+type(
+  (string, t) Hashtbl.t
+)
+ident(
+  int_ref table "label.ml" 4 56 60 "label.ml" 4 56 65
+)
+"label.ml" 10 144 167 "label.ml" 10 144 168
+type(
+  string
+)
+ident(
+  int_ref s "label.ml" 8 123 134 "label.ml" 8 123 135
+)
+"label.ml" 10 144 148 "label.ml" 10 144 168
+call(
+  stack
+)
+type(
+  t
+)
+"label.ml" 11 169 176 "label.ml" 11 169 185
+type(
+  exn
+)
+"label.ml" 12 189 197 "label.ml" 12 189 198
+type(
+  t
+)
+ident(
+  def l "label.ml" 13 236 240 "label.ml" 14 263 268
+)
+"label.ml" 12 189 214 "label.ml" 12 189 215
+type(
+  string
+)
+ident(
+  int_ref s "label.ml" 8 123 134 "label.ml" 8 123 135
+)
+"label.ml" 12 189 227 "label.ml" 12 189 229
+type(
+  int
+)
+"label.ml" 12 189 201 "label.ml" 12 189 231
+type(
+  t
+)
+"label.ml" 13 236 240 "label.ml" 13 236 251
+type(
+  (string, t) Hashtbl.t -> string -> t -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"label.ml" 13 236 252 "label.ml" 13 236 257
+type(
+  (string, t) Hashtbl.t
+)
+ident(
+  int_ref table "label.ml" 4 56 60 "label.ml" 4 56 65
+)
+"label.ml" 13 236 258 "label.ml" 13 236 259
+type(
+  string
+)
+ident(
+  int_ref s "label.ml" 8 123 134 "label.ml" 8 123 135
+)
+"label.ml" 13 236 260 "label.ml" 13 236 261
+type(
+  t
+)
+ident(
+  int_ref l "label.ml" 12 189 197 "label.ml" 12 189 198
+)
+"label.ml" 13 236 240 "label.ml" 13 236 261
+call(
+  stack
+)
+type(
+  unit
+)
+"label.ml" 14 263 267 "label.ml" 14 263 268
+type(
+  t
+)
+ident(
+  int_ref l "label.ml" 12 189 197 "label.ml" 12 189 198
+)
+"label.ml" 13 236 240 "label.ml" 14 263 268
+type(
+  t
+)
+"label.ml" 12 189 193 "label.ml" 14 263 268
+type(
+  t
+)
+"label.ml" 9 138 140 "label.ml" 14 263 268
+type(
+  t
+)

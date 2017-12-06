@@ -1,0 +1,203 @@
+"util.ml" 4 14 18 "util.ml" 4 14 33
+type(
+  (Format.formatter -> 'a -> unit) -> 'a -> string
+)
+ident(
+  def print_to_string "util.ml" 10 176 195 "util.ml" 1 0 -1
+)
+"util.ml" 4 14 34 "util.ml" 4 14 35
+type(
+  Format.formatter -> 'a -> unit
+)
+ident(
+  def f "util.ml" 4 14 36 "util.ml" 10 176 195
+)
+"util.ml" 4 14 36 "util.ml" 4 14 37
+type(
+  'a
+)
+ident(
+  def x "util.ml" 5 40 42 "util.ml" 10 176 195
+)
+"util.ml" 5 40 46 "util.ml" 5 40 47
+type(
+  Buffer.t
+)
+ident(
+  def b "util.ml" 6 72 74 "util.ml" 10 176 195
+)
+"util.ml" 5 40 50 "util.ml" 5 40 63
+type(
+  int -> Buffer.t
+)
+ident(
+  ext_ref Buffer.create
+)
+"util.ml" 5 40 64 "util.ml" 5 40 68
+type(
+  int
+)
+"util.ml" 5 40 50 "util.ml" 5 40 68
+call(
+  stack
+)
+type(
+  Buffer.t
+)
+"util.ml" 6 72 74 "util.ml" 6 72 86
+type(
+  Buffer.t -> unit
+)
+ident(
+  ext_ref Buffer.clear
+)
+"util.ml" 6 72 87 "util.ml" 6 72 88
+type(
+  Buffer.t
+)
+ident(
+  int_ref b "util.ml" 5 40 46 "util.ml" 5 40 47
+)
+"util.ml" 6 72 74 "util.ml" 6 72 88
+call(
+  stack
+)
+type(
+  unit
+)
+"util.ml" 7 90 96 "util.ml" 7 90 99
+type(
+  Format.formatter
+)
+ident(
+  def fmt "util.ml" 8 127 129 "util.ml" 10 176 195
+)
+"util.ml" 7 90 102 "util.ml" 7 90 121
+type(
+  Buffer.t -> Format.formatter
+)
+ident(
+  ext_ref Format.formatter_of_buffer
+)
+"util.ml" 7 90 122 "util.ml" 7 90 123
+type(
+  Buffer.t
+)
+ident(
+  int_ref b "util.ml" 5 40 46 "util.ml" 5 40 47
+)
+"util.ml" 7 90 102 "util.ml" 7 90 123
+call(
+  stack
+)
+type(
+  Format.formatter
+)
+"util.ml" 8 127 129 "util.ml" 8 127 136
+type(
+  Format.formatter ->
+  ((Format.formatter -> 'a -> unit) -> 'a -> unit, Format.formatter, unit)
+  format -> (Format.formatter -> 'a -> unit) -> 'a -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"util.ml" 8 127 137 "util.ml" 8 127 140
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "util.ml" 7 90 96 "util.ml" 7 90 99
+)
+"util.ml" 8 127 141 "util.ml" 8 127 145
+type(
+  ((Format.formatter -> 'a -> unit) -> 'a -> unit, Format.formatter, unit)
+  format
+)
+"util.ml" 8 127 146 "util.ml" 8 127 147
+type(
+  Format.formatter -> 'a -> unit
+)
+ident(
+  int_ref f "util.ml" 4 14 34 "util.ml" 4 14 35
+)
+"util.ml" 8 127 148 "util.ml" 8 127 149
+type(
+  'a
+)
+ident(
+  int_ref x "util.ml" 4 14 36 "util.ml" 4 14 37
+)
+"util.ml" 8 127 129 "util.ml" 8 127 149
+call(
+  stack
+)
+type(
+  unit
+)
+"util.ml" 9 151 153 "util.ml" 9 151 167
+type(
+  Format.formatter -> unit -> unit
+)
+ident(
+  ext_ref Format.pp_print_flush
+)
+"util.ml" 9 151 168 "util.ml" 9 151 171
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "util.ml" 7 90 96 "util.ml" 7 90 99
+)
+"util.ml" 9 151 172 "util.ml" 9 151 174
+type(
+  unit
+)
+"util.ml" 9 151 153 "util.ml" 9 151 174
+call(
+  stack
+)
+type(
+  unit
+)
+"util.ml" 10 176 178 "util.ml" 10 176 193
+type(
+  Buffer.t -> string
+)
+ident(
+  ext_ref Buffer.contents
+)
+"util.ml" 10 176 194 "util.ml" 10 176 195
+type(
+  Buffer.t
+)
+ident(
+  int_ref b "util.ml" 5 40 46 "util.ml" 5 40 47
+)
+"util.ml" 10 176 178 "util.ml" 10 176 195
+call(
+  tail
+)
+type(
+  string
+)
+"util.ml" 9 151 153 "util.ml" 10 176 195
+type(
+  string
+)
+"util.ml" 8 127 129 "util.ml" 10 176 195
+type(
+  string
+)
+"util.ml" 7 90 92 "util.ml" 10 176 195
+type(
+  string
+)
+"util.ml" 6 72 74 "util.ml" 10 176 195
+type(
+  string
+)
+"util.ml" 5 40 42 "util.ml" 10 176 195
+type(
+  string
+)

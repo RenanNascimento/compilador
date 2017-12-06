@@ -1,0 +1,334 @@
+"hstring.ml" 6 69 73 "hstring.ml" 6 69 74
+type(
+  (string, t) Hashtbl.t
+)
+ident(
+  def h "hstring.ml" 8 96 96 "hstring.ml" 1 0 -1
+)
+"hstring.ml" 6 69 77 "hstring.ml" 6 69 91
+type(
+  ?random:bool -> int -> (string, t) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"hstring.ml" 6 69 92 "hstring.ml" 6 69 94
+type(
+  int
+)
+"hstring.ml" 6 69 77 "hstring.ml" 6 69 94
+call(
+  stack
+)
+type(
+  (string, t) Hashtbl.t
+)
+"hstring.ml" 8 96 100 "hstring.ml" 8 96 105
+type(
+  unit -> unit
+)
+ident(
+  def clear "hstring.ml" 10 128 128 "hstring.ml" 1 0 -1
+)
+"hstring.ml" 8 96 106 "hstring.ml" 8 96 108
+type(
+  unit
+)
+"hstring.ml" 8 96 111 "hstring.ml" 8 96 124
+type(
+  (string, t) Hashtbl.t -> unit
+)
+ident(
+  ext_ref Hashtbl.clear
+)
+"hstring.ml" 8 96 125 "hstring.ml" 8 96 126
+type(
+  (string, t) Hashtbl.t
+)
+ident(
+  int_ref h "hstring.ml" 6 69 73 "hstring.ml" 6 69 74
+)
+"hstring.ml" 8 96 111 "hstring.ml" 8 96 126
+call(
+  tail
+)
+type(
+  unit
+)
+"hstring.ml" 10 128 132 "hstring.ml" 10 128 138
+type(
+  string -> t
+)
+ident(
+  def create "hstring.ml" 22 343 343 "hstring.ml" 1 0 -1
+)
+"hstring.ml" 11 141 147 "hstring.ml" 11 141 148
+type(
+  int ref
+)
+ident(
+  def r "hstring.ml" 12 160 162 "hstring.ml" 20 332 341
+)
+"hstring.ml" 11 141 151 "hstring.ml" 11 141 154
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"hstring.ml" 11 141 155 "hstring.ml" 11 141 156
+type(
+  int
+)
+"hstring.ml" 11 141 151 "hstring.ml" 11 141 156
+type(
+  int ref
+)
+"hstring.ml" 12 160 166 "hstring.ml" 12 160 167
+type(
+  string
+)
+ident(
+  def s "hstring.ml" 13 171 175 "hstring.ml" 20 332 341
+)
+"hstring.ml" 14 179 189 "hstring.ml" 14 179 190
+type(
+  t
+)
+ident(
+  def x "hstring.ml" 15 213 219 "hstring.ml" 15 213 220
+)
+"hstring.ml" 14 179 193 "hstring.ml" 14 179 205
+type(
+  (string, t) Hashtbl.t -> string -> t
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"hstring.ml" 14 179 206 "hstring.ml" 14 179 207
+type(
+  (string, t) Hashtbl.t
+)
+ident(
+  int_ref h "hstring.ml" 6 69 73 "hstring.ml" 6 69 74
+)
+"hstring.ml" 14 179 208 "hstring.ml" 14 179 209
+type(
+  string
+)
+ident(
+  int_ref s "hstring.ml" 12 160 166 "hstring.ml" 12 160 167
+)
+"hstring.ml" 14 179 193 "hstring.ml" 14 179 209
+call(
+  stack
+)
+type(
+  t
+)
+"hstring.ml" 15 213 219 "hstring.ml" 15 213 220
+type(
+  t
+)
+ident(
+  int_ref x "hstring.ml" 14 179 189 "hstring.ml" 14 179 190
+)
+"hstring.ml" 14 179 185 "hstring.ml" 15 213 220
+type(
+  t
+)
+"hstring.ml" 16 221 230 "hstring.ml" 16 221 239
+type(
+  exn
+)
+"hstring.ml" 17 243 249 "hstring.ml" 17 243 253
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"hstring.ml" 17 243 254 "hstring.ml" 17 243 255
+type(
+  int ref
+)
+ident(
+  int_ref r "hstring.ml" 11 141 147 "hstring.ml" 11 141 148
+)
+"hstring.ml" 17 243 249 "hstring.ml" 17 243 255
+type(
+  unit
+)
+"hstring.ml" 18 257 267 "hstring.ml" 18 257 270
+type(
+  t
+)
+ident(
+  def str "hstring.ml" 19 305 311 "hstring.ml" 20 332 341
+)
+"hstring.ml" 18 257 284 "hstring.ml" 18 257 285
+type(
+  string
+)
+ident(
+  int_ref s "hstring.ml" 12 160 166 "hstring.ml" 12 160 167
+)
+"hstring.ml" 18 257 297 "hstring.ml" 18 257 298
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hstring.ml" 18 257 298 "hstring.ml" 18 257 299
+type(
+  int ref
+)
+ident(
+  int_ref r "hstring.ml" 11 141 147 "hstring.ml" 11 141 148
+)
+"hstring.ml" 18 257 297 "hstring.ml" 18 257 299
+type(
+  int
+)
+"hstring.ml" 18 257 273 "hstring.ml" 18 257 301
+type(
+  t
+)
+"hstring.ml" 19 305 311 "hstring.ml" 19 305 322
+type(
+  (string, t) Hashtbl.t -> string -> t -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"hstring.ml" 19 305 323 "hstring.ml" 19 305 324
+type(
+  (string, t) Hashtbl.t
+)
+ident(
+  int_ref h "hstring.ml" 6 69 73 "hstring.ml" 6 69 74
+)
+"hstring.ml" 19 305 325 "hstring.ml" 19 305 326
+type(
+  string
+)
+ident(
+  int_ref s "hstring.ml" 12 160 166 "hstring.ml" 12 160 167
+)
+"hstring.ml" 19 305 327 "hstring.ml" 19 305 330
+type(
+  t
+)
+ident(
+  int_ref str "hstring.ml" 18 257 267 "hstring.ml" 18 257 270
+)
+"hstring.ml" 19 305 311 "hstring.ml" 19 305 330
+call(
+  stack
+)
+type(
+  unit
+)
+"hstring.ml" 20 332 338 "hstring.ml" 20 332 341
+type(
+  t
+)
+ident(
+  int_ref str "hstring.ml" 18 257 267 "hstring.ml" 18 257 270
+)
+"hstring.ml" 19 305 311 "hstring.ml" 20 332 341
+type(
+  t
+)
+"hstring.ml" 18 257 263 "hstring.ml" 20 332 341
+type(
+  t
+)
+"hstring.ml" 17 243 249 "hstring.ml" 20 332 341
+type(
+  t
+)
+"hstring.ml" 13 171 175 "hstring.ml" 20 332 341
+type(
+  t
+)
+"hstring.ml" 12 160 162 "hstring.ml" 20 332 341
+type(
+  string -> t
+)
+"hstring.ml" 11 141 143 "hstring.ml" 20 332 341
+type(
+  string -> t
+)
+"hstring.ml" 22 343 347 "hstring.ml" 22 343 351
+type(
+  (t -> unit) -> unit
+)
+ident(
+  def iter "hstring.ml" 22 343 387 "hstring.ml" 1 0 -1
+)
+"hstring.ml" 22 343 352 "hstring.ml" 22 343 353
+type(
+  t -> unit
+)
+ident(
+  def f "hstring.ml" 22 343 356 "hstring.ml" 22 343 387
+)
+"hstring.ml" 22 343 356 "hstring.ml" 22 343 368
+type(
+  (string -> t -> unit) -> (string, t) Hashtbl.t -> unit
+)
+ident(
+  ext_ref Hashtbl.iter
+)
+"hstring.ml" 22 343 374 "hstring.ml" 22 343 375
+type(
+  string
+)
+"hstring.ml" 22 343 376 "hstring.ml" 22 343 377
+type(
+  t
+)
+ident(
+  def x "hstring.ml" 22 343 381 "hstring.ml" 22 343 384
+)
+"hstring.ml" 22 343 381 "hstring.ml" 22 343 382
+type(
+  t -> unit
+)
+ident(
+  int_ref f "hstring.ml" 22 343 352 "hstring.ml" 22 343 353
+)
+"hstring.ml" 22 343 383 "hstring.ml" 22 343 384
+type(
+  t
+)
+ident(
+  int_ref x "hstring.ml" 22 343 376 "hstring.ml" 22 343 377
+)
+"hstring.ml" 22 343 381 "hstring.ml" 22 343 384
+call(
+  tail
+)
+type(
+  unit
+)
+"hstring.ml" 22 343 369 "hstring.ml" 22 343 385
+type(
+  string -> t -> unit
+)
+"hstring.ml" 22 343 386 "hstring.ml" 22 343 387
+type(
+  (string, t) Hashtbl.t
+)
+ident(
+  int_ref h "hstring.ml" 6 69 73 "hstring.ml" 6 69 74
+)
+"hstring.ml" 22 343 356 "hstring.ml" 22 343 387
+call(
+  tail
+)
+type(
+  unit
+)
