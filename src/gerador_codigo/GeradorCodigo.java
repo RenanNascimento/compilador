@@ -62,6 +62,24 @@ public class GeradorCodigo {
 
     public void tratarTermPrime() {
         //term'               ::= mulop factor-a term' | λ
+        int tag = token.getTag();
+        if(tag == Tag.MUL || tag == Tag.DIV || tag == Tag.AND){
+            token = it.next(); // Consome * ou / ou &&
+            codigo += "ATOI" + '\n'; // Converte o primeiro termo em int
+            tratarFactorA();
+            codigo += "ATOI" + '\n'; // Converte o segundo termo em int
+
+            // Operacao
+            if(tag == Tag.MUL) {
+                codigo += "MUL" + '\n';
+            }else {
+                if (tag == Tag.DIV)
+                    codigo += "DIV" + '\n';
+                //else Tem que ver o operando para &&
+            }
+            codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
+            tratarTermPrime();
+        }
 
     }
 
@@ -81,7 +99,6 @@ public class GeradorCodigo {
                 break;
             case Tag.NUM:
                 codigo += "PUSHS \"" + token.toString() + "\"\n";
-                //codigo += "ATOI" + '\n';
                 token = it.next(); // Consome PV
                 break;
             case Tag.LIT:
@@ -102,8 +119,15 @@ public class GeradorCodigo {
         tratarExpressionPrime();
     }
 
+
+    public void tratarRelop(){
+        //relop				::= "==" |  ">" | "<" | "!=" | ">=" | "<="
+    }
+
     public void tratarExpressionPrime() {
         //expression'			::= relop  simple-expr	|	λ
+        tratarRelop();
+        tratarSimpleExpr();
 
     }
 
@@ -113,6 +137,25 @@ public class GeradorCodigo {
 
     public void tratarSimpleExpressionPrime() {
         //simple-expr'		::= addop term simple-expr'  | λ
+        int tag = token.getTag();
+        if(tag == Tag.SUM || tag == Tag.MIN || tag == Tag.OR){
+            token = it.next(); // Consome + ou - ou ||
+            codigo += "ATOI" + '\n'; // Converte o primeiro termo em int
+            tratarFactorA();
+            codigo += "ATOI" + '\n'; // Converte o segundo termo em int
+
+            // Operacao
+            if(tag == Tag.SUM) {
+                codigo += "ADD" + '\n';
+            }else {
+                if (tag == Tag.MIN)
+                    codigo += "SUB" + '\n';
+                //else Tem que ver o operando para &&
+            }
+            codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
+            tratarTermPrime();
+        }
+
     }
 
     public void tratarStmtList() {

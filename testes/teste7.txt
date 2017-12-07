@@ -1,12 +1,19 @@
 program
 	int a, b, y;
-	int result;
-	string x,total;
+	int result, total;
+	string x;
 
 	a = 2;
 	x = "um";
 	scan (b);
 	scan (y);
-	result = (a);
+	result = (a*b + 1) / 2;
+
+	print ("Resultado: ");
 	print (result);
+	print ("\n");
+	print ("Total (y / b): ");
+	total = y / b;
+	print (total);
+	print ("\n");
 end
