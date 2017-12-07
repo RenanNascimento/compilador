@@ -7146,6 +7146,10 @@ type(
 type(
   Instr.t
 )
+"vm.ml" 359 8422 8439 "vm.ml" 359 8422 8444
+type(
+  bool
+)
 "vm.ml" 359 8422 8432 "vm.ml" 359 8422 8444
 type(
   bool
@@ -7177,6 +7181,9 @@ type(
   unit
 )
 "vm.ml" 361 8449 8464 "vm.ml" 361 8449 8476
+call(
+  stack
+)
 type(
   element
 )
@@ -7192,6 +7199,9 @@ type(
   unit
 )
 "vm.ml" 361 8449 8478 "vm.ml" 361 8449 8490
+call(
+  stack
+)
 type(
   element
 )
@@ -7247,6 +7257,9 @@ ident(
   int_ref a "vm.ml" 362 8496 8505 "vm.ml" 362 8496 8506
 )
 "vm.ml" 362 8496 8517 "vm.ml" 362 8496 8525
+call(
+  stack
+)
 type(
   bool
 )
@@ -7298,6 +7311,9 @@ ident(
   int_ref a "vm.ml" 363 8526 8537 "vm.ml" 363 8526 8538
 )
 "vm.ml" 363 8526 8551 "vm.ml" 363 8526 8559
+call(
+  stack
+)
 type(
   bool
 )
@@ -7357,6 +7373,9 @@ type(
   string
 )
 "vm.ml" 364 8560 8589 "vm.ml" 364 8560 8611
+call(
+  stack
+)
 type(
   bool
 )
@@ -7414,6 +7433,9 @@ type(
   element
 )
 "vm.ml" 367 8647 8648 "vm.ml" 367 8647 8679
+call(
+  tail
+)
 type(
   unit
 )
@@ -7512,6 +7534,9 @@ type(
   element
 )
 "vm.ml" 372 8765 8776 "vm.ml" 372 8765 8788
+call(
+  tail
+)
 type(
   unit
 )
@@ -13015,6 +13040,10 @@ type(
 "vm.ml" 549 13784 13790 "vm.ml" 549 13784 13797
 type(
   Instr.t
+)
+"vm.ml" 549 13784 13808 "vm.ml" 549 13784 13813
+type(
+  bool
 )
 "vm.ml" 549 13784 13801 "vm.ml" 549 13784 13813
 type(

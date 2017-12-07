@@ -41,7 +41,7 @@ public class GeradorCodigo {
                 token = it.next();
                 qtd++;
             } while (it.hasNext() && token.tag != Tag.PV);
-            token = it.next();
+            token = it.next(); // Consome PV
         }
             // Empilha o valor inteiro 0
         codigo += "PUSHN " + qtd + '\n';
@@ -157,16 +157,7 @@ public class GeradorCodigo {
         token = it.next();
         // Consome igual
         token = it.next();
-        boolean neg = false;
-        if(token.tag == Tag.MIN){
-            neg = true;
-            token = it.next();
-        }
         tratarSimpleExpr();
-        if(neg) {
-            codigo += "PUSHI -1\n";
-            codigo += "MUL\n";
-        }
         codigo += "STOREL " + pos + '\n';
     }
 

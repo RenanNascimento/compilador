@@ -1,0 +1,533 @@
+   0  $accept : %entry% $end
+
+   1  main : EOF
+   2       | instrs EOF
+   3       | comms instrs EOF
+
+   4  instrs : instr_com instrs
+   5         | instr_com
+
+   6  instr_com : instr comms
+   7            | instr
+
+   8  comms : COMMENT comms
+   9        | COMMENT
+
+  10  instr : IDENT COLON
+  11        | INSTR
+  12        | PUSHI INT
+  13        | PUSHN INT
+  14        | PUSHF FLOAT
+  15        | PUSHS STRING
+  16        | PUSHG INT
+  17        | PUSHL INT
+  18        | LOAD INT
+  19        | DUP INT
+  20        | POP INT
+  21        | STOREL INT
+  22        | STOREG INT
+  23        | STORE INT
+  24        | CHECK INT COMMA INT
+  25        | JUMP IDENT
+  26        | JZ IDENT
+  27        | PUSHA IDENT
+  28        | ERR STRING
+  29        | ALLOC INT
+
+  30  %entry% : '\001' main
+
+state 0
+	$accept : . %entry% $end  (0)
+
+	'\001'  shift 1
+	.  error
+
+	%entry%  goto 2
+
+
+state 1
+	%entry% : '\001' . main  (30)
+
+	IDENT  shift 3
+	INSTR  shift 4
+	PUSHI  shift 5
+	PUSHN  shift 6
+	PUSHF  shift 7
+	PUSHS  shift 8
+	PUSHG  shift 9
+	PUSHL  shift 10
+	LOAD  shift 11
+	DUP  shift 12
+	POP  shift 13
+	STOREL  shift 14
+	STOREG  shift 15
+	STORE  shift 16
+	CHECK  shift 17
+	JUMP  shift 18
+	JZ  shift 19
+	PUSHA  shift 20
+	ERR  shift 21
+	ALLOC  shift 22
+	EOF  shift 23
+	COMMENT  shift 24
+	.  error
+
+	main  goto 25
+	instrs  goto 26
+	comms  goto 27
+	instr_com  goto 28
+	instr  goto 29
+
+
+state 2
+	$accept : %entry% . $end  (0)
+
+	$end  accept
+
+
+state 3
+	instr : IDENT . COLON  (10)
+
+	COLON  shift 30
+	.  error
+
+
+state 4
+	instr : INSTR .  (11)
+
+	.  reduce 11
+
+
+state 5
+	instr : PUSHI . INT  (12)
+
+	INT  shift 31
+	.  error
+
+
+state 6
+	instr : PUSHN . INT  (13)
+
+	INT  shift 32
+	.  error
+
+
+state 7
+	instr : PUSHF . FLOAT  (14)
+
+	FLOAT  shift 33
+	.  error
+
+
+state 8
+	instr : PUSHS . STRING  (15)
+
+	STRING  shift 34
+	.  error
+
+
+state 9
+	instr : PUSHG . INT  (16)
+
+	INT  shift 35
+	.  error
+
+
+state 10
+	instr : PUSHL . INT  (17)
+
+	INT  shift 36
+	.  error
+
+
+state 11
+	instr : LOAD . INT  (18)
+
+	INT  shift 37
+	.  error
+
+
+state 12
+	instr : DUP . INT  (19)
+
+	INT  shift 38
+	.  error
+
+
+state 13
+	instr : POP . INT  (20)
+
+	INT  shift 39
+	.  error
+
+
+state 14
+	instr : STOREL . INT  (21)
+
+	INT  shift 40
+	.  error
+
+
+state 15
+	instr : STOREG . INT  (22)
+
+	INT  shift 41
+	.  error
+
+
+state 16
+	instr : STORE . INT  (23)
+
+	INT  shift 42
+	.  error
+
+
+state 17
+	instr : CHECK . INT COMMA INT  (24)
+
+	INT  shift 43
+	.  error
+
+
+state 18
+	instr : JUMP . IDENT  (25)
+
+	IDENT  shift 44
+	.  error
+
+
+state 19
+	instr : JZ . IDENT  (26)
+
+	IDENT  shift 45
+	.  error
+
+
+state 20
+	instr : PUSHA . IDENT  (27)
+
+	IDENT  shift 46
+	.  error
+
+
+state 21
+	instr : ERR . STRING  (28)
+
+	STRING  shift 47
+	.  error
+
+
+state 22
+	instr : ALLOC . INT  (29)
+
+	INT  shift 48
+	.  error
+
+
+state 23
+	main : EOF .  (1)
+
+	.  reduce 1
+
+
+state 24
+	comms : COMMENT . comms  (8)
+	comms : COMMENT .  (9)
+
+	COMMENT  shift 24
+	IDENT  reduce 9
+	INSTR  reduce 9
+	PUSHI  reduce 9
+	PUSHN  reduce 9
+	PUSHF  reduce 9
+	PUSHS  reduce 9
+	PUSHG  reduce 9
+	PUSHL  reduce 9
+	LOAD  reduce 9
+	DUP  reduce 9
+	POP  reduce 9
+	STOREL  reduce 9
+	STOREG  reduce 9
+	STORE  reduce 9
+	CHECK  reduce 9
+	JUMP  reduce 9
+	JZ  reduce 9
+	PUSHA  reduce 9
+	ERR  reduce 9
+	ALLOC  reduce 9
+	EOF  reduce 9
+
+	comms  goto 49
+
+
+state 25
+	%entry% : '\001' main .  (30)
+
+	.  reduce 30
+
+
+state 26
+	main : instrs . EOF  (2)
+
+	EOF  shift 50
+	.  error
+
+
+state 27
+	main : comms . instrs EOF  (3)
+
+	IDENT  shift 3
+	INSTR  shift 4
+	PUSHI  shift 5
+	PUSHN  shift 6
+	PUSHF  shift 7
+	PUSHS  shift 8
+	PUSHG  shift 9
+	PUSHL  shift 10
+	LOAD  shift 11
+	DUP  shift 12
+	POP  shift 13
+	STOREL  shift 14
+	STOREG  shift 15
+	STORE  shift 16
+	CHECK  shift 17
+	JUMP  shift 18
+	JZ  shift 19
+	PUSHA  shift 20
+	ERR  shift 21
+	ALLOC  shift 22
+	.  error
+
+	instrs  goto 51
+	instr_com  goto 28
+	instr  goto 29
+
+
+state 28
+	instrs : instr_com . instrs  (4)
+	instrs : instr_com .  (5)
+
+	IDENT  shift 3
+	INSTR  shift 4
+	PUSHI  shift 5
+	PUSHN  shift 6
+	PUSHF  shift 7
+	PUSHS  shift 8
+	PUSHG  shift 9
+	PUSHL  shift 10
+	LOAD  shift 11
+	DUP  shift 12
+	POP  shift 13
+	STOREL  shift 14
+	STOREG  shift 15
+	STORE  shift 16
+	CHECK  shift 17
+	JUMP  shift 18
+	JZ  shift 19
+	PUSHA  shift 20
+	ERR  shift 21
+	ALLOC  shift 22
+	EOF  reduce 5
+
+	instrs  goto 52
+	instr_com  goto 28
+	instr  goto 29
+
+
+state 29
+	instr_com : instr . comms  (6)
+	instr_com : instr .  (7)
+
+	COMMENT  shift 24
+	IDENT  reduce 7
+	INSTR  reduce 7
+	PUSHI  reduce 7
+	PUSHN  reduce 7
+	PUSHF  reduce 7
+	PUSHS  reduce 7
+	PUSHG  reduce 7
+	PUSHL  reduce 7
+	LOAD  reduce 7
+	DUP  reduce 7
+	POP  reduce 7
+	STOREL  reduce 7
+	STOREG  reduce 7
+	STORE  reduce 7
+	CHECK  reduce 7
+	JUMP  reduce 7
+	JZ  reduce 7
+	PUSHA  reduce 7
+	ERR  reduce 7
+	ALLOC  reduce 7
+	EOF  reduce 7
+
+	comms  goto 53
+
+
+state 30
+	instr : IDENT COLON .  (10)
+
+	.  reduce 10
+
+
+state 31
+	instr : PUSHI INT .  (12)
+
+	.  reduce 12
+
+
+state 32
+	instr : PUSHN INT .  (13)
+
+	.  reduce 13
+
+
+state 33
+	instr : PUSHF FLOAT .  (14)
+
+	.  reduce 14
+
+
+state 34
+	instr : PUSHS STRING .  (15)
+
+	.  reduce 15
+
+
+state 35
+	instr : PUSHG INT .  (16)
+
+	.  reduce 16
+
+
+state 36
+	instr : PUSHL INT .  (17)
+
+	.  reduce 17
+
+
+state 37
+	instr : LOAD INT .  (18)
+
+	.  reduce 18
+
+
+state 38
+	instr : DUP INT .  (19)
+
+	.  reduce 19
+
+
+state 39
+	instr : POP INT .  (20)
+
+	.  reduce 20
+
+
+state 40
+	instr : STOREL INT .  (21)
+
+	.  reduce 21
+
+
+state 41
+	instr : STOREG INT .  (22)
+
+	.  reduce 22
+
+
+state 42
+	instr : STORE INT .  (23)
+
+	.  reduce 23
+
+
+state 43
+	instr : CHECK INT . COMMA INT  (24)
+
+	COMMA  shift 54
+	.  error
+
+
+state 44
+	instr : JUMP IDENT .  (25)
+
+	.  reduce 25
+
+
+state 45
+	instr : JZ IDENT .  (26)
+
+	.  reduce 26
+
+
+state 46
+	instr : PUSHA IDENT .  (27)
+
+	.  reduce 27
+
+
+state 47
+	instr : ERR STRING .  (28)
+
+	.  reduce 28
+
+
+state 48
+	instr : ALLOC INT .  (29)
+
+	.  reduce 29
+
+
+state 49
+	comms : COMMENT comms .  (8)
+
+	.  reduce 8
+
+
+state 50
+	main : instrs EOF .  (2)
+
+	.  reduce 2
+
+
+state 51
+	main : comms instrs . EOF  (3)
+
+	EOF  shift 55
+	.  error
+
+
+state 52
+	instrs : instr_com instrs .  (4)
+
+	.  reduce 4
+
+
+state 53
+	instr_com : instr comms .  (6)
+
+	.  reduce 6
+
+
+state 54
+	instr : CHECK INT COMMA . INT  (24)
+
+	INT  shift 56
+	.  error
+
+
+state 55
+	main : comms instrs EOF .  (3)
+
+	.  reduce 3
+
+
+state 56
+	instr : CHECK INT COMMA INT .  (24)
+
+	.  reduce 24
+
+
+31 terminals, 7 nonterminals
+31 grammar rules, 57 states

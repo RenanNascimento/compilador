@@ -3970,7 +3970,7 @@ type(
   Label.t
 )
 ident(
-  def l "code.ml" 169 4948 4962 "code.ml" 169 4948 5015
+  def l "code.ml" 169 4948 4967 "code.ml" 169 4948 5015
 )
 "code.ml" 169 4948 4952 "code.ml" 169 4948 4959
 type(

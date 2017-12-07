@@ -7,9 +7,21 @@ code_lexer.cmx : instr.cmi code_parser.cmx
 code_parser.cmo : label.cmi instr.cmi hstring.cmi code_parser.cmi
 code_parser.cmx : label.cmx instr.cmi hstring.cmx code_parser.cmi
 gmain.cmo : vm.cmi version.cmo maze.cmi label.cmi instr.cmi hstring.cmi \
-    code.cmi
+    /usr/lib/ocaml/lablgtk2/gtkTree.cmo /usr/lib/ocaml/lablgtk2/gobject.cmi \
+    /usr/lib/ocaml/lablgtk2/glib.cmi /usr/lib/ocaml/lablgtk2/gdkKeysyms.cmo \
+    /usr/lib/ocaml/lablgtk2/gWindow.cmi /usr/lib/ocaml/lablgtk2/gTree.cmi \
+    /usr/lib/ocaml/lablgtk2/gToolbox.cmi /usr/lib/ocaml/lablgtk2/gPack.cmi \
+    /usr/lib/ocaml/lablgtk2/gMisc.cmi /usr/lib/ocaml/lablgtk2/gMenu.cmi \
+    /usr/lib/ocaml/lablgtk2/gMain.cmi /usr/lib/ocaml/lablgtk2/gDraw.cmi \
+    /usr/lib/ocaml/lablgtk2/gBin.cmi code.cmi
 gmain.cmx : vm.cmx version.cmx maze.cmx label.cmx instr.cmi hstring.cmx \
-    code.cmx
+    /usr/lib/ocaml/lablgtk2/gtkTree.cmx /usr/lib/ocaml/lablgtk2/gobject.cmx \
+    /usr/lib/ocaml/lablgtk2/glib.cmx /usr/lib/ocaml/lablgtk2/gdkKeysyms.cmx \
+    /usr/lib/ocaml/lablgtk2/gWindow.cmx /usr/lib/ocaml/lablgtk2/gTree.cmx \
+    /usr/lib/ocaml/lablgtk2/gToolbox.cmx /usr/lib/ocaml/lablgtk2/gPack.cmx \
+    /usr/lib/ocaml/lablgtk2/gMisc.cmx /usr/lib/ocaml/lablgtk2/gMenu.cmx \
+    /usr/lib/ocaml/lablgtk2/gMain.cmx /usr/lib/ocaml/lablgtk2/gDraw.cmx \
+    /usr/lib/ocaml/lablgtk2/gBin.cmx code.cmx
 gvm.cmo :
 gvm.cmx :
 hstring.cmo : hstring.cmi

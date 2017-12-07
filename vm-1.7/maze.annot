@@ -1732,6 +1732,10 @@ call(
 type(
   unit
 )
+"maze.ml" 53 1406 1422 "maze.ml" 53 1406 1427
+type(
+  bool
+)
 "maze.ml" 53 1406 1415 "maze.ml" 53 1406 1427
 type(
   unit
@@ -1912,6 +1916,10 @@ call(
 )
 type(
   unit
+)
+"maze.ml" 57 1536 1552 "maze.ml" 57 1536 1557
+type(
+  bool
 )
 "maze.ml" 57 1536 1545 "maze.ml" 57 1536 1557
 type(
