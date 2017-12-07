@@ -8,7 +8,6 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Iterator;
 
 public class GeradorCodigo {
@@ -16,10 +15,14 @@ public class GeradorCodigo {
     private String nome_arquivo;
     private ArrayList<Token> tokens;
     private String codigo;
-    HashMap<String, Integer> variaveis;
-    Iterator<Token> it;
-    Token token;
-    int offset;
+    private HashMap<String, Integer> variaveis;
+    private Iterator<Token> it;
+    private Token token;
+    private int offset;
+    private int cont_label = 'A';
+    private int label_atual = 0;
+
+    HashMap<Integer, Integer> labels = new HashMap<>();  // guarda labelDestino -> labelVolta
 
     public GeradorCodigo(String nome_arquivo, ArrayList<Token> tokens) {
         this.nome_arquivo = nome_arquivo;
@@ -48,7 +51,7 @@ public class GeradorCodigo {
         //token = it.next(); // Consome PV
     }
 
-    public void tratarSimpleExpr() {
+    public void tratarSimpleExpression() {
         //simple-expr			::= term  simple-expr'
         tratarTerm();
         tratarSimpleExpressionPrime();
@@ -115,25 +118,71 @@ public class GeradorCodigo {
 
     public void tratarExpression() {
         //expression			::= simple-expr  expression'
-        tratarSimpleExpr();
+        tratarSimpleExpression();
         tratarExpressionPrime();
     }
 
 
-    public void tratarRelop(){
+    public int tratarRelop(){
         //relop				::= "==" |  ">" | "<" | "!=" | ">=" | "<="
+        int tag = token.getTag();
+        switch (tag) {
+            case Tag.EQ:    // ==
+                break;
+            case (int)'>':
+                break;
+            case (int)'<':
+                break;
+            case Tag.NE:    // !=
+                break;
+            case Tag.GE:    // >=
+                break;
+            case Tag.LE:    // <=
+                break;
+            default:        // lambda
+                return -1;
+        }
+        token = it.next(); // Consome o operador
+        return tag;
     }
 
     public void tratarExpressionPrime() {
         //expression'			::= relop  simple-expr	|	λ
-        tratarRelop();
-        tratarSimpleExpr();
-
+        int tagRelop = tratarRelop();
+        if (tagRelop == -1)
+            return;     // Não é relop, então é λ
+        tratarSimpleExpression();
+        switch (tagRelop) {
+            case Tag.EQ:    // ==
+                codigo += "EQUAL\n";
+                break;
+            case (int) '>':
+                codigo += "SUP\n";
+                break;
+            case (int) '<':
+                codigo += "INF\n";
+                break;
+            case Tag.NE:    // !=
+                codigo += "EQUAL\n";
+                codigo += "NOT\n";
+                break;
+            case Tag.GE:    // >=
+                codigo += "SUPEQ\n";
+                break;
+            case Tag.LE:    // <=
+                codigo += "INFEQ\n";
+                break;
+        }
+        codigo += "NOT\n";  // Nega o que está no topo da pilha pois o jz verifica se é 0 para saltar
+        int destino = cont_label++;
+        int volta = cont_label++;
+        label_atual = destino;
+        labels.put(destino, volta);
+        codigo += "JZ " + (char)destino + '\n';
+        codigo += "JUMP " + (char)volta + '\n';
+        codigo += (char)destino + ":\n";
     }
 
-    public void tratarSimpleExpression() {
-        //simple-expr			::= term  simple-expr'
-    }
 
     public void tratarSimpleExpressionPrime() {
         //simple-expr'		::= addop term simple-expr'  | λ
@@ -194,11 +243,44 @@ public class GeradorCodigo {
 
     public void tratarIf() {
         //if-stmt				::= if  expression  then  stmt-list  if-stmt' end
+        int parenteses = 0;
+        token = it.next();  // Consome if
+        while (token.tag == Tag.AP) {
+            parenteses++;
+            token = it.next();
+        }
+        tratarExpression();
+
+        token = it.next();  // Consome FP
+        token = it.next();  // Consome then
+        tratarStmtList();
+        tratarIfPrime();
+        token = it.next();  // Consome end
+        voltaFluxoNormal();
+    }
+
+
+    public void voltaFluxoNormal() {
+        int volta = labels.get(label_atual);
+        codigo += "JUMP " + (char)volta + '\n';
+        label_atual = volta;
+        codigo += (char)volta + ":\n";
     }
 
     public void tratarIfPrime() {
         //if-stmt'			::=	else stmt-list | λ
+        int tag = token.getTag();
+        if (tag != Tag.ELSE) {
+            // Sai do if
+            /*int volta = labels.get(label_atual);
+            codigo += "JUMP " + (volta);*/
+            return;
+        }
+
+        tratarStmtList();
     }
+
+
 
     public void tratarWhile() {
         //while-stmt			::= do stmt-list stmt-sufix
@@ -221,7 +303,7 @@ public class GeradorCodigo {
     public void tratarWrite() {
         token = it.next(); //Consome PRINT
         token = it.next(); //Consome AP
-        tratarSimpleExpr();
+        tratarSimpleExpression();
         token = it.next(); //Consome FP
         codigo += "WRITES\n";
     }
@@ -232,7 +314,7 @@ public class GeradorCodigo {
         token = it.next();
         // Consome igual
         token = it.next();
-        tratarSimpleExpr();
+        tratarSimpleExpression();
         codigo += "STOREL " + pos + '\n';
     }
 
@@ -260,7 +342,5 @@ public class GeradorCodigo {
         writer.write(codigo);
         writer.close();
     }
-
-
 
 }

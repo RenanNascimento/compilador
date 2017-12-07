@@ -35,13 +35,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("Entre com o numero do teste (1-12): ");
-		int arq = input.nextInt()-1;
+		//System.out.println("Entre com o numero do teste (1-12): ");
+		//int arq = input.nextInt()-1;
 		ArrayList<Token> tokens = new ArrayList<Token> ();
 		Lexer L = null;
 		int line = -5;
 		try {
-			L = new Lexer(testes[arq]);
+			//L = new Lexer(testes[arq]);
+			L = new Lexer("testes/teste8.txt");
 			System.out.println("**** Tokens lidos ****");
 			// Apenas para entrar no laço
 			Token T = new Token(0, line);
