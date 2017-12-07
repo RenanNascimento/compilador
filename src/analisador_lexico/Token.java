@@ -140,6 +140,9 @@ public class Token {
 		}
 	}
 
+	public int getTag(){
+		return tag;
+	}
 
 	public static boolean isLetter(char ch) {
 		int A = (int)'A';

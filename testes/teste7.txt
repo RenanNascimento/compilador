@@ -7,11 +7,6 @@ program
 	x = "um";
 	scan (b);
 	scan (y);
-	result = (a*b + 1) / 2;
-	print ("Resultado: ");
+	result = (a);
 	print (result);
-	print ("Total: ");
-	total = "y dividido por x";
-	print ("Total: ");
-	print (total);
 end

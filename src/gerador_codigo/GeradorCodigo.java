@@ -45,34 +45,66 @@ public class GeradorCodigo {
         }
             // Empilha o valor inteiro 0
         codigo += "PUSHN " + qtd + '\n';
-        token = it.next(); // Consome PV
+        //token = it.next(); // Consome PV
     }
 
     public void tratarSimpleExpr() {
+        //simple-expr			::= term  simple-expr'
+        tratarTerm();
+        tratarSimpleExpressionPrime();
     }
 
     public void tratarTerm() {
         //term                ::= factor-a  term'
+        tratarFactorA();
+        tratarTermPrime();
     }
 
     public void tratarTermPrime() {
         //term'               ::= mulop factor-a term' | λ
+
     }
 
     public void tratarFactorA() {
         //factor-a			::= factor  |  !  factor  |  "-"  factor
+        tratarFactor();
     }
 
     public void tratarFactor() {
         //factor          	::= identifier  |  constant  |  "("  expression  ")"
+        switch (token.getTag()) {
+            case Tag.ID:
+                int pos = variaveis.get(token.getLexeme());
+                // pega o valor da variavel
+                codigo += "PUSHG " + pos + '\n';
+                token = it.next(); // Consome PV
+                break;
+            case Tag.NUM:
+                codigo += "PUSHS \"" + token.toString() + "\"\n";
+                //codigo += "ATOI" + '\n';
+                token = it.next(); // Consome PV
+                break;
+            case Tag.LIT:
+                codigo += "PUSHS " + token.getLexeme() + '\n';
+                token = it.next(); // Consome PV
+                break;
+            case Tag.AP:
+                token = it.next(); // Consome AP
+                tratarExpression();
+                token = it.next(); // Consome FP
+                break;
+        }
     }
 
     public void tratarExpression() {
         //expression			::= simple-expr  expression'
+        tratarSimpleExpr();
+        tratarExpressionPrime();
     }
 
     public void tratarExpressionPrime() {
         //expression'			::= relop  simple-expr	|	λ
+
     }
 
     public void tratarSimpleExpression() {
@@ -95,7 +127,7 @@ public class GeradorCodigo {
     }
 
     public void tratarStmt() {
-        switch (token.tag) {
+        switch (token.getTag()) {
             case Tag.ID:
                 tratarAssign();
                 token = it.next(); // Consome PV
