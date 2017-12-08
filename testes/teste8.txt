@@ -1,10 +1,11 @@
 program
 
-	int a, c, b;
+	int a, c, b, val;
 	int d, e;
 	
 	a = 0; d = 3;
 	c = d / 12;
+	val=1;
 	
 	scan (a);
 	scan (c);
@@ -13,7 +14,7 @@ program
 	print ("Resultado: ");
 	print (c);
 	a = (b + c + d)/2;
-	e = c + a;
+	e = val + c + a;
 	print ("E: ");
 	print (e);
 end
