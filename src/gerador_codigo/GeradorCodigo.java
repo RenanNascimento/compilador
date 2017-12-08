@@ -55,22 +55,18 @@ public class GeradorCodigo {
         //token = it.next(); // Consome PV
     }
 
-    public void tratarSimpleExpression() {
+    public boolean tratarSimpleExpression() {
         //simple-expr			::= term  simple-expr'
-        tratarTerm();
+        boolean str = tratarTerm();
         tratarSimpleExpressionPrime();
+        return str;
     }
 
-    public void tratarSimpleExpressionString() {
-        //simple-expr			::= term  simple-expr'
-        tratarTerm();
-        tratarSimpleExpressionPrimeString();
-    }
-
-    public void tratarTerm() {
+    public boolean tratarTerm() {
         //term                ::= factor-a  term'
-        tratarFactorA();
+        boolean str = tratarFactorA();
         tratarTermPrime();
+        return str;
     }
 
     public void tratarTermPrime() {
@@ -78,9 +74,7 @@ public class GeradorCodigo {
         int tag = token.getTag();
         if(tag == Tag.MUL || tag == Tag.DIV || tag == Tag.AND){
             token = it.next(); // Consome * ou / ou &&
-            codigo += "ATOI" + '\n'; // Converte o primeiro termo em int
             tratarFactorA();
-            codigo += "ATOI" + '\n'; // Converte o segundo termo em int
 
             // Operacao
             if(tag == Tag.MUL || tag == Tag.AND) {
@@ -88,13 +82,12 @@ public class GeradorCodigo {
             } else if (tag == Tag.DIV) {
                 codigo += "DIV" + '\n';
             }
-            codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
             tratarTermPrime();
         }
 
     }
 
-    public void tratarFactorA() {
+    public boolean tratarFactorA() {
         //factor-a			::= factor  |  !  factor  |  "-"  factor
         boolean menos=false, negativo=false;
         if(token.tag == Tag.MIN) {
@@ -105,33 +98,34 @@ public class GeradorCodigo {
             negativo = true;
             token = it.next(); // Consome !
         }
-        tratarFactor();
+        boolean str = tratarFactor();
         if(menos) {
-            codigo += "ATOI" + '\n';
             codigo += "PUSHI -1" + '\n';
             codigo += "MUL" + '\n';
-            codigo += "STRI" + '\n';
         } else if(negativo){
-            codigo += "ATOI" + '\n';
             codigo += "NOT\n";
-            codigo += "STRI" + '\n';
         }
+        return str;
     }
 
-    public void tratarFactor() {
+    public boolean tratarFactor() {
         //factor          	::= identifier  |  constant  |  "("  expression  ")"
+        boolean str = false;
         switch (token.getTag()) {
             case Tag.ID:
+                if(TS.get(token.getLexeme())==Tag.STR)
+                    str=true;
                 int pos = variaveis.get(token.getLexeme());
                 // pega o valor da variavel
                 codigo += "PUSHG " + pos + '\n';
                 token = it.next(); // Consome PV
                 break;
             case Tag.NUM:
-                codigo += "PUSHS " + token.toString() + "\n";
+                codigo += "PUSHI " + token.toString() + "\n";
                 token = it.next(); // Consome PV
                 break;
             case Tag.LIT:
+                str=true;
                 codigo += "PUSHS " + token.getLexeme() + '\n';
                 token = it.next(); // Consome PV
                 break;
@@ -141,6 +135,7 @@ public class GeradorCodigo {
                 token = it.next(); // Consome FP
                 break;
         }
+        return str;
     }
 
     public void tratarExpression() {
@@ -178,38 +173,28 @@ public class GeradorCodigo {
         int tagRelop = tratarRelop();
         if (tagRelop == -1)
             return;     // Não é relop, então é λ
-        codigo += "ATOI\n";
         tratarSimpleExpression();
         switch (tagRelop) {
             case Tag.EQ:    // ==
-                codigo += "SWAP\n";
-                codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
                 codigo += "EQUAL\n";
-                codigo += "ATOI\n";
                 break;
             case (int) '>':
-                codigo += "ATOI\n";
                 codigo += "SUP\n";
                 break;
             case (int) '<':
-                codigo += "ATOI\n";
                 codigo += "INF\n";
                 break;
             case Tag.NE:    // !=
-                codigo += "ATOI\n";
                 codigo += "EQUAL\n";
                 codigo += "NOT\n";
                 break;
             case Tag.GE:    // >=
-                codigo += "ATOI\n";
                 codigo += "SUPEQ\n";
                 break;
             case Tag.LE:    // <=
-                codigo += "ATOI\n";
                 codigo += "INFEQ\n";
                 break;
         }
-        codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
     }
 
 
@@ -218,33 +203,22 @@ public class GeradorCodigo {
         int tag = token.getTag();
         if(tag == Tag.SUM || tag == Tag.MIN || tag == Tag.OR){
             token = it.next(); // Consome + ou - ou ||
-            codigo += "ATOI" + '\n'; // Converte o primeiro termo em int
-            tratarFactorA();
+            boolean str = tratarFactorA();
 
             // Operacao
             if(tag == Tag.SUM || tag == Tag.OR) {
                 tratarTermPrime();
-                codigo += "ATOI" + '\n'; // Converte o segundo termo em int
-                codigo += "ADD" + '\n';
+                if(str) {
+                    codigo += "SWAP" + '\n';
+                    codigo += "CONCAT" + '\n';
+                }
+                else
+                    codigo += "ADD" + '\n';
             }else if (tag == Tag.MIN){
                 tratarTermPrime();
-                codigo += "ATOI" + '\n'; // Converte o segundo termo em int
                 codigo += "SUB" + '\n';
                 //else Tem que ver o operando para &&
             }
-            codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
-            tratarSimpleExpressionPrime();
-        }
-    }
-
-
-    public void tratarSimpleExpressionPrimeString() {
-        //simple-expr'		::= addop term simple-expr'  | λ
-        int tag = token.getTag();
-        if(tag == Tag.SUM){
-            token = it.next(); // Consome + ou - ou ||
-            tratarFactorA();
-            codigo += "CONCAT" + '\n'; // Converte o segundo termo em int
             tratarSimpleExpressionPrime();
         }
     }
@@ -295,7 +269,6 @@ public class GeradorCodigo {
         int destino = cont_label++;
         int fim = cont_label++;
         tratarExpression();
-        codigo += "ATOI" + '\n'; // Converte o topo da pilha para inteiro
         codigo += "JZ " + (char)destino + '\n';
         token = it.next();  // Consome then
         tratarStmtList();
@@ -326,7 +299,6 @@ public class GeradorCodigo {
         codigo += (char)destino + ":\n";
         tratarStmtList();
         tratarStmtSufix();
-        codigo += "ATOI" + '\n'; // Converte o topo da pilha para inteiro
         codigo += "NOT\n";  // Nega o que está no topo da pilha pois o jz verifica se é 0 para saltar
         codigo += "JZ " + (char)destino + '\n';
     }
@@ -342,37 +314,36 @@ public class GeradorCodigo {
         token = it.next(); //Consome Scan
         token = it.next(); //Consome AP
         int pos = variaveis.get(token.getLexeme());
+        boolean str=false;
+        if(TS.get(token.getLexeme())==Tag.STR)
+            str=true;
         token = it.next(); //Consome ID
         token = it.next(); //Consome FP
         codigo += "READ\n";
+        if(!str)
+            codigo += "ATOI" + '\n';
         codigo += "STOREL " + pos + '\n';
     }
 
     public void tratarWrite() {
         token = it.next(); //Consome PRINT
         token = it.next(); //Consome AP
-        tratarSimpleExpression();
+        boolean str = tratarSimpleExpression();
         token = it.next(); //Consome FP
-        codigo += "WRITES\n";
+        if(str)
+            codigo += "WRITES\n";
+        else
+            codigo += "WRITEI\n";
     }
 
     public void tratarAssign() {
         // assign-stmt			::= identifier "=" simple_expr
         int pos = variaveis.get(token.getLexeme());
-        int tipo = TS.get(token.getLexeme()); //SUBSTITUIR
         // Pega proximo token
         token = it.next();
         // Consome igual
         token = it.next();
-        switch(tipo){
-            case Tag.INT:
-                tratarSimpleExpression();
-                break;
-            case Tag.STR:
-                tratarSimpleExpressionString();
-                break;
-
-        }
+        tratarSimpleExpression();
         codigo += "STOREL " + pos + '\n';
     }
 
