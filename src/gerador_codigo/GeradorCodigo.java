@@ -202,8 +202,8 @@ public class GeradorCodigo {
             }else {
                 if (tag == Tag.MIN)
                     tratarTermPrime();
-                codigo += "ATOI" + '\n'; // Converte o segundo termo em int
-                codigo += "SUB" + '\n';
+                    codigo += "ATOI" + '\n'; // Converte o segundo termo em int
+                    codigo += "SUB" + '\n';
                 //else Tem que ver o operando para &&
             }
             codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
