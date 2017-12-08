@@ -73,12 +73,10 @@ public class GeradorCodigo {
             codigo += "ATOI" + '\n'; // Converte o segundo termo em int
 
             // Operacao
-            if(tag == Tag.MUL) {
+            if(tag == Tag.MUL || tag == Tag.AND) {
                 codigo += "MUL" + '\n';
-            }else {
-                if (tag == Tag.DIV)
+            } else if (tag == Tag.DIV) {
                     codigo += "DIV" + '\n';
-                //else Tem que ver o operando para &&
             }
             codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
             tratarTermPrime();
@@ -88,7 +86,16 @@ public class GeradorCodigo {
 
     public void tratarFactorA() {
         //factor-a			::= factor  |  !  factor  |  "-"  factor
+        boolean menos=false;
+        if(token.tag == Tag.MIN)
+            menos= true;
         tratarFactor();
+        if(menos) {
+            codigo += "ATOI" + '\n';
+            codigo += "PUSHI -1" + '\n';
+            codigo += "MUL" + '\n';
+            codigo += "STRI" + '\n';
+        }
     }
 
     public void tratarFactor() {
@@ -151,7 +158,9 @@ public class GeradorCodigo {
         int tagRelop = tratarRelop();
         if (tagRelop == -1)
             return;     // Não é relop, então é λ
+        codigo += "ATOI\n";
         tratarSimpleExpression();
+        codigo += "ATOI\n";
         switch (tagRelop) {
             case Tag.EQ:    // ==
                 codigo += "EQUAL\n";
@@ -173,14 +182,7 @@ public class GeradorCodigo {
                 codigo += "INFEQ\n";
                 break;
         }
-        codigo += "NOT\n";  // Nega o que está no topo da pilha pois o jz verifica se é 0 para saltar
-        int destino = cont_label++;
-        int volta = cont_label++;
-        label_atual = destino;
-        labels.put(destino, volta);
-        codigo += "JZ " + (char)destino + '\n';
-        codigo += "JUMP " + (char)volta + '\n';
-        codigo += (char)destino + ":\n";
+        codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
     }
 
 
@@ -191,21 +193,22 @@ public class GeradorCodigo {
             token = it.next(); // Consome + ou - ou ||
             codigo += "ATOI" + '\n'; // Converte o primeiro termo em int
             tratarFactorA();
-            codigo += "ATOI" + '\n'; // Converte o segundo termo em int
 
             // Operacao
             if(tag == Tag.SUM) {
+                tratarTermPrime();
+                codigo += "ATOI" + '\n'; // Converte o segundo termo em int
                 codigo += "ADD" + '\n';
             }else {
                 if (tag == Tag.MIN)
-                    codigo += "SUB" + '\n';
+                    tratarTermPrime();
+                codigo += "ATOI" + '\n'; // Converte o segundo termo em int
+                codigo += "SUB" + '\n';
                 //else Tem que ver o operando para &&
             }
             codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
-            tratarTermPrime();
             tratarSimpleExpressionPrime();
         }
-
     }
 
     public void tratarStmtList() {
@@ -251,12 +254,28 @@ public class GeradorCodigo {
             token = it.next();
         }*/
         tratarExpression();
-        
+
         token = it.next();  // Consome then
+
+        mudaFluxo();
+
         tratarStmtList();
         tratarIfPrime();
         token = it.next();  // Consome end
         voltaFluxoNormal();
+    }
+
+
+    public void mudaFluxo() {
+        codigo += "ATOI" + '\n'; // Converte o topo da pilha para inteiro
+        codigo += "NOT\n";  // Nega o que está no topo da pilha pois o jz verifica se é 0 para saltar
+        int destino = cont_label++;
+        int volta = cont_label++;
+        label_atual = destino;
+        labels.put(destino, volta);
+        codigo += "JZ " + (char)destino + '\n';
+        codigo += "JUMP " + (char)volta + '\n';
+        codigo += (char)destino + ":\n";
     }
 
 
