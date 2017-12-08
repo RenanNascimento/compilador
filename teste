@@ -1,7 +1,0 @@
-program
-    int a;
-    a = 2;
-    if ((a > 1) && (a < 0)) then
-        print("Deu bom");
-    end
-end

@@ -30,19 +30,21 @@ public class Main {
 			"testes/teste10.txt",
 			"testes/teste11.txt",
 			"testes/teste12.txt",
+			"testes/teste13.txt",
+			"testes/teste14.txt",
+
 	};
 
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		//System.out.println("Entre com o numero do teste (1-12): ");
-		//int arq = input.nextInt()-1;
+		System.out.println("Entre com o numero do teste (1-14): ");
+		int arq = input.nextInt()-1;
 		ArrayList<Token> tokens = new ArrayList<Token> ();
 		Lexer L = null;
 		int line = -5;
 		try {
-			//L = new Lexer(testes[arq]);
-			L = new Lexer("teste");
+			L = new Lexer(testes[arq]);
 			System.out.println("**** Tokens lidos ****");
 			// Apenas para entrar no laço
 			Token T = new Token(0, line);
@@ -69,7 +71,7 @@ public class Main {
 			Parser P = new Parser(tokens);
 			System.out.println("\n\n\n**** Inicio Parser ****");
 			P.init();
-			GeradorCodigo gerador = new GeradorCodigo("codigo.m", tokens);
+			GeradorCodigo gerador = new GeradorCodigo("codigo.m", tokens, P.getTS());
 			gerador.gerar();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

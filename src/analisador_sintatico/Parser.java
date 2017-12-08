@@ -4,6 +4,7 @@ import analisador_lexico.Tag;
 import analisador_lexico.Token;
 import analisador_semantico.VerificadorSemantico;
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 public class Parser {
     private Token tok;
@@ -20,6 +21,11 @@ public class Parser {
         tag=tok.tag;
         line=tok.line;
         vs = new VerificadorSemantico();
+    }
+
+
+    public Hashtable<String, Integer> getTS() {
+        return vs.getTS();
     }
 
     public void init(){

@@ -1,0 +1,17 @@
+program
+	int c, d;
+
+	c = 3;
+	d = 6;
+
+	if ((d > 1) && (c > 2)) then
+	    print("Entrei no if\n");
+
+	    if (d > 4) then
+        	    print("Entrei no if denovo\n");
+        end
+	else
+	    print("Entrei no else\n");
+	end
+
+end

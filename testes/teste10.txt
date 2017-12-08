@@ -1,15 +1,14 @@
 program
 	int a, aux, b;
 	string nome, sobrenome, msg;
-	
-	print(Nome );
+	print("Nome: ");
 	scan (nome);
 	print("Sobrenome: ");
 	scan (sobrenome);
 	msg = "Ola, " + nome + " " + sobrenome + "!";
 	msg = msg + "um";
 	print (msg);
-	
+
 	scan (a);
 	scan(b);
 	if (a>b) then

@@ -1,0 +1,14 @@
+program
+	int a, b;
+	a = 1;
+	do
+		print("A");
+		a = a + 1;
+        b = 1;
+        do
+            print("B");
+            b = b + 1;
+        while (b <= 2) end
+        print("B\n");
+	while (a <= 3) end
+end

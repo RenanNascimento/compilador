@@ -32,6 +32,10 @@ public class VerificadorSemantico {
         }
     }
 
+    public Hashtable<String, Integer> getTS() {
+        return TS;
+    }
+
     private String type2String(int type){
         String tipo = "int";
         //Definir o tipo
