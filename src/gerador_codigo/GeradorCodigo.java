@@ -46,7 +46,7 @@ public class GeradorCodigo {
             } while (it.hasNext() && token.tag != Tag.PV);
             token = it.next(); // Consome PV
         }
-            // Empilha o valor inteiro 0
+        // Empilha o valor inteiro 0
         codigo += "PUSHN " + qtd + '\n';
         //token = it.next(); // Consome PV
     }
@@ -76,7 +76,7 @@ public class GeradorCodigo {
             if(tag == Tag.MUL || tag == Tag.AND) {
                 codigo += "MUL" + '\n';
             } else if (tag == Tag.DIV) {
-                    codigo += "DIV" + '\n';
+                codigo += "DIV" + '\n';
             }
             codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
             tratarTermPrime();
@@ -202,8 +202,8 @@ public class GeradorCodigo {
             }else {
                 if (tag == Tag.MIN)
                     tratarTermPrime();
-                    codigo += "ATOI" + '\n'; // Converte o segundo termo em int
-                    codigo += "SUB" + '\n';
+                codigo += "ATOI" + '\n'; // Converte o segundo termo em int
+                codigo += "SUB" + '\n';
                 //else Tem que ver o operando para &&
             }
             codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
@@ -217,8 +217,15 @@ public class GeradorCodigo {
     }
 
     public void tratarStmtListPrime() {
-        while(token.tag != Tag.END){
-            tratarStmt();
+        tratarStmt();
+        switch (token.tag){
+            case Tag.ID:
+            case Tag.IF:
+            case Tag.DO:
+            case Tag.SCAN:
+            case Tag.PRINT:
+                tratarStmtListPrime();
+                break;
         }
     }
 
@@ -231,7 +238,7 @@ public class GeradorCodigo {
             case Tag.IF:
                 tratarIf();
                 break;
-            case Tag.WHILE:
+            case Tag.DO:
                 tratarWhile();
                 break;
             case Tag.SCAN:
@@ -246,56 +253,28 @@ public class GeradorCodigo {
     }
 
     public void tratarIf() {
-        //if-stmt				::= if  expression  then  stmt-list  if-stmt' end
-        int parenteses = 0;
         token = it.next();  // Consome if
-        /*while (token.tag == Tag.AP) {
-            parenteses++;
-            token = it.next();
-        }*/
-        tratarExpression();
-
-        token = it.next();  // Consome then
-
-        mudaFluxo();
-
-        tratarStmtList();
-        tratarIfPrime();
-        token = it.next();  // Consome end
-        voltaFluxoNormal();
-    }
-
-
-    public void mudaFluxo() {
-        codigo += "ATOI" + '\n'; // Converte o topo da pilha para inteiro
-        codigo += "NOT\n";  // Nega o que está no topo da pilha pois o jz verifica se é 0 para saltar
         int destino = cont_label++;
-        int volta = cont_label++;
-        label_atual = destino;
-        labels.put(destino, volta);
+        int fim = cont_label++;
+        tratarExpression();
+        codigo += "ATOI" + '\n'; // Converte o topo da pilha para inteiro
         codigo += "JZ " + (char)destino + '\n';
-        codigo += "JUMP " + (char)volta + '\n';
-        codigo += (char)destino + ":\n";
-    }
-
-
-    public void voltaFluxoNormal() {
-        int volta = labels.get(label_atual);
-        codigo += "JUMP " + (char)volta + '\n';
-        label_atual = volta;
-        codigo += (char)volta + ":\n";
+        token = it.next();  // Consome then
+        tratarStmtList();
+        if(token.tag == Tag.ELSE) {
+            codigo += "JUMP " + (char)fim + '\n';
+            codigo += (char)destino + ":\n";
+            tratarIfPrime();
+            codigo += (char)fim + ":\n";
+        }else{
+            codigo += (char)destino + ":\n";
+        }
+        token = it.next();  // Consome end
     }
 
     public void tratarIfPrime() {
         //if-stmt'			::=	else stmt-list | λ
-        int tag = token.getTag();
-        if (tag != Tag.ELSE) {
-            // Sai do if
-            /*int volta = labels.get(label_atual);
-            codigo += "JUMP " + (volta);*/
-            return;
-        }
-
+        token = it.next();  // Consome ELSE
         tratarStmtList();
     }
 
@@ -303,10 +282,22 @@ public class GeradorCodigo {
 
     public void tratarWhile() {
         //while-stmt			::= do stmt-list stmt-sufix
+        token = it.next(); //Consome DO
+        int destino = cont_label++;
+        label_atual = destino;
+        codigo += (char)destino + ":\n";
+        tratarStmtList();
+        tratarStmtSufix();
+        codigo += "ATOI" + '\n'; // Converte o topo da pilha para inteiro
+        codigo += "NOT\n";  // Nega o que está no topo da pilha pois o jz verifica se é 0 para saltar
+        codigo += "JZ " + (char)destino + '\n';
     }
 
     public void tratarStmtSufix() {
         //stmt-sufix			::= while expression end
+        token = it.next(); //Consome WHILE
+        tratarExpression();
+        token = it.next(); //Consome END
     }
 
     public void tratarRead() {
