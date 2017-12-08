@@ -94,7 +94,7 @@ public class GeradorCodigo {
         tratarFactor();
         if(menos) {
             codigo += "ATOI" + '\n';
-            codigo += "PUSHS -1" + '\n';
+            codigo += "PUSHI -1" + '\n';
             codigo += "MUL" + '\n';
             codigo += "STRI" + '\n';
         }
