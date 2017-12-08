@@ -1,7 +1,7 @@
 program
 
 	int a, c, b;
-	int d, e, val;
+	int d, e;
 	
 	a = 0; d = 3;
 	c = d / 12;
@@ -13,7 +13,7 @@ program
 	print ("Resultado: ");
 	print (c);
 	a = (b + c + d)/2;
-	e = val + c + a;
+	e = c + a;
 	print ("E: ");
 	print (e);
 end

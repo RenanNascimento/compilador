@@ -7,7 +7,7 @@ type				::= int | string
 stmt-list			::= stmt stmt-list'
 stmt-list'			::= stmt stmt-list' | λ
 stmt				::= assign-stmt ";"  |	if-stmt  |  while-stmt | read-stmt ";"  |  write-stmt ";"
-assign-stmt			::= identifier "=" simple_expr
+assign-stmt			::= identifier "=" simple-expr
 if-stmt				::= if  expression  then  stmt-list  if-stmt' end
 if-stmt'			::=	else stmt-list | λ
 while-stmt			::= do stmt-list stmt-sufix

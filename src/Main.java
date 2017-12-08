@@ -42,7 +42,7 @@ public class Main {
 		int line = -5;
 		try {
 			//L = new Lexer(testes[arq]);
-			L = new Lexer("testes/teste8.txt");
+			L = new Lexer("teste");
 			System.out.println("**** Tokens lidos ****");
 			// Apenas para entrar no laço
 			Token T = new Token(0, line);

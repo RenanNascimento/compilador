@@ -203,6 +203,7 @@ public class GeradorCodigo {
             }
             codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
             tratarTermPrime();
+            tratarSimpleExpressionPrime();
         }
 
     }
@@ -309,6 +310,7 @@ public class GeradorCodigo {
     }
 
     public void tratarAssign() {
+        // assign-stmt			::= identifier "=" simple_expr
         int pos = variaveis.get(token.getLexeme());
         // Pega proximo token
         token = it.next();
