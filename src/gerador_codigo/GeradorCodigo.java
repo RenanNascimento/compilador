@@ -88,7 +88,16 @@ public class GeradorCodigo {
 
     public void tratarFactorA() {
         //factor-a			::= factor  |  !  factor  |  "-"  factor
+        boolean menos=false;
+        if(token.tag == Tag.MIN)
+            menos= true;
         tratarFactor();
+        if(menos) {
+            codigo += "ATOI" + '\n';
+            codigo += "PUSHS -1" + '\n';
+            codigo += "MUL" + '\n';
+            codigo += "STRI" + '\n';
+        }
     }
 
     public void tratarFactor() {
@@ -191,18 +200,20 @@ public class GeradorCodigo {
             token = it.next(); // Consome + ou - ou ||
             codigo += "ATOI" + '\n'; // Converte o primeiro termo em int
             tratarFactorA();
-            codigo += "ATOI" + '\n'; // Converte o segundo termo em int
 
             // Operacao
             if(tag == Tag.SUM) {
+                tratarTermPrime();
+                codigo += "ATOI" + '\n'; // Converte o segundo termo em int
                 codigo += "ADD" + '\n';
             }else {
                 if (tag == Tag.MIN)
+                    tratarTermPrime();
+                    codigo += "ATOI" + '\n'; // Converte o segundo termo em int
                     codigo += "SUB" + '\n';
                 //else Tem que ver o operando para &&
             }
             codigo += "STRI" + '\n'; // Converte o resultado da operacao em string
-            tratarTermPrime();
             tratarSimpleExpressionPrime();
         }
 
