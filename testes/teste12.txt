@@ -7,19 +7,25 @@ program
     // comentario
     //
     int a, b, c, d;
-
+	a = 1;
+	b = 2;
+	c = 3;
+	d = 4;
     if ((c==a) || (c==b)) then
         print("Valor c: ");
-	print(c);
+		print(c);
+		print("\n");
     else
         if ( c<=d ) then
-            print("Valor d");
-	    print(d);
-	end
+            print("Valor d:");
+			print(d);
+			print("\n");
+		end
     end
 
     if (c-d != a) then
-        print(!false);
+		print("Valor a:");
+        print(a);
     end
 
 end
