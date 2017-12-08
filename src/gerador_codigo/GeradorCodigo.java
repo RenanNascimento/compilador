@@ -246,13 +246,12 @@ public class GeradorCodigo {
         //if-stmt				::= if  expression  then  stmt-list  if-stmt' end
         int parenteses = 0;
         token = it.next();  // Consome if
-        while (token.tag == Tag.AP) {
+        /*while (token.tag == Tag.AP) {
             parenteses++;
             token = it.next();
-        }
+        }*/
         tratarExpression();
-
-        token = it.next();  // Consome FP
+        
         token = it.next();  // Consome then
         tratarStmtList();
         tratarIfPrime();
