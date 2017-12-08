@@ -1,0 +1,39 @@
+START
+PUSHN 4
+PUSHS "Sim"
+STOREL 3
+PUSHI 50
+STOREL 2
+PUSHI 100
+STOREL 1
+A:
+PUSHS "Pontuacao Candidato: "
+WRITES
+READ
+ATOI
+STOREL 0
+PUSHS "Disponibilidade Candidato: "
+WRITES
+READ
+STOREL 3
+PUSHG 0
+PUSHG 2
+SUP
+PUSHG 3
+PUSHS "Sim"
+EQUAL
+MUL
+JZ B
+PUSHS "Candidato aprovado"
+WRITES
+JUMP C
+B:
+PUSHS "Candidato reprovado"
+WRITES
+C:
+PUSHG 0
+PUSHI 0
+SUPEQ
+NOT
+JZ A
+STOP

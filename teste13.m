@@ -1,0 +1,29 @@
+START
+PUSHN 2
+PUSHI 3
+STOREL 0
+PUSHI 6
+STOREL 1
+PUSHG 1
+PUSHI 1
+SUP
+PUSHG 0
+PUSHI 2
+SUP
+MUL
+JZ A
+PUSHS "Entrei no if\n"
+WRITES
+PUSHG 1
+PUSHI 4
+SUP
+JZ C
+PUSHS "Entrei no if denovo\n"
+WRITES
+C:
+JUMP B
+A:
+PUSHS "Entrei no else\n"
+WRITES
+B:
+STOP
